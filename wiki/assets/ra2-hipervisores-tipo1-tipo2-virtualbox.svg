@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 420" role="img" aria-label="Hipervisores Tipo 1 vs Tipo 2 con VirtualBox sobre host MAX">
+  <rect x="2" y="2" width="916" height="416" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="460" y="34" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="19" font-weight="700" fill="#0f172a">Virtualización: Hipervisor Tipo 1 (Bare-Metal) vs. Tipo 2 (VirtualBox en MAX)</text>
+
+  <!-- Left: Type 1 -->
+  <rect x="34" y="56" width="404" height="338" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="236" y="80" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#334155">HIPERVISOR TIPO 1 (Nativo / Bare-Metal)</text>
+  <text x="236" y="98" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#64748b">Centros de datos · KVM/Proxmox · VMware ESXi · Hyper-V</text>
+
+  <!-- VMs -->
+  <rect x="54" y="114" width="174" height="122" rx="8" fill="#eef2ff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="141" y="136" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#312e81">VM 1</text>
+  <rect x="68" y="148" width="146" height="32" rx="4" fill="#ffffff" stroke="#818cf8"/>
+  <text x="141" y="168" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" fill="#3730a3">Aplicaciones</text>
+  <rect x="68" y="188" width="146" height="34" rx="4" fill="#c7d2fe" stroke="#4f46e5"/>
+  <text x="141" y="209" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#312e81">SO Invitado (Linux)</text>
+
+  <rect x="244" y="114" width="174" height="122" rx="8" fill="#eef2ff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="331" y="136" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#312e81">VM 2</text>
+  <rect x="258" y="148" width="146" height="32" rx="4" fill="#ffffff" stroke="#818cf8"/>
+  <text x="331" y="168" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" fill="#3730a3">Aplicaciones</text>
+  <rect x="258" y="188" width="146" height="34" rx="4" fill="#c7d2fe" stroke="#4f46e5"/>
+  <text x="331" y="209" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#312e81">SO Invitado (Win Server)</text>
+
+  <!-- Hypervisor -->
+  <rect x="54" y="250" width="364" height="58" rx="8" fill="#ea580c" stroke="#c2410c" stroke-width="2"/>
+  <text x="236" y="276" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#ffffff">Hipervisor Tipo 1 (Directo en hardware)</text>
+  <text x="236" y="294" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" fill="#ffedd5">Mínima sobrecarga · Máximo rendimiento</text>
+
+  <!-- Hardware -->
+  <rect x="54" y="322" width="364" height="54" rx="8" fill="#1e293b"/>
+  <text x="236" y="346" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="700" fill="#f8fafc">Hardware Físico Servidor</text>
+  <text x="236" y="364" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#cbd5e1">CPU (VT-x / AMD-V) · RAM ECC · Storage · NICs</text>
+
+  <!-- Right: Type 2 (Aula MAX) -->
+  <rect x="462" y="56" width="424" height="338" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="674" y="80" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#334155">HIPERVISOR TIPO 2 (Alojado · Entorno Aula)</text>
+  <text x="674" y="98" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#64748b">Oracle VirtualBox sobre Host MAX · Límite VMs: 10–12 GB RAM</text>
+
+  <!-- VMs + Host App -->
+  <rect x="480" y="114" width="128" height="100" rx="8" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.8"/>
+  <text x="544" y="134" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#312e81">VM Ubuntu</text>
+  <text x="544" y="152" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#4338ca">2 GB RAM</text>
+  <text x="544" y="170" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" fill="#4f46e5">Disco .vdi dinámico</text>
+  <text x="544" y="190" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="700" fill="#312e81">Snapshots / OVA</text>
+
+  <rect x="618" y="114" width="128" height="100" rx="8" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.8"/>
+  <text x="682" y="134" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#312e81">VM Win 10/11</text>
+  <text x="682" y="152" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#4338ca">4 GB RAM</text>
+  <text x="682" y="170" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" fill="#4f46e5">EFI + TPM 2.0 (W11)</text>
+  <text x="682" y="190" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="700" fill="#312e81">Guest Additions</text>
+
+  <rect x="756" y="114" width="112" height="100" rx="8" fill="#ecfeff" stroke="#0891b2" stroke-width="1.8"/>
+  <text x="812" y="142" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#155e75">Apps Host</text>
+  <text x="812" y="160" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#0e7490">Navegador</text>
+  <text x="812" y="176" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#0e7490">Terminal</text>
+  <text x="812" y="192" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#0e7490">IDE</text>
+
+  <!-- VirtualBox Layer -->
+  <rect x="480" y="224" width="266" height="38" rx="6" fill="#f97316" stroke="#c2410c" stroke-width="1.8"/>
+  <text x="613" y="247" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#ffffff">Oracle VirtualBox (GUI + VBoxManage)</text>
+
+  <!-- Host OS MAX -->
+  <rect x="480" y="272" width="388" height="42" rx="6" fill="#4f46e5" stroke="#312e81" stroke-width="1.8"/>
+  <text x="674" y="297" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="700" fill="#ffffff">SO Anfitrión (Host): MAX MAdrid_linuX (4–6 GB libres)</text>
+
+  <!-- Hardware -->
+  <rect x="480" y="324" width="388" height="52" rx="8" fill="#1e293b"/>
+  <text x="674" y="347" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="700" fill="#f8fafc">Hardware PC Aula (16 GB RAM · x86-64 VT-x/AMD-V)</text>
+  <text x="674" y="364" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#cbd5e1">Regla aula: Suma VMs activas ≤ 10–12 GB</text>
+</svg>

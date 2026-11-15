@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 380" role="img" aria-label="Esquema de particiones GPT en Dual Boot Windows y Ubuntu con UEFI">
+  <rect x="2" y="2" width="916" height="376" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="460" y="34" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="19" font-weight="700" fill="#0f172a">Particionado de Disco GPT en Arranque Dual (Windows 10/11 + Ubuntu)</text>
+
+  <!-- Disk Container -->
+  <rect x="34" y="68" width="852" height="140" rx="10" fill="#f8fafc" stroke="#64748b" stroke-width="2"/>
+  <text x="460" y="90" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="700" fill="#334155">DISCO VIRTUAL / FÍSICO GPT (ej. 60–65 GB VDI en VirtualBox con EFI activado)</text>
+
+  <!-- Part 1: ESP -->
+  <rect x="48" y="106" width="128" height="86" rx="6" fill="#ffedd5" stroke="#ea580c" stroke-width="2"/>
+  <text x="112" y="128" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#9a3412">ESP (EFI)</text>
+  <text x="112" y="146" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" fill="#c2410c">FAT32 · ~100–512 MB</text>
+  <text x="112" y="164" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" fill="#7c2d12">/boot/efi compartida</text>
+  <text x="112" y="180" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="700" fill="#9a3412">NO formatear al instalar Linux</text>
+
+  <!-- Part 2: MSR -->
+  <rect x="184" y="106" width="64" height="86" rx="6" fill="#e2e8f0" stroke="#64748b" stroke-width="1.5"/>
+  <text x="216" y="136" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#1e293b">MSR</text>
+  <text x="216" y="154" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" fill="#475569">16 MB</text>
+  <text x="216" y="170" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#475569">Reserva</text>
+
+  <!-- Part 3: Windows C: -->
+  <rect x="256" y="106" width="230" height="86" rx="6" fill="#eef2ff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="371" y="130" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="700" fill="#312e81">Windows (C:)</text>
+  <text x="371" y="148" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#4338ca">NTFS · ~35 GB</text>
+  <text x="371" y="166" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" fill="#3730a3">Reducida sin pérdida para crear espacio libre</text>
+  <text x="371" y="182" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="700" fill="#312e81">Desactivar Inicio Rápido</text>
+
+  <!-- Part 4: WinRE -->
+  <rect x="494" y="106" width="84" height="86" rx="6" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="536" y="134" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#312e81">WinRE</text>
+  <text x="536" y="152" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" fill="#4338ca">NTFS</text>
+  <text x="536" y="168" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#4338ca">~600 MB</text>
+
+  <!-- Part 5: Linux Root / -->
+  <rect x="586" y="106" width="180" height="86" rx="6" fill="#ecfeff" stroke="#0891b2" stroke-width="2"/>
+  <text x="676" y="130" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="700" fill="#155e75">Ubuntu Raíz (/)</text>
+  <text x="676" y="148" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#0e7490">ext4 · ~18–20 GB</text>
+  <text x="676" y="166" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" fill="#155e75">Sistema, /etc, /usr y /swapfile</text>
+
+  <!-- Part 6: Linux /home -->
+  <rect x="774" y="106" width="98" height="86" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="823" y="130" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="700" fill="#166534">/home</text>
+  <text x="823" y="148" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#15803d">ext4 (opc.)</text>
+  <text x="823" y="166" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#166534">Datos usuario</text>
+
+  <!-- Boot Flow explanation -->
+  <rect x="34" y="226" width="852" height="128" rx="10" fill="#fff7ed" stroke="#fdba74" stroke-width="1.5"/>
+  <text x="460" y="250" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13.5" font-weight="700" fill="#9a3412">¿CÓMO COEXISTEN LOS DOS GESTORES DE ARRANQUE EN LA PARTICIÓN ESP?</text>
+
+  <rect x="54" y="266" width="230" height="70" rx="6" fill="#ffffff" stroke="#ea580c"/>
+  <text x="169" y="288" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="700" fill="#c2410c">1. Firmware UEFI + NVRAM</text>
+  <text x="169" y="306" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#7c2d12">Prioridad BootOrder → ubuntu primero</text>
+  <text x="169" y="322" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" fill="#9a3412">shimx64.efi → grubx64.efi</text>
+
+  <line x1="284" y1="301" x2="328" y2="301" stroke="#ea580c" stroke-width="2.5"/>
+  <polygon points="338,301 326,295 326,307" fill="#ea580c"/>
+
+  <rect x="338" y="266" width="244" height="70" rx="6" fill="#ffffff" stroke="#0891b2"/>
+  <text x="460" y="288" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="700" fill="#155e75">2. Menú GRUB 2 (os-prober)</text>
+  <text x="460" y="306" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#0e7490">Opción A: Ubuntu (vmlinuz)</text>
+  <text x="460" y="322" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#0e7490">Opción B: Windows Boot Manager</text>
+
+  <line x1="582" y1="301" x2="626" y2="301" stroke="#4f46e5" stroke-width="2.5"/>
+  <polygon points="636,301 624,295 624,307" fill="#4f46e5"/>
+
+  <rect x="636" y="266" width="230" height="70" rx="6" fill="#ffffff" stroke="#4f46e5"/>
+  <text x="751" y="288" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="700" fill="#312e81">3. Carga en cadena (Chainload)</text>
+  <text x="751" y="306" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#4338ca">\EFI\Microsoft\Boot\bootmgfw.efi</text>
+  <text x="751" y="322" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" fill="#3730a3">→ Almacén BCD → winload.efi</text>
+</svg>

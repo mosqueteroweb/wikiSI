@@ -21,3 +21,4 @@ Las prácticas de clase integran en un escenario realista los conocimientos y de
 | Práctica | Bloque | Criterios | Laboratorio VirtualBox (RAM total) | Enunciado |
 | :---: | :---: | :---: | :--- | :--- |
 | **p01** | [RA1](../ra/RA1.md) | `RA1.a`–`RA1.h` | `DAM-Win10-Audit` (4 GB) + `DAM-Ubuntu-Node` (2 GB) = **6 GB** | [Auditoría Integral de Hardware, Arranque, Red y PRL](p01-ra1-auditoria-integral-sistema-red-enunciado.md) |
+| **p02** | [RA2](../ra/RA2.md) | `RA2.a`–`RA2.i` | `DAM-Estacion-Dual` (4 GB) + `DAM-Rescate-Puppy` (1 GB) = **5 GB** | [Despliegue Dual-Boot, Gestión de Paquetes, Arranque y Recuperación](p02-ra2-despliegue-dualboot-recuperacion-enunciado.md) |

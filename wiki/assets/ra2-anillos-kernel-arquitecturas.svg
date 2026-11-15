@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 430" role="img" aria-label="Anillos de protección de CPU y arquitecturas de kernel">
+  <rect x="2" y="2" width="916" height="426" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="460" y="34" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="19" font-weight="700" fill="#0f172a">Anillos de Privilegio (Ring 0 / Ring 3) y Arquitecturas de Kernel</text>
+
+  <!-- Left: Protection Rings -->
+  <rect x="26" y="54" width="330" height="352" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="191" y="78" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13.5" font-weight="700" fill="#334155">ANILLOS DE PROTECCIÓN x86-64</text>
+
+  <!-- Ring 3 outer -->
+  <circle cx="191" cy="228" r="126" fill="#eef2ff" stroke="#4f46e5" stroke-width="2.5"/>
+  <text x="191" y="122" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#312e81">Ring 3 · Espacio de Usuario</text>
+  <text x="191" y="138" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" fill="#4338ca">Apps, Navegador, IDE, Terminal</text>
+
+  <!-- Ring 1/2 middle -->
+  <circle cx="191" cy="238" r="82" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="191" y="176" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#64748b">Rings 1 y 2 (en desuso habitual)</text>
+
+  <!-- Ring 0 inner -->
+  <circle cx="191" cy="248" r="54" fill="#ea580c" stroke="#9a3412" stroke-width="2.5"/>
+  <text x="191" y="242" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="700" fill="#ffffff">Ring 0</text>
+  <text x="191" y="258" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" fill="#ffedd5">Modo Kernel</text>
+  <text x="191" y="272" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" fill="#ffedd5">Hardware directo</text>
+
+  <!-- Syscall badge -->
+  <rect x="76" y="366" width="230" height="28" rx="6" fill="#1e293b"/>
+  <text x="191" y="384" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#f8fafc">Pasarela controlada: Syscalls (open, read, fork)</text>
+
+  <!-- Right: Kernel Architectures -->
+  <rect x="372" y="54" width="522" height="352" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="633" y="78" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13.5" font-weight="700" fill="#334155">MODELOS DE NÚCLEO (KERNEL)</text>
+
+  <!-- Col 1: Monolithic -->
+  <rect x="388" y="96" width="154" height="292" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="465" y="116" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="700" fill="#c2410c">Monolítico</text>
+  <text x="465" y="132" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#64748b">(Linux / MAX / Ubuntu)</text>
+
+  <rect x="400" y="146" width="130" height="54" rx="6" fill="#e0e7ff" stroke="#4f46e5"/>
+  <text x="465" y="169" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#312e81">Ring 3: Apps</text>
+  <text x="465" y="186" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" fill="#4338ca">libc / POSIX</text>
+
+  <line x1="396" y1="210" x2="534" y2="210" stroke="#94a3b8" stroke-dasharray="4 3" stroke-width="1.5"/>
+
+  <rect x="400" y="220" width="130" height="122" rx="6" fill="#ffedd5" stroke="#ea580c" stroke-width="1.5"/>
+  <text x="465" y="240" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#9a3412">Ring 0: Todo unido</text>
+  <text x="465" y="258" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#7c2d12">• CPU y Memoria</text>
+  <text x="465" y="274" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#7c2d12">• VFS y Red</text>
+  <text x="465" y="290" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#7c2d12">• Drivers + Módulos</text>
+  <text x="465" y="314" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="700" fill="#c2410c">Máxima velocidad</text>
+  <text x="465" y="328" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" fill="#9a3412">(.ko dinámicos)</text>
+
+  <rect x="400" y="352" width="130" height="24" rx="4" fill="#334155"/>
+  <text x="465" y="368" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#ffffff">Hardware</text>
+
+  <!-- Col 2: Microkernel -->
+  <rect x="556" y="96" width="154" height="292" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="633" y="116" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="700" fill="#0891b2">Microkernel</text>
+  <text x="633" y="132" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#64748b">(MINIX / QNX / seL4)</text>
+
+  <rect x="568" y="146" width="130" height="114" rx="6" fill="#ecfeff" stroke="#0891b2" stroke-width="1.5"/>
+  <text x="633" y="166" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#155e75">Ring 3: Servidores</text>
+  <text x="633" y="184" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#0e7490">• Aplicaciones</text>
+  <text x="633" y="200" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#0e7490">• Drivers aislados</text>
+  <text x="633" y="216" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#0e7490">• Sist. de Archivos</text>
+  <text x="633" y="236" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="700" fill="#0891b2">Comunicación vía IPC</text>
+  <text x="633" y="250" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" fill="#155e75">Máximo aislamiento</text>
+
+  <line x1="564" y1="270" x2="702" y2="270" stroke="#94a3b8" stroke-dasharray="4 3" stroke-width="1.5"/>
+
+  <rect x="568" y="280" width="130" height="62" rx="6" fill="#ffedd5" stroke="#ea580c" stroke-width="1.5"/>
+  <text x="633" y="300" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#9a3412">Ring 0 Mínimo</text>
+  <text x="633" y="318" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" fill="#7c2d12">Hilos básicos + IPC</text>
+  <text x="633" y="332" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" fill="#7c2d12">e interrupciones</text>
+
+  <rect x="568" y="352" width="130" height="24" rx="4" fill="#334155"/>
+  <text x="633" y="368" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#ffffff">Hardware</text>
+
+  <!-- Col 3: Hybrid -->
+  <rect x="724" y="96" width="154" height="292" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="801" y="116" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="700" fill="#4f46e5">Híbrido</text>
+  <text x="801" y="132" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#64748b">(Windows NT / XNU)</text>
+
+  <rect x="736" y="146" width="130" height="72" rx="6" fill="#eef2ff" stroke="#4f46e5"/>
+  <text x="801" y="168" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#312e81">Ring 3: Usuario</text>
+  <text x="801" y="186" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" fill="#4338ca">Apps y subsistemas</text>
+  <text x="801" y="202" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" fill="#4338ca">(Win32 / servicios)</text>
+
+  <line x1="732" y1="228" x2="870" y2="228" stroke="#94a3b8" stroke-dasharray="4 3" stroke-width="1.5"/>
+
+  <rect x="736" y="238" width="130" height="104" rx="6" fill="#e0e7ff" stroke="#4f46e5" stroke-width="1.5"/>
+  <text x="801" y="258" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#312e81">Ring 0 Modular</text>
+  <text x="801" y="276" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#3730a3">• Microkernel NT</text>
+  <text x="801" y="292" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#3730a3">• Executive + HAL</text>
+  <text x="801" y="308" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#3730a3">• Drivers críticos</text>
+  <text x="801" y="328" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="700" fill="#4f46e5">Equilibrio modular/rend.</text>
+
+  <rect x="736" y="352" width="130" height="24" rx="4" fill="#334155"/>
+  <text x="801" y="368" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#ffffff">Hardware</text>
+</svg>

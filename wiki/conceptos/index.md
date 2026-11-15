@@ -27,9 +27,17 @@ Páginas de referencia teórica del módulo **Sistemas Informáticos (0483)**. C
 
 ---
 
+## RA2 · Instalación y Virtualización de Sistemas Operativos (Completado ✅)
+
+1. [Arquitectura, Elementos Funcionales y Clasificación de Sistemas Operativos](ra2-arquitectura-funciones-sistema-operativo.md) (`RA2.a`, `RA2.b`)
+2. [Comparativa de Sistemas Operativos, Requisitos y Licencias](ra2-comparativa-so-licencias.md) (`RA2.c`)
+3. [Tecnologías de Virtualización y Laboratorio VirtualBox en MAX](ra2-virtualizacion-virtualbox-max.md) (`RA2.d`, `RA2.g`)
+4. [Planificación, Particionado GPT/UEFI e Instalación Dual-Boot](ra2-planificacion-instalacion-dual-boot.md) (`RA2.d`, `RA2.e`, `RA2.i`)
+5. [Gestores de Arranque: GRUB2, Windows BCD y Reparación](ra2-gestores-arranque-grub-bcd.md) (`RA2.e`, `RA2.f`)
+6. [Gestión de Aplicaciones, Actualización y Recuperación del Sistema](ra2-gestion-aplicaciones-actualizacion-recuperacion.md) (`RA2.f`, `RA2.h`, `RA2.i`)
+
 ## Próximos Bloques Planificados
 
-- **[RA2 · Instalación y virtualización de sistemas operativos](../ra/RA2.md)**
 - **[RA3 · Sistemas de archivos, particiones y copias de seguridad](../ra/RA3.md)**
 - **[RA4 · Administración, usuarios, permisos, procesos y monitorización](../ra/RA4.md)**
 - **[RA5 · Interconexión de sistemas en red y TCP/IP](../ra/RA5.md)**

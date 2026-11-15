@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 400" role="img" aria-label="Escalera de recuperación del sistema en 4 niveles">
+  <rect x="2" y="2" width="916" height="396" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="460" y="34" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="19" font-weight="700" fill="#0f172a">Estrategia de Recuperación del Sistema Operativo en 4 Niveles</text>
+
+  <!-- Step 1 -->
+  <rect x="40" y="64" width="840" height="68" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <circle cx="80" cy="98" r="20" fill="#16a34a"/>
+  <text x="80" y="104" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700" fill="#ffffff">1</text>
+  <text x="118" y="88" font-family="system-ui, -apple-system, sans-serif" font-size="13.5" font-weight="700" fill="#166534">Instantánea de Virtualización (VirtualBox Snapshot) — Reversión en segundos</text>
+  <text x="118" y="110" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#14532d">Ideal en laboratorio antes de tocar particiones, GRUB o drivers: VBoxManage snapshot &lt;VM&gt; restore &lt;nombre&gt;</text>
+
+  <!-- Step 2 -->
+  <rect x="40" y="148" width="840" height="68" rx="10" fill="#ecfeff" stroke="#0891b2" stroke-width="2"/>
+  <circle cx="80" cy="182" r="20" fill="#0891b2"/>
+  <text x="80" y="188" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700" fill="#ffffff">2</text>
+  <text x="118" y="172" font-family="system-ui, -apple-system, sans-serif" font-size="13.5" font-weight="700" fill="#155e75">Puntos de Control del Sistema Operativo — Sin perder datos personales</text>
+  <text x="118" y="194" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#164e63">MAX / Ubuntu / Mint: Timeshift (RSYNC / BTRFS) · Windows 10/11: Puntos de Restauración (rstrui.exe)</text>
+
+  <!-- Step 3 -->
+  <rect x="40" y="232" width="840" height="68" rx="10" fill="#eef2ff" stroke="#4f46e5" stroke-width="2"/>
+  <circle cx="80" cy="266" r="20" fill="#4f46e5"/>
+  <text x="80" y="272" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700" fill="#ffffff">3</text>
+  <text x="118" y="256" font-family="system-ui, -apple-system, sans-serif" font-size="13.5" font-weight="700" fill="#312e81">Reparación de Integridad en Caliente — Cuando el sistema aún arranca</text>
+  <text x="118" y="278" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#3730a3">Linux: dpkg --configure -a &amp;&amp; apt --fix-broken install · Windows: DISM /RestoreHealth + sfc /scannow</text>
+
+  <!-- Step 4 -->
+  <rect x="40" y="316" width="840" height="68" rx="10" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+  <circle cx="80" cy="350" r="20" fill="#ea580c"/>
+  <text x="80" y="356" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700" fill="#ffffff">4</text>
+  <text x="118" y="340" font-family="system-ui, -apple-system, sans-serif" font-size="13.5" font-weight="700" fill="#9a3412">Rescate Externo (Sistema no arranca) — Live USB o WinRE</text>
+  <text x="118" y="362" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#7c2d12">Ubuntu Live + chroot → grub-install &amp;&amp; update-grub · WinRE Símbolo del sistema → bcdboot C:\Windows /s S: /f UEFI</text>
+</svg>

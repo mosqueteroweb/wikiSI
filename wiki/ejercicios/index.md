@@ -27,6 +27,14 @@ Cada ejercicio incluye:
 
 ---
 
+## RA2 · Instalación, Dual-Boot, Virtualización, Paquetes y Recuperación (Completado ✅)
+
+1. [e06 · Verificación de ISOs, Licencias y Provisionamiento VM UEFI en VirtualBox](e06-ra2-verificacion-isos-creacion-vm-virtualbox.md) (`RA2.a`, `RA2.c`, `RA2.d`, `RA2.g` · 6 GB RAM con Win11 + Mint)
+2. [e07 · Planificación e Instalación Dual-Boot Windows + Ubuntu en UEFI/GPT](e07-ra2-instalacion-dual-boot-windows-ubuntu.md) (`RA2.d`, `RA2.e`, `RA2.g` · 4 GB RAM)
+3. [e08 · Configuración y Reparación de Arranque Dual-Boot (GRUB2 y BCD)](e08-ra2-configuracion-reparacion-grub-bcd.md) (`RA2.e`, `RA2.f` · 4 GB RAM)
+4. [e09 · Gestión Profesional de Aplicaciones: `apt`, `dpkg`, Snap y `winget`](e09-ra2-gestion-paquetes-apt-dpkg-winget.md) (`RA2.h` · 6 GB RAM con Ubuntu + Win10)
+5. [e10 · Recuperación ante Desastres: Snapshots, Timeshift, DISM/SFC y Acta Técnica](e10-ra2-recuperacion-snapshots-timeshift-dism.md) (`RA2.f`, `RA2.g`, `RA2.i` · 6 GB RAM con Mint + Win10)
+
 ## Otros Bloques
 
-*Los ejercicios de RA2–RA7 se publicarán secuencialmente tras completar cada bloque.*
+*Los ejercicios de RA3–RA7 se publicarán secuencialmente tras completar cada bloque.*

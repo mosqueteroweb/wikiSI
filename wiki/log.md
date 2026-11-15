@@ -11,6 +11,16 @@ Bitácora de operaciones (*ingest*, *compile*, *lint*, *publish*) ejecutadas sob
 
 ---
 
+## [2026-11-15] Compilación completa del bloque RA2 (6 conceptos, 6 SVGs, 5 ejercicios `e06`–`e10`, práctica `p02` y banco de evaluación privado)
+
+- **Fuentes procesadas (`raw/procesados/`):** `ra2-arquitectura-so-licencias.md`, `ra2-virtualizacion-planificacion-instalacion.md`, `ra2-arranque-aplicaciones-recuperacion-doc.md`.
+- **Conceptos publicados (`wiki/conceptos/`):** 6 páginas completas cubriendo `RA2.a`–`RA2.i` con tabs duales MAX/Ubuntu y Windows 10/11, plus 6 diagramas SVG locales (`wiki/assets/ra2-*.svg`).
+- **Ejercicios resueltos (`wiki/ejercicios/`):** `e06`–`e10` con presupuesto de RAM $\le 6\text{ GB}$ sobre hosts MAX de 16 GB.
+- **Práctica Integradora (`wiki/practicas/`):** Enunciado público `p02` (`DAM-Estacion-Dual` 4 GB + `DAM-Rescate-Puppy` 1 GB = 5 GB) y solución docente marcada con `publicar: false`.
+- **Evaluación privada (`privado_evaluacion/`):** Examen teórico-práctico RA2 (18 preguntas + bloque Moodle GIFT + 3 supuestos), solucionario y rúbrica `RA2.a`–`RA2.i` (excluido de Git vía `.gitignore`).
+
+---
+
 ## [2026-11-15] Compilación completa del bloque RA1 (6 conceptos, 6 SVGs, 5 ejercicios, práctica p01 y banco de evaluación privado)
 
 - **Tipo:** `ingest` · `compile` · `publish`

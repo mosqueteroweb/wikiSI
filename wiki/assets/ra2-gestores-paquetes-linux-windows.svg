@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 390" role="img" aria-label="Gestores de paquetes en Linux (apt/dpkg/Snap) y Windows (winget/msiexec)">
+  <rect x="2" y="2" width="916" height="386" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="460" y="34" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="19" font-weight="700" fill="#0f172a">Gestión de Aplicaciones y Paquetes: Linux (MAX / Ubuntu) vs. Windows 10/11</text>
+
+  <!-- Left: Linux -->
+  <rect x="30" y="54" width="420" height="312" rx="10" fill="#fff7ed" stroke="#fdba74" stroke-width="1.8"/>
+  <text x="240" y="80" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#9a3412">MAX / UBUNTU / LINUX MINT (Ecosistema Debian)</text>
+
+  <rect x="52" y="98" width="176" height="72" rx="8" fill="#ffffff" stroke="#ea580c" stroke-width="1.5"/>
+  <text x="140" y="120" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#c2410c">Repositorios APT</text>
+  <text x="140" y="138" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#7c2d12">/etc/apt/sources.list(.d)</text>
+  <text x="140" y="156" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" fill="#9a3412">Firmas GPG verificadas</text>
+
+  <line x1="228" y1="134" x2="262" y2="134" stroke="#ea580c" stroke-width="2.5"/>
+  <polygon points="272,134 260,128 260,140" fill="#ea580c"/>
+
+  <rect x="272" y="98" width="156" height="72" rx="8" fill="#ffedd5" stroke="#ea580c" stroke-width="2"/>
+  <text x="350" y="120" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="700" fill="#9a3412">APT (Alto Nivel)</text>
+  <text x="350" y="138" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#7c2d12">Resuelve dependencias</text>
+  <text x="350" y="156" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="700" fill="#c2410c">apt update · install · purge</text>
+
+  <line x1="350" y1="170" x2="350" y2="198" stroke="#ea580c" stroke-width="2.5"/>
+  <polygon points="350,206 344,194 356,194" fill="#ea580c"/>
+
+  <rect x="52" y="206" width="376" height="62" rx="8" fill="#ffffff" stroke="#c2410c" stroke-width="1.5"/>
+  <text x="240" y="228" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#9a3412">DPKG (Bajo Nivel · Paquetes .deb locales)</text>
+  <text x="240" y="248" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" fill="#7c2d12">dpkg -i archivo.deb · dpkg -l · Si faltan libs → apt --fix-broken install</text>
+
+  <rect x="52" y="284" width="376" height="64" rx="8" fill="#ecfeff" stroke="#0891b2" stroke-width="1.5"/>
+  <text x="240" y="306" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#155e75">Contenedores Universales (Sandboxing + Dependencias)</text>
+  <text x="240" y="326" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" fill="#0e7490">Snap (Ubuntu) · Flatpak (Linux Mint) · AppImage (Ejecutable portátil)</text>
+
+  <!-- Right: Windows -->
+  <rect x="470" y="54" width="420" height="312" rx="10" fill="#eef2ff" stroke="#a5b4fc" stroke-width="1.8"/>
+  <text x="680" y="80" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#312e81">WINDOWS 10 / WINDOWS 11</text>
+
+  <rect x="492" y="98" width="176" height="72" rx="8" fill="#ffffff" stroke="#4f46e5" stroke-width="1.5"/>
+  <text x="580" y="120" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#3730a3">Catálogo Winget</text>
+  <text x="580" y="138" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#4338ca">winget-pkgs + MS Store</text>
+  <text x="580" y="156" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" fill="#4f46e5">Hashes SHA-256 validados</text>
+
+  <line x1="668" y1="134" x2="702" y2="134" stroke="#4f46e5" stroke-width="2.5"/>
+  <polygon points="712,134 700,128 700,140" fill="#4f46e5"/>
+
+  <rect x="712" y="98" width="156" height="72" rx="8" fill="#e0e7ff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="790" y="120" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="700" fill="#312e81">Winget CLI</text>
+  <text x="790" y="138" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#3730a3">Automatiza descarga</text>
+  <text x="790" y="156" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="700" fill="#4f46e5">search · install · upgrade</text>
+
+  <line x1="790" y1="170" x2="790" y2="198" stroke="#4f46e5" stroke-width="2.5"/>
+  <polygon points="790,206 784,194 796,194" fill="#4f46e5"/>
+
+  <rect x="492" y="206" width="376" height="62" rx="8" fill="#ffffff" stroke="#4338ca" stroke-width="1.5"/>
+  <text x="680" y="228" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#312e81">Instaladores Nativos (.msi / .exe / .msix)</text>
+  <text x="680" y="248" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" fill="#4338ca">msiexec /i app.msi /qn · winget export -o apps.json (clonado rápido)</text>
+
+  <rect x="492" y="284" width="376" height="64" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="680" y="306" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#166534">Actualización del Propio Sistema Operativo</text>
+  <text x="680" y="326" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" fill="#15803d">Linux: apt full-upgrade (kernel + apps) · Windows: Windows Update</text>
+</svg>
