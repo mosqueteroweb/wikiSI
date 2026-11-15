@@ -1,0 +1,25 @@
+INHERIT: mkdocs.yml
+
+site_name: "wikiSI · Portal Docente Completo (LOCAL · PRIVADO)"
+site_url: "http://127.0.0.1:8000/"
+site_dir: site_docente
+
+theme:
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: deep purple
+      toggle:
+        icon: material/brightness-7
+        name: Cambiar a modo oscuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: deep purple
+      toggle:
+        icon: material/brightness-4
+        name: Cambiar a modo claro
+
+hooks:
+  - scripts/teacher_portal.py

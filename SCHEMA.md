@@ -43,10 +43,12 @@ Toda guía paso a paso, ejercicio práctico, práctica integradora, comando de c
 wikiSI/
 ├── PLAN_WIKISI.md            # Plan arquitectónico general
 ├── SCHEMA.md                 # Este documento normativo
-├── mkdocs.yml                # Configuración de compilación MkDocs Material
+├── mkdocs.yml                # Web pública de alumnos (GitHub Pages)
+├── mkdocs.docente.yml        # Portal Docente Local completo (http://127.0.0.1:8000)
 ├── requirements.txt          # Dependencias Python fijadas
 ├── scripts/
-│   └── filter_unpublished.py # Hook de exclusión de páginas con publicar: false
+│   ├── filter_unpublished.py # Hook público: excluye páginas con publicar: false
+│   └── teacher_portal.py     # Hook docente local: añade soluciones, privado/, raw/ y Graph View
 ├── raw/                      # CAPA 1: INMUTABLE (fuentes originales)
 │   ├── propios/              # Apuntes, PDFs y enlaces del profesor
 │   ├── inbox/                # Fuentes recolectadas pendientes de ingesta
@@ -66,9 +68,10 @@ wikiSI/
     └── rubricas/             # Rúbricas trazadas por RAx.CEy
 ```
 
-### Regla crítica anti-filtraciones
-1. `privado_evaluacion/` debe figurar siempre en `.gitignore`. Antes de cualquier `git commit` o `git push`, el agente verificará que ningún archivo de `privado_evaluacion/` esté en el área de preparación (*staging*).
+### Regla crítica anti-filtraciones y publicación dual
+1. `privado_evaluacion/`, `site_docente/` y `.cache_docente/` deben figurar siempre en `.gitignore`. Antes de cualquier `git commit` o `git push`, el agente verificará que ningún archivo de `privado_evaluacion/` esté en el área de preparación (*staging*).
 2. Ninguna página de `wiki/` puede enlazar ni incrustar contenido procedente de `privado_evaluacion/`.
+3. **Dos vistas sobre una única fuente:** el material para alumnos (`publicar: true` en `wiki/`) se publica en **ambas webs** (GitHub Pages pública vía `mkdocs.yml` + Portal Docente Local vía `mkdocs.docente.yml`), mientras que lo exclusivo del profesor (`publicar: false`, `privado_evaluacion/`, `raw/procesados/` y el `Graph View` completo) se sirve **únicamente en el Portal Docente Local** y nunca sale al repositorio público.
 
 ---
 
@@ -297,8 +300,13 @@ Cada bloque de RA se articula en **4 niveles**:
 
 ---
 
-## 8. Flujo de Mantenimiento (`ingest`, `lint`, `publish`)
+## 8. Flujo de Mantenimiento Operado por el Agente (`ingest`, `lint`, `publish`)
 
-1. **Ingesta (`ingest`):** Leer nuevas fuentes en `raw/propios/` o `raw/inbox/`, validar nivel de credibilidad (descartando Nivel 3 en `raw/descartados.txt`), sintetizar en `wiki/` actualizando los hubs `wiki/ra/RAx.md` y `wiki/index.md`, mover la fuente a `raw/procesados/` y registrar en `wiki/log.md`.
+El agente ejecuta íntegramente las tareas técnicas de evaluación, compilación y publicación en ambas vistas:
+
+1. **Propuesta e Ingesta (`ingest` · Esquema Karpathy):** Cuando el profesor aporta un nuevo recurso (URL, vídeo, PDF o apunte), el agente evalúa su credibilidad (Nivel 1/2 frente a Nivel 3 descartable en `raw/descartados.txt`), analiza su encaje curricular en `RA1`–`RA7` y acuerda con el profesor si se incorpora.
+   - Si se aprueba: sintetiza el recurso en `raw/procesados/`, integra en `wiki/` el contenido destinado al alumnado, actualiza `wiki/ra/RAx.md`, `wiki/index.md` y `wiki/log.md`, y genera o actualiza los materiales docentes exclusivos (`publicar: false` o `privado_evaluacion/`).
 2. **Auditoría (`lint`):** Comprobar periódicamente enlaces internos rotos, imágenes locales existentes en `wiki/assets/`, cumplimiento del presupuesto de RAM (<= 12 GB en VMs), coherencia curricular (`RAx.CEy`) y presencia de `## Recursos para profundizar` en conceptos.
-3. **Publicación (`publish`):** Verificar localmente con `.venv/bin/mkdocs build` que las páginas con `publicar: false` quedan excluidas y realizar push a `main` para activar el despliegue automático en GitHub Pages.
+3. **Publicación Dual (`publish`):**
+   - **Web pública de alumnos (`mkdocs.yml` → GitHub Pages):** el agente valida `.venv/bin/mkdocs build --strict` comprobando que las páginas con `publicar: false` quedan omitidas y `privado_evaluacion/` tiene `0` archivos en Git (`git ls-files privado_evaluacion/`), consolida el commit atómico y ejecuta `git push origin main` para desplegar en GitHub Pages.
+   - **Portal Docente Local (`mkdocs.docente.yml` → `http://127.0.0.1:8000`):** el agente valida `.venv/bin/mkdocs build -f mkdocs.docente.yml --strict` y mantiene actualizado el servidor local con todas las páginas públicas más las soluciones `publicar: false`, `privado_evaluacion/`, `raw/procesados/` y el `Graph View` recalculado dinámicamente.

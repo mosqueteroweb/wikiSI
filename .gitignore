@@ -4,6 +4,8 @@ privado_evaluacion/
 # Entorno Python y compilación MkDocs
 .venv/
 site/
+site_docente/
+.cache_docente/
 __pycache__/
 *.pyc
 
