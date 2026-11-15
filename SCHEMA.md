@@ -44,7 +44,7 @@ wikiSI/
 ├── PLAN_WIKISI.md            # Plan arquitectónico general
 ├── SCHEMA.md                 # Este documento normativo
 ├── mkdocs.yml                # Web pública de alumnos (GitHub Pages)
-├── mkdocs.docente.yml        # Portal Docente Local completo (http://127.0.0.1:8000)
+├── mkdocs.docente.yml        # Portal Docente Local completo (http://localhost:81 · 0.0.0.0:81)
 ├── requirements.txt          # Dependencias Python fijadas
 ├── scripts/
 │   ├── filter_unpublished.py # Hook público: excluye páginas con publicar: false
@@ -309,4 +309,4 @@ El agente ejecuta íntegramente las tareas técnicas de evaluación, compilació
 2. **Auditoría (`lint`):** Comprobar periódicamente enlaces internos rotos, imágenes locales existentes en `wiki/assets/`, cumplimiento del presupuesto de RAM (<= 12 GB en VMs), coherencia curricular (`RAx.CEy`) y presencia de `## Recursos para profundizar` en conceptos.
 3. **Publicación Dual (`publish`):**
    - **Web pública de alumnos (`mkdocs.yml` → GitHub Pages):** el agente valida `.venv/bin/mkdocs build --strict` comprobando que las páginas con `publicar: false` quedan omitidas y `privado_evaluacion/` tiene `0` archivos en Git (`git ls-files privado_evaluacion/`), consolida el commit atómico y ejecuta `git push origin main` para desplegar en GitHub Pages.
-   - **Portal Docente Local (`mkdocs.docente.yml` → `http://127.0.0.1:8000`):** el agente valida `.venv/bin/mkdocs build -f mkdocs.docente.yml --strict` y mantiene actualizado el servidor local con todas las páginas públicas más las soluciones `publicar: false`, `privado_evaluacion/`, `raw/procesados/` y el `Graph View` recalculado dinámicamente.
+   - **Portal Docente Local (`mkdocs.docente.yml` → `http://localhost:81` / `0.0.0.0:81`):** el agente valida `.venv/bin/mkdocs build -f mkdocs.docente.yml --strict` y mantiene actualizado el servidor local con todas las páginas públicas más las soluciones `publicar: false`, `privado_evaluacion/`, `raw/procesados/` y el `Graph View` recalculado dinámicamente.

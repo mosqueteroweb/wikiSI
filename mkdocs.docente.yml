@@ -1,8 +1,9 @@
 INHERIT: mkdocs.yml
 
 site_name: "wikiSI · Portal Docente Completo (LOCAL · PRIVADO)"
-site_url: "http://127.0.0.1:8000/"
+site_url: "http://localhost:81/"
 site_dir: site_docente
+dev_addr: "0.0.0.0:81"
 
 theme:
   palette:
