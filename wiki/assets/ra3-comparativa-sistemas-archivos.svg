@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 420" role="img" aria-label="Anatomía de un sistema de archivos POSIX e inodos frente a NTFS y comparativa">
+  <rect x="2" y="2" width="916" height="416" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="460" y="34" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="18.5" font-weight="700" fill="#0f172a">Anatomía de Sistemas de Archivos: Inodos POSIX (ext4) vs. NTFS y Btrfs</text>
+
+  <!-- Left panel: Directorio -> Inodo -> Bloques -->
+  <rect x="28" y="54" width="430" height="225" rx="10" fill="#f8fafc" stroke="#0891b2" stroke-width="2"/>
+  <text x="243" y="78" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13.5" font-weight="700" fill="#0e7490">1. Cómo resuelve ext4 un archivo (Nombre separado del Inodo)</text>
+
+  <rect x="44" y="96" width="125" height="90" rx="6" fill="#ecfeff" stroke="#06b6d4"/>
+  <text x="106" y="116" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="700" fill="#155e75">Directorio /doc</text>
+  <text x="106" y="136" text-anchor="middle" font-family="monospace" font-size="10.5" fill="#0f172a">apuntes.pdf -&gt; 4092</text>
+  <text x="106" y="154" text-anchor="middle" font-family="monospace" font-size="10.5" fill="#0f172a">copia.pdf  -&gt; 4092</text>
+  <text x="106" y="174" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" fill="#0e7490">(Hard link = mismo inodo)</text>
+
+  <line x1="169" y1="141" x2="195" y2="141" stroke="#0891b2" stroke-width="2"/>
+  <polygon points="203,141 193,136 193,146" fill="#0891b2"/>
+
+  <rect x="203" y="96" width="132" height="106" rx="6" fill="#ffffff" stroke="#0891b2" stroke-width="1.5"/>
+  <text x="269" y="115" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="700" fill="#155e75">Inodo #4092</text>
+  <text x="212" y="133" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#334155">• Tipo y Permisos (-rw-r--r--)</text>
+  <text x="212" y="149" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#334155">• UID / GID / Tamaño</text>
+  <text x="212" y="165" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#334155">• Fechas mtime/ctime</text>
+  <text x="212" y="181" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#334155">• Contador links: 2</text>
+  <text x="212" y="195" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="700" fill="#0e7490">• Punteros / Extents</text>
+
+  <line x1="335" y1="149" x2="355" y2="149" stroke="#0891b2" stroke-width="2"/>
+  <polygon points="363,149 353,144 353,154" fill="#0891b2"/>
+
+  <rect x="363" y="102" width="80" height="36" rx="5" fill="#cffafe" stroke="#0891b2"/>
+  <text x="403" y="124" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#164e63">Bloques 800-815</text>
+  <rect x="363" y="150" width="80" height="36" rx="5" fill="#cffafe" stroke="#0891b2"/>
+  <text x="403" y="172" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#164e63">Datos binarios</text>
+
+  <rect x="44" y="216" width="399" height="48" rx="6" fill="#fff7ed" stroke="#f97316"/>
+  <text x="243" y="236" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#9a3412">Superbloque + Journal ($JBD2)</text>
+  <text x="243" y="253" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" fill="#7c2d12">Registra transacciones antes de confirmar escritura -> evita corrupción tras cortes de luz</text>
+
+  <!-- Right panel: NTFS & CoW -->
+  <rect x="476" y="54" width="416" height="225" rx="10" fill="#f8fafc" stroke="#4f46e5" stroke-width="2"/>
+  <text x="684" y="78" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13.5" font-weight="700" fill="#3730a3">2. Alternativas clave en Windows y Linux moderno</text>
+
+  <rect x="492" y="96" width="384" height="78" rx="6" fill="#eef2ff" stroke="#6366f1"/>
+  <text x="684" y="116" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#312e81">NTFS (Windows 10 / 11)</text>
+  <text x="684" y="135" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" fill="#3730a3">Tabla Maestra de Archivos (MFT): guarda atributos, ACLs NTFS y datos pequeños inline.</text>
+  <text x="684" y="153" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" fill="#3730a3">Journal ($LogFile), cifrado EFS, cuotas y compresión transparente.</text>
+
+  <rect x="492" y="186" width="384" height="78" rx="6" fill="#f0fdf4" stroke="#16a34a"/>
+  <text x="684" y="206" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#166534">Btrfs (Linux CoW) vs. FAT32 / exFAT (Extraíbles)</text>
+  <text x="684" y="225" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" fill="#14532d">• Btrfs: Copy-on-Write, checksums CRC y snapshots instantáneos sin copiar datos.</text>
+  <text x="684" y="243" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" fill="#14532d">• FAT32 (máx. 4 GiB/archivo, ESP UEFI) vs. exFAT (USB sin límite 4 GiB, multi-SO).</text>
+
+  <!-- Bottom summary matrix -->
+  <rect x="28" y="294" width="864" height="106" rx="8" fill="#f1f5f9" stroke="#94a3b8"/>
+  <text x="460" y="316" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#0f172a">Guía rápida de elección por escenario en Sistemas Informáticos</text>
+  <text x="50" y="340" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#1e293b">• Partición raíz Linux estable: ext4 (o Btrfs si se usan snapshots nativos)   • Alto rendimiento I/O servidor Linux: XFS</text>
+  <text x="50" y="362" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#1e293b">• Sistema Windows y ACLs corporativas: NTFS   • Partición de arranque ESP (UEFI): FAT32 obligatorio</text>
+  <text x="50" y="384" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#1e293b">• Pendrive compartido Linux/Windows/macOS con ISOs mayores de 4 GiB: exFAT</text>
+</svg>

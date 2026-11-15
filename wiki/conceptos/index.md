@@ -36,9 +36,19 @@ Páginas de referencia teórica del módulo **Sistemas Informáticos (0483)**. C
 5. [Gestores de Arranque: GRUB2, Windows BCD y Reparación](ra2-gestores-arranque-grub-bcd.md) (`RA2.e`, `RA2.f`)
 6. [Gestión de Aplicaciones, Actualización y Recuperación del Sistema](ra2-gestion-aplicaciones-actualizacion-recuperacion.md) (`RA2.f`, `RA2.h`, `RA2.i`)
 
+---
+
+## RA3 · Gestión de la Información, Almacenamiento y Backups (Completado ✅)
+
+1. [Sistemas de Archivos: Anatomía y Comparativa Técnica](ra3-sistemas-archivos-anatomia-comparativa.md) (`RA3.a`)
+2. [Estructura y Función de los Directorios: FHS Linux vs. Windows](ra3-estructura-directorios-fhs-windows.md) (`RA3.b`, `RA3.c`)
+3. [Búsqueda, Localización de Información e Inventario de Software](ra3-busqueda-localizacion-informacion.md) (`RA3.d`, `RA3.h`)
+4. [Administración de Discos, Particiones, LVM y Matrices RAID](ra3-particiones-lvm-raid-administracion-discos.md) (`RA3.e`, `RA3.h`)
+5. [Diagnóstico, Chequeo, TRIM vs. Desfragmentación y Cifrado de Discos](ra3-chequeo-desfragmentacion-cifrado-discos.md) (`RA3.e`, `RA3.h`)
+6. [Copias de Seguridad, Clonación y Automatización de Tareas](ra3-copias-seguridad-clonacion-tareas-programadas.md) (`RA3.f`, `RA3.g`, `RA3.h`)
+
 ## Próximos Bloques Planificados
 
-- **[RA3 · Sistemas de archivos, particiones y copias de seguridad](../ra/RA3.md)**
 - **[RA4 · Administración, usuarios, permisos, procesos y monitorización](../ra/RA4.md)**
 - **[RA5 · Interconexión de sistemas en red y TCP/IP](../ra/RA5.md)**
 - **[RA6 · Operación de sistemas en red, servicios y dominios](../ra/RA6.md)**

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 400" role="img" aria-label="Arquitectura de Volúmenes Lógicos LVM en Linux en 3 capas">
+  <rect x="2" y="2" width="916" height="396" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="460" y="34" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="18.5" font-weight="700" fill="#0f172a">Arquitectura en Capas de LVM (Logical Volume Manager) en GNU/Linux</text>
+
+  <!-- Capa 1: Discos físicos y PVs -->
+  <rect x="34" y="56" width="852" height="92" rx="10" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+  <text x="52" y="78" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#9a3412">CAPA 1 · Volúmenes Físicos (PV - Physical Volumes) -&gt; pvcreate /dev/sdb1 /dev/sdc1</text>
+  <rect x="54" y="90" width="245" height="44" rx="6" fill="#ffffff" stroke="#f97316"/>
+  <text x="176" y="110" text-anchor="middle" font-family="monospace" font-size="12" font-weight="700" fill="#c2410c">/dev/sdb1 (Disco 10 GB)</text>
+  <text x="176" y="126" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#7c2d12">Etiquetado como PV</text>
+
+  <rect x="336" y="90" width="245" height="44" rx="6" fill="#ffffff" stroke="#f97316"/>
+  <text x="458" y="110" text-anchor="middle" font-family="monospace" font-size="12" font-weight="700" fill="#c2410c">/dev/sdc1 (Disco 10 GB)</text>
+  <text x="458" y="126" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#7c2d12">Etiquetado como PV</text>
+
+  <rect x="618" y="90" width="245" height="44" rx="6" fill="#ffedd5" stroke="#ea580c" stroke-dasharray="5,3"/>
+  <text x="740" y="110" text-anchor="middle" font-family="monospace" font-size="12" font-weight="700" fill="#9a3412">+ /dev/sdd1 (Futuro disco)</text>
+  <text x="740" y="126" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#9a3412">Ampliable con vgextend en caliente</text>
+
+  <!-- Capa 2: VG -->
+  <rect x="34" y="168" width="852" height="72" rx="10" fill="#eef2ff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="460" y="194" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#312e81">CAPA 2 · Grupo de Volúmenes (VG: vg_proyectos = 20 GB totales)</text>
+  <text x="460" y="218" text-anchor="middle" font-family="monospace" font-size="11.5" fill="#4338ca">vgcreate vg_proyectos /dev/sdb1 /dev/sdc1   |   Actúa como un gran depósito común de almacenamiento (PE de 4 MiB)</text>
+
+  <!-- Capa 3: LVs -->
+  <rect x="34" y="260" width="852" height="118" rx="10" fill="#ecfeff" stroke="#0891b2" stroke-width="2"/>
+  <text x="52" y="284" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#155e75">CAPA 3 · Volúmenes Lógicos (LV) + Sistema de Archivos -&gt; lvcreate / mkfs.ext4 / fstab</text>
+
+  <rect x="54" y="298" width="252" height="66" rx="6" fill="#ffffff" stroke="#0891b2"/>
+  <text x="180" y="319" text-anchor="middle" font-family="monospace" font-size="11.5" font-weight="700" fill="#0e7490">lv_codigo (8 GB -&gt; +4 GB)</text>
+  <text x="180" y="337" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#334155">ext4 montado en /srv/codigo</text>
+  <text x="180" y="353" text-anchor="middle" font-family="monospace" font-size="9.5" fill="#0e7490">lvextend -L +4G -r</text>
+
+  <rect x="334" y="298" width="252" height="66" rx="6" fill="#ffffff" stroke="#0891b2"/>
+  <text x="460" y="319" text-anchor="middle" font-family="monospace" font-size="11.5" font-weight="700" fill="#0e7490">lv_backups (8 GB)</text>
+  <text x="460" y="337" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#334155">ext4 montado en /mnt/backups</text>
+  <text x="460" y="353" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" fill="#0e7490">Admite LVM Snapshots para copia</text>
+
+  <rect x="614" y="298" width="250" height="66" rx="6" fill="#f1f5f9" stroke="#64748b" stroke-dasharray="4,3"/>
+  <text x="739" y="324" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="700" fill="#475569">Espacio libre en VG (4 GB)</text>
+  <text x="739" y="344" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#64748b">Reservado para crecer bajo demanda</text>
+</svg>

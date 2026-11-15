@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 400" role="img" aria-label="Estrategias de copias de seguridad Completa, Incremental y Diferencial más regla 3-2-1">
+  <rect x="2" y="2" width="916" height="396" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="460" y="34" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="18.5" font-weight="700" fill="#0f172a">Estrategias de Copias de Seguridad (Completa, Incremental, Diferencial) y Regla 3-2-1</text>
+
+  <!-- Col 1: Completa -->
+  <rect x="26" y="54" width="278" height="196" rx="10" fill="#eef2ff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="165" y="78" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13.5" font-weight="700" fill="#312e81">1. Copia Completa (Full)</text>
+  <rect x="44" y="92" width="242" height="30" rx="5" fill="#4f46e5"/><text x="165" y="111" text-anchor="middle" font-size="11" fill="#ffffff" font-family="system-ui">Lun: Todo (100 GB)</text>
+  <rect x="44" y="128" width="242" height="30" rx="5" fill="#4f46e5"/><text x="165" y="147" text-anchor="middle" font-size="11" fill="#ffffff" font-family="system-ui">Mar: Todo (105 GB)</text>
+  <rect x="44" y="164" width="242" height="30" rx="5" fill="#4f46e5"/><text x="165" y="183" text-anchor="middle" font-size="11" fill="#ffffff" font-family="system-ui">Mié: Todo (112 GB)</text>
+  <text x="165" y="216" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#312e81">Espacio: Máximo · Restauración: Mínima</text>
+  <text x="165" y="234" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#4338ca">(Solo necesitas 1 copia para recuperar)</text>
+
+  <!-- Col 2: Incremental -->
+  <rect x="321" y="54" width="278" height="196" rx="10" fill="#ecfeff" stroke="#0891b2" stroke-width="2"/>
+  <text x="460" y="78" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13.5" font-weight="700" fill="#155e75">2. Copia Incremental</text>
+  <rect x="339" y="92" width="242" height="30" rx="5" fill="#0891b2"/><text x="460" y="111" text-anchor="middle" font-size="11" fill="#ffffff" font-family="system-ui">Lun: Full base (100 GB)</text>
+  <rect x="339" y="128" width="90" height="30" rx="5" fill="#06b6d4"/><text x="384" y="147" text-anchor="middle" font-size="10.5" fill="#ffffff" font-family="system-ui">Mar: +5 GB</text>
+  <rect x="437" y="128" width="144" height="30" rx="5" fill="#ffffff" stroke="#94a3b8"/><text x="509" y="147" text-anchor="middle" font-size="10" fill="#475569">Cambios desde Lun</text>
+  <rect x="339" y="164" width="98" height="30" rx="5" fill="#06b6d4"/><text x="388" y="183" text-anchor="middle" font-size="10.5" fill="#ffffff" font-family="system-ui">Mié: +7 GB</text>
+  <rect x="445" y="164" width="136" height="30" rx="5" fill="#ffffff" stroke="#94a3b8"/><text x="513" y="183" text-anchor="middle" font-size="10" fill="#475569">Cambios desde Mar</text>
+  <text x="460" y="216" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#155e75">Espacio: Mínimo · Restauración: Lenta</text>
+  <text x="460" y="234" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#0e7490">(Requiere Full + TODAS las incrementales)</text>
+
+  <!-- Col 3: Diferencial -->
+  <rect x="616" y="54" width="278" height="196" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="755" y="78" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13.5" font-weight="700" fill="#166534">3. Copia Diferencial</text>
+  <rect x="634" y="92" width="242" height="30" rx="5" fill="#16a34a"/><text x="755" y="111" text-anchor="middle" font-size="11" fill="#ffffff" font-family="system-ui">Lun: Full base (100 GB)</text>
+  <rect x="634" y="128" width="90" height="30" rx="5" fill="#22c55e"/><text x="679" y="147" text-anchor="middle" font-size="10.5" fill="#ffffff" font-family="system-ui">Mar: +5 GB</text>
+  <rect x="732" y="128" width="144" height="30" rx="5" fill="#ffffff" stroke="#94a3b8"/><text x="804" y="147" text-anchor="middle" font-size="10" fill="#475569">Cambios desde Lun</text>
+  <rect x="634" y="164" width="140" height="30" rx="5" fill="#22c55e"/><text x="704" y="183" text-anchor="middle" font-size="10.5" fill="#ffffff" font-family="system-ui">Mié: +12 GB (acum.)</text>
+  <rect x="782" y="164" width="94" height="30" rx="5" fill="#ffffff" stroke="#94a3b8"/><text x="829" y="183" text-anchor="middle" font-size="10" fill="#475569">Desde Lun</text>
+  <text x="755" y="216" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#166534">Equilibrio ideal de restauración</text>
+  <text x="755" y="234" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#15803d">(Solo necesita Full + Última Diferencial)</text>
+
+  <!-- Regla 3-2-1 Footer -->
+  <rect x="26" y="268" width="868" height="114" rx="10" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+  <text x="460" y="294" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#9a3412">REGLA DE ORO 3-2-1 Y AUTOMATIZACIÓN PROGRAMADA</text>
+
+  <rect x="44" y="308" width="262" height="58" rx="6" fill="#ffffff" stroke="#f97316"/>
+  <text x="175" y="328" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#c2410c">3 Copias Totales</text>
+  <text x="175" y="348" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" fill="#7c2d12">1 dato original + 2 backups verificados</text>
+
+  <rect x="329" y="308" width="262" height="58" rx="6" fill="#ffffff" stroke="#f97316"/>
+  <text x="460" y="328" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#c2410c">2 Soportes Distintos</text>
+  <text x="460" y="348" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" fill="#7c2d12">Ej. SSD estación + NAS/USB (cron / schtasks)</text>
+
+  <rect x="614" y="308" width="262" height="58" rx="6" fill="#ffffff" stroke="#f97316"/>
+  <text x="745" y="328" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#c2410c">1 Copia Externa (Off-Site)</text>
+  <text x="745" y="348" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" fill="#7c2d12">Remota / cifrada / desconectada ante ransomware</text>
+</svg>

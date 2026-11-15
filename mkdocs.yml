@@ -83,6 +83,12 @@ nav:
       - "RA2 · Planificación y Dual-Boot UEFI/GPT": conceptos/ra2-planificacion-instalacion-dual-boot.md
       - "RA2 · Gestores de Arranque GRUB2 y BCD": conceptos/ra2-gestores-arranque-grub-bcd.md
       - "RA2 · Paquetes, Parches y Recuperación": conceptos/ra2-gestion-aplicaciones-actualizacion-recuperacion.md
+      - "RA3 · Sistemas de Archivos e Inodos": conceptos/ra3-sistemas-archivos-anatomia-comparativa.md
+      - "RA3 · Directorios FHS vs. Windows": conceptos/ra3-estructura-directorios-fhs-windows.md
+      - "RA3 · Búsqueda e Inventario": conceptos/ra3-busqueda-localizacion-informacion.md
+      - "RA3 · Discos, LVM y RAID": conceptos/ra3-particiones-lvm-raid-administracion-discos.md
+      - "RA3 · SMART, TRIM y Cifrado LUKS/BitLocker": conceptos/ra3-chequeo-desfragmentacion-cifrado-discos.md
+      - "RA3 · Copias de Seguridad y Tareas (cron/schtasks)": conceptos/ra3-copias-seguridad-clonacion-tareas-programadas.md
   - Ejercicios:
       - Índice de Ejercicios: ejercicios/index.md
       - "e01 · Auditoría CPU y Placa Base": ejercicios/e01-ra1-auditoria-hardware-cpu-placas.md
@@ -95,8 +101,14 @@ nav:
       - "e08 · Reparación GRUB2 y Windows BCD": ejercicios/e08-ra2-configuracion-reparacion-grub-bcd.md
       - "e09 · Paquetes apt, dpkg y winget": ejercicios/e09-ra2-gestion-paquetes-apt-dpkg-winget.md
       - "e10 · Snapshots, Timeshift y DISM": ejercicios/e10-ra2-recuperacion-snapshots-timeshift-dism.md
+      - "e11 · FHS, Inodos, Enlaces y Búsqueda": ejercicios/e11-ra3-exploracion-fhs-inodos-enlaces-busqueda.md
+      - "e12 · Particionado GPT y fstab/DiskPart": ejercicios/e12-ra3-particionado-montaje-fstab-diskpart.md
+      - "e13 · Volúmenes Lógicos LVM y RAID 1": ejercicios/e13-ra3-volumenes-logicos-lvm-raid-mdadm.md
+      - "e14 · SMART, fsck/chkdsk y Cifrado LUKS": ejercicios/e14-ra3-chequeo-smart-cifrado-luks-bitlocker.md
+      - "e15 · Backups rsync/tar y cron/schtasks": ejercicios/e15-ra3-backups-rsync-tar-cron-schtasks.md
   - Prácticas:
       - Índice de Prácticas: practicas/index.md
       - "p01 · Auditoría Integral RA1 (Enunciado)": practicas/p01-ra1-auditoria-integral-sistema-red-enunciado.md
       - "p02 · Despliegue Dual-Boot RA2 (Enunciado)": practicas/p02-ra2-despliegue-dualboot-recuperacion-enunciado.md
+      - "p03 · Almacenamiento, Cifrado y Backups RA3 (Enunciado)": practicas/p03-ra3-almacenamiento-lvm-cifrado-backups-enunciado.md
   - Registro: log.md

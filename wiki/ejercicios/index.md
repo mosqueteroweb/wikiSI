@@ -35,6 +35,16 @@ Cada ejercicio incluye:
 4. [e09 · Gestión Profesional de Aplicaciones: `apt`, `dpkg`, Snap y `winget`](e09-ra2-gestion-paquetes-apt-dpkg-winget.md) (`RA2.h` · 6 GB RAM con Ubuntu + Win10)
 5. [e10 · Recuperación ante Desastres: Snapshots, Timeshift, DISM/SFC y Acta Técnica](e10-ra2-recuperacion-snapshots-timeshift-dism.md) (`RA2.f`, `RA2.g`, `RA2.i` · 6 GB RAM con Mint + Win10)
 
+---
+
+## RA3 · Sistemas de Archivos, Directorios, Búsquedas, LVM/RAID, Cifrado y Backups (Completado ✅)
+
+1. [e11 · Exploración FHS, Inodos, Enlaces y Búsqueda Avanzada](e11-ra3-exploracion-fhs-inodos-enlaces-busqueda.md) (`RA3.a`–`RA3.d` · 6 GB RAM con Ubuntu + Win10)
+2. [e12 · Particionado GPT, Formateo y Montaje Persistente (`fstab` vs. `DiskPart`)](e12-ra3-particionado-montaje-fstab-diskpart.md) (`RA3.a`, `RA3.e` · 6 GB RAM)
+3. [e13 · Volúmenes Lógicos `LVM` y Matrices `RAID 1` por Software (`mdadm`)](e13-ra3-volumenes-logicos-lvm-raid-mdadm.md) (`RA3.e`, `RA3.h` · 2 GB RAM)
+4. [e14 · Chequeo SMART, Reparación Lógica (`fsck`/`chkdsk`), TRIM y Cifrado `LUKS` / `BitLocker`](e14-ra3-chequeo-smart-cifrado-luks-bitlocker.md) (`RA3.e`, `RA3.h` · 6 GB RAM)
+5. [e15 · Copias de Seguridad con `rsync`, `tar` y `Robocopy` más Automatización (`cron` y `schtasks`)](e15-ra3-backups-rsync-tar-cron-schtasks.md) (`RA3.f`, `RA3.g`, `RA3.h` · 6 GB RAM)
+
 ## Otros Bloques
 
-*Los ejercicios de RA3–RA7 se publicarán secuencialmente tras completar cada bloque.*
+*Los ejercicios de RA4–RA7 se publicarán secuencialmente tras completar cada bloque.*
