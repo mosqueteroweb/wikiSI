@@ -53,6 +53,14 @@ Cada ejercicio incluye:
 4. [e19 · Auditoría de Logs (`journalctl`/Eventos) y Monitorización de Rendimiento](e19-ra4-auditoria-logs-journalctl-eventviewer-rendimiento.md) (`RA4.f`, `RA4.g` · 6 GB RAM)
 5. [e20 · Preparación de Estación de Desarrollo DAM: Variables, `PATH` y Scripting](e20-ra4-preparacion-estacion-desarrollo-dam-variables.md) (`RA4.e`, `RA4.g`, `RA4.h` · 6 GB RAM)
 
+## RA5 · Redes TCP/IP, Subredes VLSM, NAT, Diagnóstico y Protocolos Seguros (`RA5.a`–`RA5.h`)
+
+1. [e21 · Cálculo de Subredes IPv4, Planificación VLSM y Compresión IPv6](e21-ra5-calculo-subredes-cidr-vlsm-ipv6.md) (`RA5.a` · 2 GB RAM)
+2. [e22 · Configuración de Red con Netplan, `nmcli` y PowerShell en Red Interna](e22-ra5-configuracion-red-netplan-nmcli-powershell.md) (`RA5.a`, `RA5.b` · 6 GB RAM)
+3. [e23 · VM Router Linux (`ip_forward`, NAT `MASQUERADE`) y Enrutamiento WAN](e23-ra5-router-nat-masquerade-enlaces-wan.md) (`RA5.d`, `RA5.e` · 4 GB RAM)
+4. [e24 · Auditoría de Puertos (`ss`/`Get-NetTCPConnection`) y Diagnóstico *Bottom-Up*](e24-ra5-auditoria-puertos-diagnostico-red-ss-wireshark.md) (`RA5.c`, `RA5.f`, `RA5.g` · 6 GB RAM)
+5. [e25 · Comunicaciones Seguras: SSH por Claves Ed25519, SFTP y Verificación TLS](e25-ra5-comunicaciones-seguras-ssh-claves-sftp-tls.md) (`RA5.f`, `RA5.h` · 6 GB RAM)
+
 ## Otros Bloques
 
-*Los ejercicios de RA5–RA7 se publicarán secuencialmente tras completar cada bloque.*
+*Los ejercicios de RA6–RA7 se publicarán secuencialmente tras completar cada bloque.*

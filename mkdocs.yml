@@ -95,6 +95,12 @@ nav:
       - "RA4 · Procesos y Servicios (systemd/Win)": conceptos/ra4-gestion-procesos-servicios-systemd-windows.md
       - "RA4 · Comandos, Variables y Scripting": conceptos/ra4-comandos-administracion-variables-scripting.md
       - "RA4 · Monitorización, Logs y Entorno DAM": conceptos/ra4-monitorizacion-logs-optimizacion-entorno-dam.md
+      - "RA5 · TCP/IP, IPv4/IPv6 y Subredes VLSM": conceptos/ra5-arquitectura-tcpip-direccionamiento-ipv4-ipv6.md
+      - "RA5 · Netplan, NetworkManager y PowerShell": conceptos/ra5-configuracion-red-clientes-netplan-powershell.md
+      - "RA5 · LAN Cableada y Wi-Fi Segura": conceptos/ra5-redes-lan-cableadas-inalambricas-wifi-seguridad.md
+      - "RA5 · Interconexión, VLANs, NAT y WAN": conceptos/ra5-interconexion-enrutamiento-nat-acceso-wan.md
+      - "RA5 · Puertos y Diagnóstico de Red": conceptos/ra5-gestion-puertos-herramientas-diagnostico-red.md
+      - "RA5 · Protocolos Seguros (TLS, SSH, SFTP)": conceptos/ra5-protocolos-seguros-comunicaciones-tls-ssh-vpn.md
   - Ejercicios:
       - Índice de Ejercicios: ejercicios/index.md
       - "e01 · Auditoría CPU y Placa Base": ejercicios/e01-ra1-auditoria-hardware-cpu-placas.md
@@ -117,10 +123,16 @@ nav:
       - "e18 · Procesos, Señales y Servicios": ejercicios/e18-ra4-control-procesos-senales-servicios-systemd.md
       - "e19 · Logs journalctl, Eventos y Métricas": ejercicios/e19-ra4-auditoria-logs-journalctl-eventviewer-rendimiento.md
       - "e20 · Entorno DAM, Variables y Scripting": ejercicios/e20-ra4-preparacion-estacion-desarrollo-dam-variables.md
+      - "e21 · Subredes VLSM, CIDR e IPv6": ejercicios/e21-ra5-calculo-subredes-cidr-vlsm-ipv6.md
+      - "e22 · Red con Netplan, nmcli y PowerShell": ejercicios/e22-ra5-configuracion-red-netplan-nmcli-powershell.md
+      - "e23 · Router Linux, ip_forward y NAT": ejercicios/e23-ra5-router-nat-masquerade-enlaces-wan.md
+      - "e24 · Puertos (ss) y Diagnóstico Bottom-Up": ejercicios/e24-ra5-auditoria-puertos-diagnostico-red-ss-wireshark.md
+      - "e25 · SSH Ed25519, SFTP y Auditoría TLS": ejercicios/e25-ra5-comunicaciones-seguras-ssh-claves-sftp-tls.md
   - Prácticas:
       - Índice de Prácticas: practicas/index.md
       - "p01 · Auditoría Integral RA1 (Enunciado)": practicas/p01-ra1-auditoria-integral-sistema-red-enunciado.md
       - "p02 · Despliegue Dual-Boot RA2 (Enunciado)": practicas/p02-ra2-despliegue-dualboot-recuperacion-enunciado.md
       - "p03 · Almacenamiento, Cifrado y Backups RA3 (Enunciado)": practicas/p03-ra3-almacenamiento-lvm-cifrado-backups-enunciado.md
       - "p04 · Usuarios, ACLs, Servicios y DAM RA4 (Enunciado)": practicas/p04-ra4-administracion-multi-usuario-acls-monitorizacion-enunciado.md
+      - "p05 · Subredes VLSM, Router NAT y SSH RA5 (Enunciado)": practicas/p05-ra5-redes-vlsm-enrutamiento-nat-ssh-enunciado.md
   - Registro: log.md

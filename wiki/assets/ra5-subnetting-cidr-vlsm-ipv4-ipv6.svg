@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 450" width="920" height="450" font-family="system-ui, -apple-system, sans-serif">
+  <rect x="2" y="2" width="916" height="446" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="460" y="36" text-anchor="middle" font-size="20" font-weight="bold" fill="#0f172a">Planificación CIDR, VLSM sobre 192.168.10.0/24 e IPv6 (RA5.a)</text>
+  <text x="460" y="58" text-anchor="middle" font-size="13" fill="#475569">Asignación sin solapamientos ordenada de mayor a menor demanda de hosts + estructura de prefijo IPv6</text>
+
+  <!-- Bloque VLSM -->
+  <text x="40" y="92" font-size="15" font-weight="bold" fill="#1e293b">Bloque IPv4 base: 192.168.10.0/24 (256 direcciones totales)</text>
+
+  <!-- Barra proporcional VLSM -->
+  <rect x="40" y="106" width="420" height="72" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="250" y="132" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e40af">Subred A: Desarrollo (/25)</text>
+  <text x="250" y="152" text-anchor="middle" font-size="12" fill="#1e3a8a">Red: .0 | Rango: .1 – .126 (126 útiles)</text>
+  <text x="250" y="168" text-anchor="middle" font-size="11" fill="#3b82f6">Broadcast: .127 · Máscara: 255.255.255.128</text>
+
+  <rect x="464" y="106" width="210" height="72" rx="6" fill="#d1fae5" stroke="#059669" stroke-width="2"/>
+  <text x="569" y="132" text-anchor="middle" font-size="13" font-weight="bold" fill="#065f46">Subred B: QA (/26)</text>
+  <text x="569" y="152" text-anchor="middle" font-size="12" fill="#047857">.128 · .129–.190 (62 útiles)</text>
+  <text x="569" y="168" text-anchor="middle" font-size="11" fill="#059669">BC: .191 · .192</text>
+
+  <rect x="678" y="106" width="105" height="72" rx="6" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <text x="730" y="132" text-anchor="middle" font-size="12" font-weight="bold" fill="#92400e">DMZ (/27)</text>
+  <text x="730" y="152" text-anchor="middle" font-size="11" fill="#b45309">.192 (.193–.222)</text>
+  <text x="730" y="168" text-anchor="middle" font-size="11" fill="#d97706">30 útiles</text>
+
+  <rect x="787" y="106" width="93" height="72" rx="6" fill="#f1f5f9" stroke="#64748b" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="833" y="136" text-anchor="middle" font-size="12" font-weight="bold" fill="#334155">Reserva</text>
+  <text x="833" y="154" text-anchor="middle" font-size="11" fill="#475569">.224–.255</text>
+  <text x="833" y="168" text-anchor="middle" font-size="10" fill="#64748b">(/27 libre)</text>
+
+  <!-- Regla matemática -->
+  <rect x="40" y="196" width="840" height="68" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="60" y="220" font-size="13" font-weight="bold" fill="#0f172a">Regla rápida de cálculo CIDR / VLSM:</text>
+  <text x="60" y="240" font-size="12.5" fill="#334155">• Hosts útiles = 2^(32 - prefijo) - 2 (red + broadcast). Ej.: /27 → 32 - 27 = 5 bits → 2^5 - 2 = 30 hosts útiles.</text>
+  <text x="60" y="256" font-size="12.5" fill="#334155">• Tamaño de bloque = 256 - octeto de máscara. Ej.: 255.255.255.224 (/27) → 256 - 224 = saltos de 32 en 32 (.0, .32, .64...).</text>
+
+  <!-- Bloque IPv6 -->
+  <text x="40" y="298" font-size="15" font-weight="bold" fill="#1e293b">Anatomía de una Dirección IPv6 Estándar (/64 LAN — 128 bits = 8 hextetos hexadecimales)</text>
+
+  <rect x="40" y="314" width="280" height="58" rx="6" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="180" y="338" text-anchor="middle" font-size="13" font-weight="bold" fill="#5b21b6">Prefijo Global / Red (48 bits)</text>
+  <text x="180" y="358" text-anchor="middle" font-size="13" font-family="monospace" fill="#4c1d95">2001 : 0db8 : 85a3</text>
+
+  <rect x="328" y="314" width="130" height="58" rx="6" fill="#fae8ff" stroke="#c026d3" stroke-width="2"/>
+  <text x="393" y="338" text-anchor="middle" font-size="13" font-weight="bold" fill="#86198f">Subred (16 bits)</text>
+  <text x="393" y="358" text-anchor="middle" font-size="13" font-family="monospace" fill="#701a75">0010</text>
+
+  <rect x="466" y="314" width="414" height="58" rx="6" fill="#ecfdf5" stroke="#10b981" stroke-width="2"/>
+  <text x="673" y="338" text-anchor="middle" font-size="13" font-weight="bold" fill="#065f46">Identificador de Interfaz (64 bits — SLAAC / EUI-64 / Aleatorio)</text>
+  <text x="673" y="358" text-anchor="middle" font-size="13" font-family="monospace" fill="#047857">0000 : 0000 : 0370 : 7334</text>
+
+  <text x="460" y="400" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#0f172a">Compresión válida: 2001:db8:85a3:10::370:7334  (:: sustituye ceros seguidos UNA sola vez)</text>
+  <text x="460" y="424" text-anchor="middle" font-size="12" fill="#475569">Rangos clave: 2000::/3 (Pública Global) · fd00::/8 (Privada Local ULA) · fe80::/10 (Link-Local obligatoria) · ::1/128 (Loopback)</text>
+</svg>

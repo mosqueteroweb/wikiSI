@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 460" width="920" height="460" font-family="system-ui, -apple-system, sans-serif">
+  <rect x="2" y="2" width="916" height="456" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="460" y="36" text-anchor="middle" font-size="20" font-weight="bold" fill="#0f172a">Arquitectura TCP/IP vs. OSI y Proceso de Encapsulación (RA5.a)</text>
+  <text x="460" y="58" text-anchor="middle" font-size="13" fill="#475569">Cada capa añade su cabecera (PDU) hasta convertirse en trama física Ethernet / Wi-Fi</text>
+
+  <!-- Columna Modelo OSI (Izquierda) -->
+  <text x="160" y="92" text-anchor="middle" font-size="15" font-weight="bold" fill="#1e293b">Modelo OSI (7 capas)</text>
+  <rect x="55" y="108" width="210" height="36" rx="6" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="160" y="131" text-anchor="middle" font-size="13" font-weight="bold" fill="#1d4ed8">7. Aplicación (HTTP, DNS, SSH)</text>
+  <rect x="55" y="148" width="210" height="36" rx="6" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="160" y="171" text-anchor="middle" font-size="13" font-weight="bold" fill="#1d4ed8">6. Presentación (TLS, JSON)</text>
+  <rect x="55" y="188" width="210" height="36" rx="6" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="160" y="211" text-anchor="middle" font-size="13" font-weight="bold" fill="#1d4ed8">5. Sesión (Sockets / RPC)</text>
+
+  <rect x="55" y="232" width="210" height="44" rx="6" fill="#ecfdf5" stroke="#10b981" stroke-width="1.5"/>
+  <text x="160" y="259" text-anchor="middle" font-size="13" font-weight="bold" fill="#047857">4. Transporte (TCP / UDP)</text>
+
+  <rect x="55" y="284" width="210" height="44" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="160" y="311" text-anchor="middle" font-size="13" font-weight="bold" fill="#b45309">3. Red (IPv4 / IPv6 / ICMP)</text>
+
+  <rect x="55" y="336" width="210" height="40" rx="6" fill="#f3e8ff" stroke="#8b5cf6" stroke-width="1.5"/>
+  <text x="160" y="361" text-anchor="middle" font-size="13" font-weight="bold" fill="#6d28d9">2. Enlace (Ethernet / MAC / ARP)</text>
+  <rect x="55" y="380" width="210" height="40" rx="6" fill="#f3e8ff" stroke="#8b5cf6" stroke-width="1.5"/>
+  <text x="160" y="405" text-anchor="middle" font-size="13" font-weight="bold" fill="#6d28d9">1. Física (Cat6, Fibra, Señal RF)</text>
+
+  <!-- Columna Modelo TCP/IP (Centro) -->
+  <text x="415" y="92" text-anchor="middle" font-size="15" font-weight="bold" fill="#1e293b">TCP/IP (4 capas)</text>
+  <rect x="315" y="108" width="200" height="116" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="415" y="160" text-anchor="middle" font-size="15" font-weight="bold" fill="#1e40af">Aplicación</text>
+  <text x="415" y="182" text-anchor="middle" font-size="12" fill="#1e3a8a">PDU: Datos / Mensaje</text>
+
+  <rect x="315" y="232" width="200" height="44" rx="8" fill="#d1fae5" stroke="#059669" stroke-width="2"/>
+  <text x="415" y="259" text-anchor="middle" font-size="14" font-weight="bold" fill="#065f46">Transporte (TCP/UDP)</text>
+
+  <rect x="315" y="284" width="200" height="44" rx="8" fill="#fde68a" stroke="#d97706" stroke-width="2"/>
+  <text x="415" y="311" text-anchor="middle" font-size="14" font-weight="bold" fill="#92400e">Internet (IP / Rutas)</text>
+
+  <rect x="315" y="336" width="200" height="84" rx="8" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="415" y="374" text-anchor="middle" font-size="14" font-weight="bold" fill="#5b21b6">Acceso a Red</text>
+  <text x="415" y="395" text-anchor="middle" font-size="12" fill="#5b21b6">802.3 Ethernet / 802.11 Wi-Fi</text>
+
+  <!-- Columna Encapsulación PDU (Derecha) -->
+  <text x="720" y="92" text-anchor="middle" font-size="15" font-weight="bold" fill="#1e293b">Encapsulación Descendente (PDUs)</text>
+
+  <!-- PDU Datos -->
+  <rect x="570" y="145" width="300" height="40" rx="6" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="720" y="170" text-anchor="middle" font-size="13" font-weight="bold" fill="#1d4ed8">Datos de Aplicación (GET /index.html)</text>
+
+  <!-- PDU Segmento -->
+  <rect x="570" y="232" width="90" height="44" rx="5" fill="#10b981" stroke="#047857" stroke-width="1.5"/>
+  <text x="615" y="259" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">Cab. TCP</text>
+  <rect x="662" y="232" width="208" height="44" rx="5" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="766" y="259" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e3a8a">Segmento (Puerto Orig/Dest)</text>
+
+  <!-- PDU Paquete -->
+  <rect x="570" y="284" width="75" height="44" rx="5" fill="#f59e0b" stroke="#b45309" stroke-width="1.5"/>
+  <text x="607" y="311" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">Cab. IP</text>
+  <rect x="647" y="284" width="68" height="44" rx="5" fill="#10b981"/>
+  <text x="681" y="311" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">TCP</text>
+  <rect x="717" y="284" width="153" height="44" rx="5" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="793" y="311" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e3a8a">Paquete (IP Orig/Dest)</text>
+
+  <!-- PDU Trama + FCS -->
+  <rect x="570" y="346" width="65" height="46" rx="5" fill="#8b5cf6"/>
+  <text x="602" y="374" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">MAC L2</text>
+  <rect x="637" y="346" width="52" height="46" rx="5" fill="#f59e0b"/>
+  <text x="663" y="374" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">IP</text>
+  <rect x="691" y="346" width="46" height="46" rx="5" fill="#10b981"/>
+  <text x="714" y="374" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">TCP</text>
+  <rect x="739" y="346" width="84" height="46" rx="5" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="781" y="374" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e3a8a">Datos</text>
+  <rect x="825" y="346" width="45" height="46" rx="5" fill="#6d28d9"/>
+  <text x="847" y="374" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">FCS</text>
+
+  <text x="720" y="422" text-anchor="middle" font-size="12" font-weight="bold" fill="#5b21b6">Trama Ethernet II (MTU estándar: 1500 bytes carga + cabeceras) → Bits al medio</text>
+</svg>

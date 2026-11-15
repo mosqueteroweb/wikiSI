@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 420" width="920" height="420" font-family="system-ui, -apple-system, sans-serif">
+  <rect x="2" y="2" width="916" height="416" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="460" y="36" text-anchor="middle" font-size="20" font-weight="bold" fill="#0f172a">Configuración de Red en Clientes: Netplan, NetworkManager y Windows (RA5.a / RA5.b)</text>
+  <text x="460" y="58" text-anchor="middle" font-size="13" fill="#475569">Flujo de aplicación declarativo en Linux frente a PowerShell / Netsh en Windows 10 y 11</text>
+
+  <!-- Tarjeta Linux Netplan -->
+  <rect x="35" y="84" width="410" height="295" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="240" y="114" text-anchor="middle" font-size="16" font-weight="bold" fill="#166534">MAX / Ubuntu (Netplan &amp; nmcli)</text>
+
+  <rect x="55" y="132" width="370" height="104" rx="6" fill="#ffffff" stroke="#86efac" stroke-width="1.5"/>
+  <text x="70" y="152" font-size="12" font-weight="bold" fill="#15803d">1. Declaración YAML (/etc/netplan/01-netcfg.yaml · chmod 600)</text>
+  <text x="70" y="172" font-size="11.5" font-family="monospace" fill="#1e293b">network: { version: 2, renderer: NetworkManager,</text>
+  <text x="70" y="190" font-size="11.5" font-family="monospace" fill="#1e293b">  ethernets: { enp0s8: { addresses: [192.168.50.10/24],</text>
+  <text x="70" y="208" font-size="11.5" font-family="monospace" fill="#1e293b">    routes: [{ to: default, via: 192.168.50.1 }],</text>
+  <text x="70" y="226" font-size="11.5" font-family="monospace" fill="#1e293b">    nameservers: { addresses: [1.1.1.1, 8.8.8.8] } } } }</text>
+
+  <rect x="55" y="248" width="370" height="58" rx="6" fill="#dcfce7" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="70" y="269" font-size="12" font-weight="bold" fill="#14532d">2. Validación segura antes de persistir:</text>
+  <text x="70" y="290" font-size="12" font-family="monospace" fill="#14532d">sudo netplan try    # Revierte en 120 s si pierdes conexión</text>
+
+  <rect x="55" y="316" width="370" height="48" rx="6" fill="#ffffff" stroke="#86efac" stroke-width="1.5"/>
+  <text x="70" y="336" font-size="12" font-weight="bold" fill="#15803d">3. Alternativa interactiva Desktop (MAX / GUI):</text>
+  <text x="70" y="354" font-size="11.5" font-family="monospace" fill="#1e293b">nmcli con mod "Cableada 1" ipv4.addresses 192.168.50.10/24</text>
+
+  <!-- Tarjeta Windows PowerShell -->
+  <rect x="475" y="84" width="410" height="295" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="680" y="114" text-anchor="middle" font-size="16" font-weight="bold" fill="#1e40af">Windows 10 / 11 (PowerShell NetTCPIP)</text>
+
+  <rect x="495" y="132" width="370" height="72" rx="6" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="510" y="152" font-size="12" font-weight="bold" fill="#1d4ed8">1. Identificar índice de interfaz (ifIndex)</text>
+  <text x="510" y="172" font-size="11.5" font-family="monospace" fill="#1e293b">Get-NetAdapter | Select Name, InterfaceIndex, Status</text>
+  <text x="510" y="191" font-size="11.5" font-family="monospace" fill="#1e293b">Get-NetIPConfiguration</text>
+
+  <rect x="495" y="214" width="370" height="86" rx="6" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="510" y="234" font-size="12" font-weight="bold" fill="#1e3a8a">2. Aplicar IP estática, máscara CIDR y Gateway</text>
+  <text x="510" y="255" font-size="11" font-family="monospace" fill="#1e3a8a">New-NetIPAddress -InterfaceAlias "Ethernet 2" `</text>
+  <text x="510" y="272" font-size="11" font-family="monospace" fill="#1e3a8a">  -IPAddress 192.168.50.20 -PrefixLength 24 `</text>
+  <text x="510" y="289" font-size="11" font-family="monospace" fill="#1e3a8a">  -DefaultGateway 192.168.50.1</text>
+
+  <rect x="495" y="310" width="370" height="54" rx="6" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="510" y="330" font-size="12" font-weight="bold" fill="#1d4ed8">3. Configurar servidores DNS locales/públicos:</text>
+  <text x="510" y="350" font-size="11" font-family="monospace" fill="#1e293b">Set-DnsClientServerAddress -InterfaceAlias "Ethernet 2" ...</text>
+
+  <text x="460" y="400" text-anchor="middle" font-size="12" font-weight="bold" fill="#334155">Nota VirtualBox aula DAM: en Red Interna no hay DHCP integrado salvo configurarlo manualmente o con VM Router</text>
+</svg>

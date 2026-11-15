@@ -56,8 +56,16 @@ Páginas de referencia teórica del módulo **Sistemas Informáticos (0483)**. C
 5. [Comandos de Administración, Variables de Entorno y Scripting](ra4-comandos-administracion-variables-scripting.md) (`RA4.e`, `RA4.h`)
 6. [Monitorización, Registros (`journalctl`/Eventos) y Dimensionamiento para Desarrollo DAM](ra4-monitorizacion-logs-optimizacion-entorno-dam.md) (`RA4.f`, `RA4.g`, `RA4.h`)
 
+## RA5 · Interconexión de Sistemas en Red y Protocolos Seguros (Completado ✅)
+
+1. [Arquitectura TCP/IP, Direccionamiento IPv4/IPv6 y Subredes (CIDR/VLSM)](ra5-arquitectura-tcpip-direccionamiento-ipv4-ipv6.md) (`RA5.a`)
+2. [Configuración de Red en Clientes: Netplan, NetworkManager, PowerShell y VirtualBox](ra5-configuracion-red-clientes-netplan-powershell.md) (`RA5.a`, `RA5.b`)
+3. [Redes LAN Cableadas (`802.3`) e Inalámbricas (`802.11` / Wi-Fi Segura)](ra5-redes-lan-cableadas-inalambricas-wifi-seguridad.md) (`RA5.b`, `RA5.c`)
+4. [Dispositivos de Interconexión, VLANs (`802.1Q`), NAT y Acceso WAN](ra5-interconexion-enrutamiento-nat-acceso-wan.md) (`RA5.d`, `RA5.e`)
+5. [Gestión de Puertos y Diagnóstico Sistemático de Red (*Bottom-Up*)](ra5-gestion-puertos-herramientas-diagnostico-red.md) (`RA5.f`, `RA5.g`)
+6. [Protocolos Seguros de Comunicaciones: TLS, SSH, SFTP y VPN](ra5-protocolos-seguros-comunicaciones-tls-ssh-vpn.md) (`RA5.h`, `RA5.f`)
+
 ## Próximos Bloques Planificados
 
-- **[RA5 · Interconexión de sistemas en red y TCP/IP](../ra/RA5.md)**
 - **[RA6 · Operación de sistemas en red, servicios y dominios](../ra/RA6.md)**
 - **[RA7 · Documentación técnica y utilidades de propósito general](../ra/RA7.md)**

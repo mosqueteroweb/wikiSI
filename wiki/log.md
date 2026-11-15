@@ -11,6 +11,16 @@ Bitácora de operaciones (*ingest*, *compile*, *lint*, *publish*) ejecutadas sob
 
 ---
 
+## [2026-11-15] Compilación completa del bloque RA5 (6 conceptos, 5 SVGs, 5 ejercicios `e21`–`e25`, práctica `p05` y banco de evaluación privado)
+
+- **Fuentes procesadas (`raw/procesados/`):** `ra5-tcpip-direccionamiento-ipv4-ipv6-subredes.md`, `ra5-lan-cableada-inalambrica-enrutamiento-wan.md`, `ra5-puertos-diagnostico-protocolos-seguros.md`.
+- **Conceptos publicados (`wiki/conceptos/`):** 6 páginas completas cubriendo `RA5.a`–`RA5.h` con tabs duales MAX/Ubuntu y Windows 10/11, más 5 diagramas SVG locales (`wiki/assets/ra5-*.svg`).
+- **Ejercicios resueltos (`wiki/ejercicios/`):** `e21`–`e25` con presupuesto de RAM entre 2 GB y 6 GB sobre hosts MAX de 16 GB.
+- **Práctica Integradora (`wiki/practicas/`):** Enunciado público `p05` (`DAM-Router-Gate` 1 GB + `DAM-Net-Ubuntu` 2 GB + `DAM-Net-Win10` 4 GB = 7 GB) y solución docente marcada con `publicar: false`.
+- **Evaluación privada (`privado_evaluacion/`):** Examen teórico-práctico RA5 (16 preguntas + bloque Moodle GIFT + 3 supuestos), solucionario y rúbrica `RA5.a`–`RA5.h` (excluido de Git vía `.gitignore`).
+
+---
+
 ## [2026-11-15] Compilación completa del bloque RA4 (6 conceptos, 5 SVGs, 5 ejercicios `e16`–`e20`, práctica `p04` y banco de evaluación privado)
 
 - **Fuentes procesadas (`raw/procesados/`):** `ra4-usuarios-grupos-directivas-seguridad.md`, `ra4-permisos-locales-acls-herencia.md`, `ra4-procesos-servicios-monitorizacion-desarrollo.md`.
