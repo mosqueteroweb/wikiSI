@@ -11,10 +11,11 @@ from __future__ import annotations
 import json
 import os
 import re
+import shutil
 from pathlib import Path
 from typing import Any
 
-from mkdocs.structure.files import File
+from mkdocs.structure.files import File, InclusionLevel
 
 _TITLE_RE = re.compile(r"^#\s+(.+)$", re.MULTILINE)
 _FM_RE = re.compile(r"^\ufeff?---\r?\n(.*?)\r?\n---(?:\r?\n|$)", re.DOTALL)
@@ -64,10 +65,19 @@ def _collect_graph_payload(repo_root: Path, site_dir: str, use_directory_urls: b
     raw_dir = repo_root / "raw" / "procesados"
     priv_dir = repo_root / "privado_evaluacion"
 
+    priv_mds = (
+        [
+            p
+            for p in priv_dir.rglob("*.md")
+            if ".staging_entregas" not in p.parts and "textos_anonimos" not in p.parts
+        ]
+        if priv_dir.exists()
+        else []
+    )
     md_paths = sorted(
         list(wiki_dir.rglob("*.md"))
         + (list(raw_dir.glob("*.md")) if raw_dir.exists() else [])
-        + (list(priv_dir.rglob("*.md")) if priv_dir.exists() else [])
+        + priv_mds
     )
 
     nodes: list[dict[str, Any]] = []
@@ -686,6 +696,7 @@ def on_config(config: Any) -> Any:
         ("examenes", "Exámenes (con GIFT)", "Examen"),
         ("soluciones", "Solucionarios", "Solución"),
         ("rubricas", "Rúbricas", "Rúbrica"),
+        ("correcciones", "Correcciones de Tareas", "Corrección"),
     ]:
         items = [
             {_nav_label(p, prefix): p.relative_to(repo_root).as_posix()}
@@ -719,6 +730,8 @@ def on_files(files: Any, config: Any) -> Any:
         if not folder.exists():
             continue
         for md_path in sorted(folder.rglob("*.md")):
+            if ".staging_entregas" in md_path.parts or "textos_anonimos" in md_path.parts:
+                continue
             rel_path = md_path.relative_to(repo_root).as_posix()
             if rel_path in existing:
                 continue
@@ -728,6 +741,26 @@ def on_files(files: Any, config: Any) -> Any:
                     src_dir=str(repo_root),
                     dest_dir=config.site_dir,
                     use_directory_urls=config.use_directory_urls,
+                    inclusion=InclusionLevel.INCLUDED,
+                )
+            )
+            existing.add(rel_path)
+
+    corr_dir = repo_root / "privado_evaluacion" / "correcciones"
+    if corr_dir.exists():
+        for json_path in sorted(corr_dir.rglob("*.json")):
+            if ".staging_entregas" in json_path.parts or "textos_anonimos" in json_path.parts:
+                continue
+            rel_path = json_path.relative_to(repo_root).as_posix()
+            if rel_path in existing:
+                continue
+            files.append(
+                File(
+                    path=rel_path,
+                    src_dir=str(repo_root),
+                    dest_dir=config.site_dir,
+                    use_directory_urls=config.use_directory_urls,
+                    inclusion=InclusionLevel.INCLUDED,
                 )
             )
             existing.add(rel_path)
@@ -744,3 +777,23 @@ def on_files(files: Any, config: Any) -> Any:
         )
 
     return files
+
+
+def on_post_build(config: Any) -> None:
+    """Copy local identity-map JSONs (dot and non-dot alias) into `site_docente/` only."""
+    repo_root = _repo_root(config)
+    corr_dir = repo_root / "privado_evaluacion" / "correcciones"
+    if not corr_dir.exists():
+        return
+
+    site_dir = Path(config.site_dir)
+    for json_path in sorted(corr_dir.rglob("*.json")):
+        if ".staging_entregas" in json_path.parts or "textos_anonimos" in json_path.parts:
+            continue
+        rel_dir = json_path.relative_to(repo_root).parent
+        dest_dir = site_dir / rel_dir
+        dest_dir.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(json_path, dest_dir / json_path.name)
+        alias_name = json_path.name.lstrip(".")
+        if alias_name and alias_name != json_path.name:
+            shutil.copy2(json_path, dest_dir / alias_name)
