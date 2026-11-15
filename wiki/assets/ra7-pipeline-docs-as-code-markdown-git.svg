@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 400" width="920" height="400" font-family="system-ui, -apple-system, sans-serif">
+  <rect x="2" y="2" width="916" height="396" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="460" y="36" text-anchor="middle" font-size="20" font-weight="bold" fill="#0f172a">Flujos de Documentación Técnica: Ofimática Estándar y Pipeline Docs-as-Code (RA7.c)</text>
+  <text x="460" y="58" text-anchor="middle" font-size="13" fill="#475569">Integración entre documentos corporativos ODF/PDF-A y documentación técnica versionada en Markdown + Git</text>
+
+  <!-- Fila 1: Pipeline Docs-as-Code -->
+  <text x="40" y="96" font-size="15" font-weight="bold" fill="#1e293b">1. Flujo Técnico DAM (Docs-as-Code):</text>
+
+  <rect x="40" y="112" width="175" height="92" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="127" y="138" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#1e40af">Fuente Markdown</text>
+  <text x="127" y="158" text-anchor="middle" font-size="11.5" font-family="monospace" fill="#1d4ed8">README.md · docs/*.md</text>
+  <text x="127" y="178" text-anchor="middle" font-size="11" fill="#334155">Tablas GFM, código</text>
+  <text x="127" y="194" text-anchor="middle" font-size="11" fill="#334155">y diagramas Mermaid</text>
+
+  <text x="235" y="162" text-anchor="middle" font-size="20" font-weight="bold" fill="#2563eb">→</text>
+
+  <rect x="255" y="112" width="185" height="92" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <text x="347" y="138" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#92400e">Control Git / PR</text>
+  <text x="347" y="158" text-anchor="middle" font-size="11.5" font-family="monospace" fill="#b45309">git commit &amp; push</text>
+  <text x="347" y="178" text-anchor="middle" font-size="11" fill="#334155">Historial exacto, diffs</text>
+  <text x="347" y="194" text-anchor="middle" font-size="11" fill="#334155">y revisión colaborativa</text>
+
+  <text x="460" y="162" text-anchor="middle" font-size="20" font-weight="bold" fill="#d97706">→</text>
+
+  <rect x="480" y="112" width="185" height="92" rx="8" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
+  <text x="572" y="138" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#065f46">Motor / Conversor</text>
+  <text x="572" y="158" text-anchor="middle" font-size="11.5" font-family="monospace" fill="#047857">MkDocs · Pandoc</text>
+  <text x="572" y="178" text-anchor="middle" font-size="11" fill="#334155">Compilación estricta</text>
+  <text x="572" y="194" text-anchor="middle" font-size="11" fill="#334155">CI/CD GitHub Actions</text>
+
+  <text x="685" y="162" text-anchor="middle" font-size="20" font-weight="bold" fill="#059669">→</text>
+
+  <rect x="705" y="112" width="175" height="92" rx="8" fill="#f3e8ff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="792" y="138" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#5b21b6">Publicación Final</text>
+  <text x="792" y="158" text-anchor="middle" font-size="11.5" fill="#6d28d9">Web GitHub Pages</text>
+  <text x="792" y="176" text-anchor="middle" font-size="11.5" fill="#6d28d9">PDF / ODT / DOCX</text>
+  <text x="792" y="194" text-anchor="middle" font-size="11" fill="#4c1d95">Un único origen fiable</text>
+
+  <!-- Fila 2: Ofimática Estándar y Colaborativa -->
+  <text x="40" y="242" font-size="15" font-weight="bold" fill="#1e293b">2. Ofimática Corporativa Estructurada y Trabajo Colaborativo:</text>
+
+  <rect x="40" y="258" width="270" height="114" rx="8" fill="#f8fafc" stroke="#64748b" stroke-width="1.5"/>
+  <text x="175" y="282" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#0f172a">LibreOffice (Estándar ODF)</text>
+  <text x="175" y="302" text-anchor="middle" font-size="11.5" fill="#334155">• Writer (.odt) · Calc (.ods) · Impress (.odp)</text>
+  <text x="175" y="320" text-anchor="middle" font-size="11.5" fill="#334155">• Estilos jerárquicos (Título 1/2) → Índice auto</text>
+  <text x="175" y="338" text-anchor="middle" font-size="11.5" fill="#334155">• Control de cambios y comentarios</text>
+  <text x="175" y="356" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#047857">• Exportación PDF/A (ISO archivo legal)</text>
+
+  <rect x="325" y="258" width="270" height="114" rx="8" fill="#f8fafc" stroke="#64748b" stroke-width="1.5"/>
+  <text x="460" y="282" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#0f172a">Colaboración Nube / SaaS</text>
+  <text x="460" y="302" text-anchor="middle" font-size="11.5" fill="#334155">• Nextcloud + Collabora (Soberanía propia)</text>
+  <text x="460" y="320" text-anchor="middle" font-size="11.5" fill="#334155">• Google Workspace / Microsoft 365</text>
+  <text x="460" y="338" text-anchor="middle" font-size="11.5" fill="#334155">• Edición concurrente e historial de versiones</text>
+  <text x="460" y="356" text-anchor="middle" font-size="11.5" fill="#334155">• Permisos: Ver / Comentar / Editar</text>
+
+  <rect x="610" y="258" width="270" height="114" rx="8" fill="#f8fafc" stroke="#64748b" stroke-width="1.5"/>
+  <text x="745" y="282" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#0f172a">Búsqueda Técnica Eficaz (RA7.f)</text>
+  <text x="745" y="302" text-anchor="middle" font-size="11.5" fill="#334155">• Fuentes primarias: man, --help, tldr</text>
+  <text x="745" y="320" text-anchor="middle" font-size="11.5" fill="#334155">• Docs oficiales: Ubuntu, Microsoft Learn, MDN</text>
+  <text x="745" y="338" text-anchor="middle" font-size="11.5" fill="#334155">• Operadores: site:, comillas exactas, fecha</text>
+  <text x="745" y="356" text-anchor="middle" font-size="11.5" fill="#dc2626">• Validar siempre en VM antes de producción</text>
+</svg>

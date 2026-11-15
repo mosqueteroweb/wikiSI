@@ -74,6 +74,11 @@ Páginas de referencia teórica del módulo **Sistemas Informáticos (0483)**. C
 5. [Utilidades de Seguridad Básica, Defensa Activa (`fail2ban`) y Auditoría](ra6-utilidades-seguridad-auditoria-endurecimiento.md) (`RA6.b`, `RA6.e`, `RA6.f`)
 6. [Implantación y Explotación de Dominios (Active Directory, Samba AD DC, LDAP y GPO)](ra6-implantacion-explotacion-dominios-ad-samba-dc.md) (`RA6.g`, `RA6.b`)
 
-## Próximos Bloques Planificados
+## RA7 · Licencias, Entornos Productivos, Documentación, Correo y Utilidades (Completado ✅)
 
-- **[RA7 · Documentación técnica y utilidades de propósito general](../ra/RA7.md)**
+1. [Clasificación del Software, Licencias y Modelos de Distribución](ra7-clasificacion-software-licencias-modelos-distribucion.md) (`RA7.a`)
+2. [Análisis de Necesidades de Software en Entornos Productivos](ra7-analisis-necesidades-software-entornos-productivos.md) (`RA7.b`)
+3. [Documentación Técnica, Ofimática, Markdown y Trabajo Colaborativo](ra7-documentacion-ofimatica-markdown-trabajo-colaborativo.md) (`RA7.c`)
+4. [Sistemas de Correo Electrónico y Mensajería Corporativa Segura](ra7-sistemas-correo-mensajeria-corporativa-segura.md) (`RA7.d`)
+5. [Servicios de Transferencia Segura de Ficheros (SFTP, SCP y Sincronización)](ra7-servicios-transferencia-ficheros-sftp-scp-sincronizacion.md) (`RA7.e`)
+6. [Búsqueda de Documentación Técnica y Utilidades de Propósito General](ra7-busqueda-documentacion-tecnica-utilidades-sistema.md) (`RA7.f`, `RA7.g`)

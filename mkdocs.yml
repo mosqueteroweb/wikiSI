@@ -107,6 +107,12 @@ nav:
       - "RA6 · Cortafuegos UFW y Defender": conceptos/ra6-seguridad-recursos-cortafuegos-ufw-defender.md
       - "RA6 · Seguridad Básica y Fail2ban": conceptos/ra6-utilidades-seguridad-auditoria-endurecimiento.md
       - "RA6 · Dominios AD / Samba AD DC": conceptos/ra6-implantacion-explotacion-dominios-ad-samba-dc.md
+      - "RA7 · Clasificación de Software y Licencias": conceptos/ra7-clasificacion-software-licencias-modelos-distribucion.md
+      - "RA7 · Necesidades en Entornos Productivos": conceptos/ra7-analisis-necesidades-software-entornos-productivos.md
+      - "RA7 · Documentación, Ofimática y Markdown": conceptos/ra7-documentacion-ofimatica-markdown-trabajo-colaborativo.md
+      - "RA7 · Correo Corporativo y Seguridad": conceptos/ra7-sistemas-correo-mensajeria-corporativa-segura.md
+      - "RA7 · Transferencia Segura (SFTP / rsync)": conceptos/ra7-servicios-transferencia-ficheros-sftp-scp-sincronizacion.md
+      - "RA7 · Documentación Internet y Utilidades": conceptos/ra7-busqueda-documentacion-tecnica-utilidades-sistema.md
   - Ejercicios:
       - Índice de Ejercicios: ejercicios/index.md
       - "e01 · Auditoría CPU y Placa Base": ejercicios/e01-ra1-auditoria-hardware-cpu-placas.md
@@ -139,6 +145,11 @@ nav:
       - "e28 · RDP (NLA), Remmina y Túnel SSH": ejercicios/e28-ra6-escritorio-remoto-rdp-remmina-ssh-tunnel.md
       - "e29 · Cortafuegos UFW/Defender y Fail2ban": ejercicios/e29-ra6-cortafuegos-ufw-windows-defender-fail2ban.md
       - "e30 · Dominio Samba AD DC y Windows 10": ejercicios/e30-ra6-dominio-samba-ad-dc-unidades-organizativas.md
+      - "e31 · Auditoría de Licencias y Software": ejercicios/e31-ra7-auditoria-licencias-seleccion-software-empresa.md
+      - "e32 · Documentación Markdown, Pandoc y Git": ejercicios/e32-ra7-documentacion-tecnica-markdown-pandoc-git.md
+      - "e33 · Correo Corporativo y SPF/DKIM/DMARC": ejercicios/e33-ra7-configuracion-cliente-correo-spf-dkim-dmarc.md
+      - "e34 · Transferencia Segura SFTP, rsync y SHA-256": ejercicios/e34-ra7-transferencia-segura-sftp-rsync-hashes-sha256.md
+      - "e35 · Utilidades, Compresión y ClamAV": ejercicios/e35-ra7-utilidades-compresion-clamav-mantenimiento.md
   - Prácticas:
       - Índice de Prácticas: practicas/index.md
       - "p01 · Auditoría Integral RA1 (Enunciado)": practicas/p01-ra1-auditoria-integral-sistema-red-enunciado.md
@@ -147,4 +158,5 @@ nav:
       - "p04 · Usuarios, ACLs, Servicios y DAM RA4 (Enunciado)": practicas/p04-ra4-administracion-multi-usuario-acls-monitorizacion-enunciado.md
       - "p05 · Subredes VLSM, Router NAT y SSH RA5 (Enunciado)": practicas/p05-ra5-redes-vlsm-enrutamiento-nat-ssh-enunciado.md
       - "p06 · Samba, Acceso Remoto, UFW y Dominio RA6 (Enunciado)": practicas/p06-ra6-recursos-samba-acceso-remoto-cortafuegos-dominio-enunciado.md
+      - "p07 · Documentación, Correo, SFTP y Utilidades RA7 (Enunciado)": practicas/p07-ra7-documentacion-markdown-correo-transferencia-utilidades-enunciado.md
   - Registro: log.md

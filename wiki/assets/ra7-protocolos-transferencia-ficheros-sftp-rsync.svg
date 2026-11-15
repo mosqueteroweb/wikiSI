@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 390" width="920" height="390" font-family="system-ui, -apple-system, sans-serif">
+  <rect x="2" y="2" width="916" height="386" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="460" y="36" text-anchor="middle" font-size="20" font-weight="bold" fill="#0f172a">Transferencia Segura y Sincronización de Ficheros: SFTP, SCP, rsync y Verificación SHA-256 (RA7.e)</text>
+  <text x="460" y="58" text-anchor="middle" font-size="13" fill="#475569">Sustitución completa del FTP clásico sin cifrar por canales SSH cifrados más comprobación criptográfica de integridad</text>
+
+  <!-- Comparativa Protocolos -->
+  <rect x="35" y="88" width="275" height="200" rx="10" fill="#fef2f2" stroke="#ef4444" stroke-width="2"/>
+  <text x="172" y="118" text-anchor="middle" font-size="15" font-weight="bold" fill="#991b1b">FTP Clásico (Obsoleto)</text>
+  <text x="172" y="138" text-anchor="middle" font-size="12" font-family="monospace" fill="#b91c1c">Puertos 20 y 21/TCP</text>
+  <text x="52" y="168" font-size="12" fill="#7f1d1d">✕ Usuario y contraseña en claro</text>
+  <text x="52" y="190" font-size="12" fill="#7f1d1d">✕ Datos legibles por tcpdump</text>
+  <text x="52" y="212" font-size="12" fill="#7f1d1d">✕ Modo activo/pasivo complica</text>
+  <text x="52" y="229" font-size="12" fill="#7f1d1d">  reglas NAT y cortafuegos</text>
+  <text x="172" y="268" text-anchor="middle" font-size="12" font-weight="bold" fill="#dc2626">Solo admitido en anónimos públicos</text>
+
+  <rect x="325" y="88" width="275" height="200" rx="10" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
+  <text x="462" y="118" text-anchor="middle" font-size="15" font-weight="bold" fill="#065f46">SFTP / SCP (Recomendado)</text>
+  <text x="462" y="138" text-anchor="middle" font-size="12" font-family="monospace" fill="#047857">Puerto único 22/TCP (SSH)</text>
+  <text x="342" y="168" font-size="12" fill="#065f46">✓ Cifrado completo y llaves Ed25519</text>
+  <text x="342" y="190" font-size="12" fill="#065f46">✓ Un único puerto amigable con NAT/UFW</text>
+  <text x="342" y="212" font-size="12" fill="#065f46">✓ Clientes GUI: FileZilla (SFTP), WinSCP</text>
+  <text x="342" y="234" font-size="12" fill="#065f46">✓ CLI nativo Linux, macOS y Windows</text>
+  <text x="462" y="268" text-anchor="middle" font-size="12" font-weight="bold" fill="#059669">SFTP permite listado, borrado y reanudar</text>
+
+  <rect x="615" y="88" width="270" height="200" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="750" y="118" text-anchor="middle" font-size="15" font-weight="bold" fill="#1e40af">rsync sobre SSH</text>
+  <text x="750" y="138" text-anchor="middle" font-size="12" font-family="monospace" fill="#1d4ed8">rsync -avz -e ssh</text>
+  <text x="632" y="168" font-size="12" fill="#1e3a8a">✓ Transferencia delta diferencial</text>
+  <text x="632" y="190" font-size="12" fill="#1e3a8a">✓ Solo envía bloques modificados</text>
+  <text x="632" y="212" font-size="12" fill="#1e3a8a">✓ Preserva permisos y enlaces (-a)</text>
+  <text x="632" y="234" font-size="12" fill="#1e3a8a">✓ Ideal backups y despliegues web</text>
+  <text x="750" y="268" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e40af">Opción --delete sincroniza réplicas</text>
+
+  <!-- Verificación Integridad -->
+  <rect x="35" y="306" width="850" height="64" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+  <text x="55" y="330" font-size="13" font-weight="bold" fill="#92400e">Verificación obligatoria de integridad tras transferir archivos críticos (ISOs, releases .jar, copias):</text>
+  <text x="55" y="352" font-size="12" font-family="monospace" fill="#78350f">Linux: sha256sum paquete.tar.gz   |   Windows PowerShell: Get-FileHash .\paquete.tar.gz -Algorithm SHA256</text>
+</svg>

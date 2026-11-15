@@ -69,6 +69,10 @@ Cada ejercicio incluye:
 4. [e29 · Cortafuegos (`ufw`/Defender), `fail2ban` y Auditoría de Seguridad](e29-ra6-cortafuegos-ufw-windows-defender-fail2ban.md) (`RA6.e`, `RA6.f` · 6 GB RAM)
 5. [e30 · Dominio Samba AD DC, Unidades Organizativas (`OU`) y Unión Windows 10](e30-ra6-dominio-samba-ad-dc-unidades-organizativas.md) (`RA6.b`, `RA6.g` · 6 GB RAM)
 
-## Otros Bloques
+## RA7 · Licencias, Documentación, Correo, SFTP y Utilidades (RA7.a–RA7.g)
 
-*Los ejercicios de RA7 se publicarán secuencialmente tras completar el bloque.*
+1. [e31 · Auditoría de Licencias y Selección de Software en Empresa](e31-ra7-auditoria-licencias-seleccion-software-empresa.md) (`RA7.a`, `RA7.b` · 3 GB RAM)
+2. [e32 · Documentación Técnica con Markdown, Pandoc y Git](e32-ra7-documentacion-tecnica-markdown-pandoc-git.md) (`RA7.c`, `RA7.f` · 2 GB RAM)
+3. [e33 · Configuración de Cliente de Correo y Validación SPF, DKIM y DMARC](e33-ra7-configuracion-cliente-correo-spf-dkim-dmarc.md) (`RA7.d` · 2 GB RAM)
+4. [e34 · Transferencia Segura con SFTP, `rsync` y Verificación SHA-256](e34-ra7-transferencia-segura-sftp-rsync-hashes-sha256.md) (`RA7.e` · 6 GB RAM)
+5. [e35 · Utilidades de Compresión, Análisis ClamAV y Mantenimiento del Sistema](e35-ra7-utilidades-compresion-clamav-mantenimiento.md) (`RA7.f`, `RA7.g` · 6 GB RAM)

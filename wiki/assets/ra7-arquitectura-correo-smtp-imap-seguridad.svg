@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 410" width="920" height="410" font-family="system-ui, -apple-system, sans-serif">
+  <rect x="2" y="2" width="916" height="406" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="460" y="36" text-anchor="middle" font-size="20" font-weight="bold" fill="#0f172a">Arquitectura Segura de Correo Electrónico: SMTP, IMAP y Validación DNS (RA7.d)</text>
+  <text x="460" y="58" text-anchor="middle" font-size="13" fill="#475569">Flujo completo desde el cliente Thunderbird/Webmail con puertos cifrados y registros SPF, DKIM y DMARC</text>
+
+  <!-- Remitente -->
+  <rect x="35" y="108" width="170" height="118" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="120" y="136" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e40af">Cliente Remitente</text>
+  <text x="120" y="156" text-anchor="middle" font-size="12" fill="#1e3a8a">(MUA: Thunderbird)</text>
+  <text x="120" y="182" text-anchor="middle" font-size="11.5" font-family="monospace" fill="#1d4ed8">Envío cifrado:</text>
+  <text x="120" y="200" text-anchor="middle" font-size="11.5" font-family="monospace" fill="#1d4ed8">587 (STARTTLS) / 465</text>
+
+  <line x1="205" y1="167" x2="265" y2="167" stroke="#2563eb" stroke-width="3"/>
+  <text x="235" y="155" text-anchor="middle" font-size="11" font-weight="bold" fill="#1d4ed8">SMTP</text>
+
+  <!-- Servidor Origen -->
+  <rect x="265" y="102" width="165" height="130" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <text x="347" y="130" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#92400e">Servidor Origen</text>
+  <text x="347" y="150" text-anchor="middle" font-size="11.5" fill="#b45309">(MSA + MTA Postfix)</text>
+  <text x="347" y="176" text-anchor="middle" font-size="11" fill="#334155">1. Autentica usuario</text>
+  <text x="347" y="194" text-anchor="middle" font-size="11" fill="#334155">2. Firma mensaje con</text>
+  <text x="347" y="210" text-anchor="middle" font-size="11" font-weight="bold" fill="#92400e">clave privada DKIM</text>
+
+  <line x1="430" y1="167" x2="500" y2="167" stroke="#d97706" stroke-width="3"/>
+  <text x="465" y="155" text-anchor="middle" font-size="11" font-weight="bold" fill="#92400e">25+TLS</text>
+
+  <!-- Servidor Destino -->
+  <rect x="500" y="102" width="175" height="130" rx="8" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
+  <text x="587" y="130" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#065f46">Servidor Destino</text>
+  <text x="587" y="150" text-anchor="middle" font-size="11.5" fill="#047857">(MTA + MDA Dovecot)</text>
+  <text x="587" y="176" text-anchor="middle" font-size="11" fill="#334155">Verifica en DNS:</text>
+  <text x="587" y="194" text-anchor="middle" font-size="11" font-weight="bold" fill="#047857">SPF + DKIM + DMARC</text>
+  <text x="587" y="212" text-anchor="middle" font-size="11" fill="#334155">Entrega en buzón Maildir</text>
+
+  <line x1="675" y1="167" x2="725" y2="167" stroke="#059669" stroke-width="3"/>
+  <text x="700" y="155" text-anchor="middle" font-size="11" font-weight="bold" fill="#065f46">IMAPS</text>
+
+  <!-- Destinatario -->
+  <rect x="725" y="108" width="160" height="118" rx="8" fill="#f3e8ff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="805" y="136" text-anchor="middle" font-size="14" font-weight="bold" fill="#5b21b6">Destinatario</text>
+  <text x="805" y="156" text-anchor="middle" font-size="12" fill="#6d28d9">(Multi-dispositivo)</text>
+  <text x="805" y="182" text-anchor="middle" font-size="11.5" font-family="monospace" fill="#5b21b6">IMAP 993/TCP (TLS)</text>
+  <text x="805" y="200" text-anchor="middle" font-size="11" fill="#4c1d95">o POP3S 995/TCP</text>
+
+  <!-- Caja DNS Antispam -->
+  <rect x="35" y="254" width="850" height="132" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="55" y="280" font-size="14" font-weight="bold" fill="#0f172a">Tríada DNS Anti-Suplantación (Registros TXT obligatorios para proteger la identidad del dominio):</text>
+  <text x="55" y="305" font-size="12.5" fill="#1e293b">1. SPF (Sender Policy Framework): Lista qué direcciones IP/servidores tienen autorización oficial para emitir correo del dominio.</text>
+  <text x="55" y="328" font-size="12.5" fill="#1e293b">2. DKIM (DomainKeys Identified Mail): Añade firma criptográfica en cabecera verificable con la clave pública publicada en DNS.</text>
+  <text x="55" y="351" font-size="12.5" fill="#1e293b">3. DMARC: Política (none / quarantine / reject) indicando al receptor qué hacer si SPF/DKIM fallan + envío de reportes.</text>
+  <text x="55" y="374" font-size="12" font-weight="bold" fill="#047857">Nota privacidad: El cifrado TLS protege el tránsito; para cifrado extremo a extremo de contenido se usa PGP / OpenPGP o S/MIME.</text>
+</svg>

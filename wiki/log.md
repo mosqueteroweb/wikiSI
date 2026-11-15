@@ -11,6 +11,17 @@ Bitácora de operaciones (*ingest*, *compile*, *lint*, *publish*) ejecutadas sob
 
 ---
 
+## [2026-11-15] Compilación completa del bloque RA7 (6 conceptos, 5 SVGs, 5 ejercicios `e31`–`e35`, práctica `p07` y banco de evaluación privado)
+
+- **Fuentes procesadas en `raw/procesados/`:** 3 síntesis técnicas de RA7 (clasificación de software y licencias en entornos productivos; ofimática, Markdown, Pandoc y flujo *docs-as-code* con Git; correo electrónico seguro SPF/DKIM/DMARC, transferencia de ficheros SFTP/`rsync` y utilidades de propósito general).
+- **Diagramas SVG propios (5 archivos validados en XML):** taxonomía de software y licencias, pipeline *docs-as-code* con Markdown y Git, arquitectura de correo SMTP/IMAP y seguridad DNS, protocolos de transferencia segura (SFTP/SCP/`rsync`), y ecosistema de utilidades, compresión, antimalware y recuperación.
+- **Conceptos teóricos (6 páginas en `wiki/conceptos/`):** cobertura íntegra de `RA7.a`–`RA7.g`.
+- **Ejercicios resueltos (`e31`–`e35`, ≤ 6 GB RAM en host de 16 GB):** auditoría de licencias y selección de stack (`e31`), documentación técnica Markdown/Pandoc/Git (`e32`), cliente de correo y verificación SPF/DKIM/DMARC (`e33`), transferencia segura SFTP/`rsync`/SHA-256 (`e34`) y utilidades de compresión, ClamAV y mantenimiento (`e35`).
+- **Práctica integradora `p07` (`DAM-Doc-Ubuntu` 2 GB + `DAM-Oficina-Win10` 4 GB = 6 GB):** enunciado público (`publicar: true`) y solución privada (`publicar: false`).
+- **Evaluación privada (`privado_evaluacion/`):** examen teórico-práctico RA7 (14 preguntas tipo test + banco GIFT + 3 casos de laboratorio), solucionario docente y rúbrica analítica `RA7.a`–`RA7.g`.
+
+---
+
 ## [2026-11-15] Compilación completa del bloque RA6 (6 conceptos, 5 SVGs, 5 ejercicios `e26`–`e30`, práctica `p06` y banco de evaluación privado)
 
 - **Fuentes procesadas (`raw/procesados/`):** `ra6-recursos-compartidos-permisos-red-servidores.md`, `ra6-acceso-remoto-cortafuegos-seguridad-red.md`, `ra6-dominios-active-directory-ldap-integracion.md`.
