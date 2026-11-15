@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 380" role="img" aria-label="Requisitos de hardware y software del sistema informático para desarrollo de aplicaciones DAM">
+  <rect x="2" y="2" width="916" height="376" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="460" y="34" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="18.5" font-weight="700" fill="#0f172a">Dimensionamiento de una Estación para Desarrollo de Aplicaciones (1º / 2º DAM)</text>
+
+  <!-- Hardware Specs -->
+  <rect x="26" y="56" width="276" height="236" rx="10" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+  <text x="164" y="80" text-anchor="middle" font-family="system-ui" font-size="13.5" font-weight="700" fill="#9a3412">1. Requisitos Hardware Base</text>
+  <text x="42" y="108" font-family="system-ui" font-size="11" fill="#1e293b">• CPU: 4+ núcleos físicos con</text>
+  <text x="52" y="126" font-family="system-ui" font-size="10.5" font-weight="700" fill="#c2410c">VT-x / AMD-V habilitado</text>
+  <text x="42" y="152" font-family="system-ui" font-size="11" fill="#1e293b">• RAM: 16 GB físicas en aula</text>
+  <text x="52" y="170" font-family="system-ui" font-size="10" fill="#7c2d12">(IDE + JDK + Docker / VMs)</text>
+  <text x="42" y="196" font-family="system-ui" font-size="11" fill="#1e293b">• Disco: SSD/NVMe obligatorio</text>
+  <text x="52" y="214" font-family="system-ui" font-size="10" fill="#7c2d12">(Compilación Gradle + Caches)</text>
+  <text x="42" y="240" font-family="system-ui" font-size="11" fill="#1e293b">• Tope VirtualBox en clase:</text>
+  <text x="52" y="258" font-family="system-ui" font-size="10.5" font-weight="700" fill="#c2410c">Max 10-12 GB para VMs activas</text>
+
+  <!-- Variables y Entorno -->
+  <rect x="320" y="56" width="280" height="236" rx="10" fill="#ecfeff" stroke="#0891b2" stroke-width="2"/>
+  <text x="460" y="80" text-anchor="middle" font-family="system-ui" font-size="13.5" font-weight="700" fill="#155e75">2. Variables de Entorno y SDKs</text>
+  <rect x="336" y="96" width="248" height="44" rx="5" fill="#ffffff" stroke="#06b6d4"/>
+  <text x="460" y="114" text-anchor="middle" font-family="monospace" font-size="11" font-weight="700" fill="#0e7490">PATH + JAVA_HOME + ANDROID_HOME</text>
+  <text x="460" y="131" text-anchor="middle" font-family="system-ui" font-size="9.5" fill="#334155">Linux: ~/.bashrc o /etc/profile.d/</text>
+
+  <rect x="336" y="150" width="248" height="44" rx="5" fill="#ffffff" stroke="#06b6d4"/>
+  <text x="460" y="168" text-anchor="middle" font-family="monospace" font-size="11" font-weight="700" fill="#0e7490">Gestores Multi-Versión</text>
+  <text x="460" y="185" text-anchor="middle" font-family="system-ui" font-size="9.5" fill="#334155">update-alternatives · pyenv · nvm · .venv</text>
+
+  <rect x="336" y="204" width="248" height="72" rx="5" fill="#ffffff" stroke="#06b6d4"/>
+  <text x="460" y="222" text-anchor="middle" font-family="system-ui" font-size="11" font-weight="700" fill="#0e7490">Variables en Windows PowerShell</text>
+  <text x="460" y="240" text-anchor="middle" font-family="monospace" font-size="9.5" fill="#334155">$env:JAVA_HOME</text>
+  <text x="460" y="256" text-anchor="middle" font-family="monospace" font-size="9" fill="#334155">[Environment]::SetEnvironmentVariable</text>
+
+  <!-- Aislamiento y Servicios Dev -->
+  <rect x="618" y="56" width="276" height="236" rx="10" fill="#eef2ff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="756" y="80" text-anchor="middle" font-family="system-ui" font-size="13.5" font-weight="700" fill="#312e81">3. Servicios y Aislamiento</text>
+  <text x="634" y="108" font-family="system-ui" font-size="11" fill="#1e293b">• Bases de datos locales:</text>
+  <text x="644" y="126" font-family="monospace" font-size="10" fill="#3730a3">PostgreSQL / MySQL (systemd)</text>
+  <text x="634" y="152" font-family="system-ui" font-size="11" fill="#1e293b">• Contenedores y VMs:</text>
+  <text x="644" y="170" font-family="system-ui" font-size="10" fill="#3730a3">Docker (grupo docker) / VirtualBox</text>
+  <text x="634" y="196" font-family="system-ui" font-size="11" fill="#1e293b">• Control de versiones:</text>
+  <text x="644" y="214" font-family="monospace" font-size="10" fill="#3730a3">Git + Claves SSH (~/.ssh)</text>
+  <text x="634" y="240" font-family="system-ui" font-size="11" fill="#1e293b">• Permisos mínimos:</text>
+  <text x="644" y="258" font-family="system-ui" font-size="10" fill="#3730a3">Trabajar sin root; venv por proyecto</text>
+
+  <!-- Footer -->
+  <rect x="26" y="308" width="868" height="52" rx="8" fill="#f0fdf4" stroke="#16a34a"/>
+  <text x="460" y="339" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#166534">Evaluar necesidades del sistema evita cuellos de botella en compilación, conflictos de versiones SDK y agotamiento de RAM en clase.</text>
+</svg>

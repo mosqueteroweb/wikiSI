@@ -89,6 +89,12 @@ nav:
       - "RA3 · Discos, LVM y RAID": conceptos/ra3-particiones-lvm-raid-administracion-discos.md
       - "RA3 · SMART, TRIM y Cifrado LUKS/BitLocker": conceptos/ra3-chequeo-desfragmentacion-cifrado-discos.md
       - "RA3 · Copias de Seguridad y Tareas (cron/schtasks)": conceptos/ra3-copias-seguridad-clonacion-tareas-programadas.md
+      - "RA4 · Usuarios y Grupos Locales": conceptos/ra4-administracion-usuarios-grupos-locales.md
+      - "RA4 · Directivas de Contraseña y sudo": conceptos/ra4-directivas-cuenta-politicas-contrasenas-sudo.md
+      - "RA4 · Permisos Locales, Bits y ACLs": conceptos/ra4-permisos-locales-bits-especiales-acls.md
+      - "RA4 · Procesos y Servicios (systemd/Win)": conceptos/ra4-gestion-procesos-servicios-systemd-windows.md
+      - "RA4 · Comandos, Variables y Scripting": conceptos/ra4-comandos-administracion-variables-scripting.md
+      - "RA4 · Monitorización, Logs y Entorno DAM": conceptos/ra4-monitorizacion-logs-optimizacion-entorno-dam.md
   - Ejercicios:
       - Índice de Ejercicios: ejercicios/index.md
       - "e01 · Auditoría CPU y Placa Base": ejercicios/e01-ra1-auditoria-hardware-cpu-placas.md
@@ -106,9 +112,15 @@ nav:
       - "e13 · Volúmenes Lógicos LVM y RAID 1": ejercicios/e13-ra3-volumenes-logicos-lvm-raid-mdadm.md
       - "e14 · SMART, fsck/chkdsk y Cifrado LUKS": ejercicios/e14-ra3-chequeo-smart-cifrado-luks-bitlocker.md
       - "e15 · Backups rsync/tar y cron/schtasks": ejercicios/e15-ra3-backups-rsync-tar-cron-schtasks.md
+      - "e16 · Usuarios, Grupos, chage y net accounts": ejercicios/e16-ra4-creacion-usuarios-grupos-politicas-chage-net.md
+      - "e17 · Permisos POSIX, Bits y ACLs": ejercicios/e17-ra4-permisos-chmod-sgid-sticky-setfacl-icacls.md
+      - "e18 · Procesos, Señales y Servicios": ejercicios/e18-ra4-control-procesos-senales-servicios-systemd.md
+      - "e19 · Logs journalctl, Eventos y Métricas": ejercicios/e19-ra4-auditoria-logs-journalctl-eventviewer-rendimiento.md
+      - "e20 · Entorno DAM, Variables y Scripting": ejercicios/e20-ra4-preparacion-estacion-desarrollo-dam-variables.md
   - Prácticas:
       - Índice de Prácticas: practicas/index.md
       - "p01 · Auditoría Integral RA1 (Enunciado)": practicas/p01-ra1-auditoria-integral-sistema-red-enunciado.md
       - "p02 · Despliegue Dual-Boot RA2 (Enunciado)": practicas/p02-ra2-despliegue-dualboot-recuperacion-enunciado.md
       - "p03 · Almacenamiento, Cifrado y Backups RA3 (Enunciado)": practicas/p03-ra3-almacenamiento-lvm-cifrado-backups-enunciado.md
+      - "p04 · Usuarios, ACLs, Servicios y DAM RA4 (Enunciado)": practicas/p04-ra4-administracion-multi-usuario-acls-monitorizacion-enunciado.md
   - Registro: log.md

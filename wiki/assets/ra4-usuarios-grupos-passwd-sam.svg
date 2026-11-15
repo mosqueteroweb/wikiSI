@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 400" role="img" aria-label="Arquitectura de usuarios, grupos y directivas en Linux passwd/shadow frente a SAM en Windows">
+  <rect x="2" y="2" width="916" height="396" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="460" y="34" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="18.5" font-weight="700" fill="#0f172a">Gestión de Cuentas y Directivas: Linux (/etc/passwd + shadow) vs. Windows (SAM)</text>
+
+  <!-- Linux Left -->
+  <rect x="24" y="54" width="430" height="324" rx="10" fill="#ecfeff" stroke="#0891b2" stroke-width="2"/>
+  <text x="239" y="78" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#155e75">GNU/Linux (MAX / Ubuntu) — Ficheros de Identidad</text>
+
+  <rect x="42" y="92" width="394" height="62" rx="6" fill="#ffffff" stroke="#06b6d4"/>
+  <text x="54" y="112" font-family="monospace" font-size="12" font-weight="700" fill="#0e7490">/etc/passwd (644 · Lectura pública)</text>
+  <text x="54" y="130" font-family="monospace" font-size="10.5" fill="#1e293b">ana:x:1001:1001:Ana DAM:/home/ana:/bin/bash</text>
+  <text x="54" y="146" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" fill="#475569">UID 0=root · 1-999=sistema · 1000+=humanos · 'x' remite a shadow</text>
+
+  <rect x="42" y="164" width="394" height="62" rx="6" fill="#fff7ed" stroke="#f97316"/>
+  <text x="54" y="184" font-family="monospace" font-size="12" font-weight="700" fill="#9a3412">/etc/shadow (640 · Solo root/shadow)</text>
+  <text x="54" y="202" font-family="monospace" font-size="10.5" fill="#7c2d12">ana:$y$j9T$SaltHash...:20040:0:90:14:::</text>
+  <text x="54" y="218" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" fill="#7c2d12">Hash cifrado + salt + política chage (-M 90 max, -W 14 aviso)</text>
+
+  <rect x="42" y="236" width="394" height="58" rx="6" fill="#ffffff" stroke="#06b6d4"/>
+  <text x="54" y="256" font-family="monospace" font-size="12" font-weight="700" fill="#0e7490">/etc/group y /etc/sudoers (visudo)</text>
+  <text x="54" y="274" font-family="monospace" font-size="10.5" fill="#1e293b">sudo:x:27:alumdam,ana  |  usermod -aG sudo ana</text>
+
+  <rect x="42" y="304" width="394" height="58" rx="6" fill="#cffafe" stroke="#0891b2"/>
+  <text x="239" y="325" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="700" fill="#164e63">PAM (/etc/pam.d/) + /etc/skel</text>
+  <text x="239" y="344" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#155e75">Complejidad (pwquality), bloqueo tras fallos (faillock) y plantilla inicial</text>
+
+  <!-- Windows Right -->
+  <rect x="466" y="54" width="430" height="324" rx="10" fill="#eef2ff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="681" y="78" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#312e81">Windows 10 / 11 — Base Local SAM y Directivas</text>
+
+  <rect x="484" y="92" width="394" height="62" rx="6" fill="#ffffff" stroke="#6366f1"/>
+  <text x="496" y="112" font-family="monospace" font-size="12" font-weight="700" fill="#3730a3">Base de datos SAM (%SystemRoot%\System32\config\SAM)</text>
+  <text x="496" y="130" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" fill="#1e293b">Identificador único SID (S-1-5-21-...-1001) + Hash NTLM</text>
+  <text x="496" y="146" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" fill="#475569">Bloqueada en disco mientras Windows está arrancado (acceso LSA)</text>
+
+  <rect x="484" y="164" width="394" height="62" rx="6" fill="#ffffff" stroke="#6366f1"/>
+  <text x="496" y="184" font-family="monospace" font-size="12" font-weight="700" fill="#3730a3">Herramientas Locales de Cuentas y Grupos</text>
+  <text x="496" y="202" font-family="monospace" font-size="10" fill="#1e293b">lusrmgr.msc | New-LocalUser | Add-LocalGroupMember</text>
+  <text x="496" y="218" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" fill="#475569">Grupos clave: Administradores, Usuarios, Usuarios escritorio remoto</text>
+
+  <rect x="484" y="236" width="394" height="62" rx="6" fill="#fff7ed" stroke="#f97316"/>
+  <text x="496" y="256" font-family="monospace" font-size="12" font-weight="700" fill="#9a3412">Directiva de Seguridad Local (secpol.msc)</text>
+  <text x="496" y="274" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#7c2d12">• Contraseñas: longitud mínima, historial, complejidad, vigencia</text>
+  <text x="496" y="290" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#7c2d12">• Bloqueo de cuenta: umbral intentos y duración (CLI: net accounts)</text>
+
+  <rect x="484" y="308" width="394" height="54" rx="6" fill="#e0e7ff" stroke="#4f46e5"/>
+  <text x="681" y="328" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="700" fill="#312e81">UAC (Control de Cuentas de Usuario)</text>
+  <text x="681" y="346" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#3730a3">Token estándar por defecto -&gt; elevación explícita en tareas admin</text>
+</svg>

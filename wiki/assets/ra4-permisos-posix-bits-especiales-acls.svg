@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 400" role="img" aria-label="Desglose visual de permisos POSIX rwx, bits especiales y ACLs en Linux y Windows NTFS">
+  <rect x="2" y="2" width="916" height="396" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="460" y="34" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="18.5" font-weight="700" fill="#0f172a">Permisos Locales POSIX (Octal, Bits Especiales) y Listas de Control de Acceso (ACL)</text>
+
+  <!-- Octal Breakdown -->
+  <rect x="28" y="54" width="864" height="128" rx="10" fill="#f8fafc" stroke="#0891b2" stroke-width="2"/>
+  <text x="460" y="78" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13.5" font-weight="700" fill="#0e7490">1. Anatomía de una Cadena ls -l: Ejemplo chmod 2750 /srv/equipo  (-&gt; drwxr-s---+)</text>
+
+  <rect x="46" y="94" width="90" height="72" rx="6" fill="#ffedd5" stroke="#ea580c"/>
+  <text x="91" y="118" text-anchor="middle" font-family="monospace" font-size="15" font-weight="700" fill="#9a3412">d / 2</text>
+  <text x="91" y="138" text-anchor="middle" font-family="system-ui" font-size="10" font-weight="700" fill="#c2410c">Tipo + Especial</text>
+  <text x="91" y="154" text-anchor="middle" font-family="system-ui" font-size="9.5" fill="#7c2d12">SGID (2000)</text>
+
+  <rect x="150" y="94" width="164" height="72" rx="6" fill="#ecfeff" stroke="#0891b2"/>
+  <text x="232" y="118" text-anchor="middle" font-family="monospace" font-size="15" font-weight="700" fill="#155e75">rwx = 7</text>
+  <text x="232" y="138" text-anchor="middle" font-family="system-ui" font-size="10.5" font-weight="700" fill="#0e7490">Propietario (u)</text>
+  <text x="232" y="154" text-anchor="middle" font-family="monospace" font-size="9.5" fill="#334155">4(r) + 2(w) + 1(x) = 7</text>
+
+  <rect x="328" y="94" width="164" height="72" rx="6" fill="#eef2ff" stroke="#4f46e5"/>
+  <text x="410" y="118" text-anchor="middle" font-family="monospace" font-size="15" font-weight="700" fill="#312e81">r-s = 5+SGID</text>
+  <text x="410" y="138" text-anchor="middle" font-family="system-ui" font-size="10.5" font-weight="700" fill="#4338ca">Grupo (g)</text>
+  <text x="410" y="154" text-anchor="middle" font-family="monospace" font-size="9.5" fill="#334155">4(r) + 0(w) + 1(x) = 5</text>
+
+  <rect x="506" y="94" width="150" height="72" rx="6" fill="#f1f5f9" stroke="#64748b"/>
+  <text x="581" y="118" text-anchor="middle" font-family="monospace" font-size="15" font-weight="700" fill="#1e293b">--- = 0</text>
+  <text x="581" y="138" text-anchor="middle" font-family="system-ui" font-size="10.5" font-weight="700" fill="#334155">Otros (o)</text>
+  <text x="581" y="154" text-anchor="middle" font-family="system-ui" font-size="9.5" fill="#475569">Sin acceso alguno</text>
+
+  <rect x="670" y="94" width="204" height="72" rx="6" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="772" y="118" text-anchor="middle" font-family="monospace" font-size="15" font-weight="700" fill="#166534">Signo '+'</text>
+  <text x="772" y="138" text-anchor="middle" font-family="system-ui" font-size="10.5" font-weight="700" fill="#15803d">ACL Extendida Activa</text>
+  <text x="772" y="154" text-anchor="middle" font-family="monospace" font-size="9.5" fill="#14532d">getfacl / setfacl -m</text>
+
+  <!-- Bits Especiales -->
+  <rect x="28" y="198" width="424" height="180" rx="10" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+  <text x="240" y="222" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13.5" font-weight="700" fill="#9a3412">2. Tres Bits Especiales POSIX Clave</text>
+  <rect x="44" y="236" width="392" height="38" rx="5" fill="#ffffff" stroke="#fdba74"/>
+  <text x="54" y="259" font-family="system-ui" font-size="10.5" fill="#1e293b"><tspan font-weight="700" fill="#c2410c">SUID (4000 / u+s):</tspan> Ejecutable corre con UID del dueño (ej. passwd).</text>
+  <rect x="44" y="282" width="392" height="38" rx="5" fill="#ffffff" stroke="#fdba74"/>
+  <text x="54" y="305" font-family="system-ui" font-size="10.5" fill="#1e293b"><tspan font-weight="700" fill="#c2410c">SGID (2000 / g+s):</tspan> Nuevos ficheros en carpeta heredan su grupo.</text>
+  <rect x="44" y="328" width="392" height="38" rx="5" fill="#ffffff" stroke="#fdba74"/>
+  <text x="54" y="351" font-family="system-ui" font-size="10.5" fill="#1e293b"><tspan font-weight="700" fill="#c2410c">Sticky (1000 / +t):</tspan> Solo dueño o root borran en /tmp (1777).</text>
+
+  <!-- ACL Linux vs Windows NTFS -->
+  <rect x="468" y="198" width="424" height="180" rx="10" fill="#eef2ff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="680" y="222" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13.5" font-weight="700" fill="#312e81">3. ACLs Granulares: setfacl vs. NTFS (icacls)</text>
+  <rect x="484" y="236" width="392" height="58" rx="5" fill="#ffffff" stroke="#818cf8"/>
+  <text x="494" y="255" font-family="monospace" font-size="11" font-weight="700" fill="#0e7490">POSIX ACL: setfacl -m u:luis:rw,d:g:dam:rwx dir/</text>
+  <text x="494" y="274" font-family="system-ui" font-size="10" fill="#334155">Permite múltiples usuarios/grupos específicos y herencia por defecto (d:).</text>
+  <rect x="484" y="304" width="392" height="62" rx="5" fill="#ffffff" stroke="#818cf8"/>
+  <text x="494" y="323" font-family="monospace" font-size="11" font-weight="700" fill="#312e81">NTFS DACL: icacls / Get-Acl / Set-Acl</text>
+  <text x="494" y="341" font-family="system-ui" font-size="10" fill="#334155">Regla de oro NTFS: permisos se acumulan (Allow), pero cualquier</text>
+  <text x="494" y="356" font-family="system-ui" font-size="10" font-weight="700" fill="#dc2626">Denegación explícita (Deny) PREVALECE siempre sobre Permitir.</text>
+</svg>

@@ -47,9 +47,17 @@ Páginas de referencia teórica del módulo **Sistemas Informáticos (0483)**. C
 5. [Diagnóstico, Chequeo, TRIM vs. Desfragmentación y Cifrado de Discos](ra3-chequeo-desfragmentacion-cifrado-discos.md) (`RA3.e`, `RA3.h`)
 6. [Copias de Seguridad, Clonación y Automatización de Tareas](ra3-copias-seguridad-clonacion-tareas-programadas.md) (`RA3.f`, `RA3.g`, `RA3.h`)
 
+## RA4 · Administración de Usuarios, Permisos, Procesos, Monitorización y Desarrollo (Completado ✅)
+
+1. [Administración de Usuarios y Grupos Locales](ra4-administracion-usuarios-grupos-locales.md) (`RA4.a`, `RA4.e`)
+2. [Directivas de Cuenta, Contraseñas y Delegación `sudo`](ra4-directivas-cuenta-politicas-contrasenas-sudo.md) (`RA4.b`, `RA4.e`)
+3. [Permisos Locales, Bits Especiales (`SUID`/`SGID`/`Sticky`) y ACLs (`setfacl`/`icacls`)](ra4-permisos-locales-bits-especiales-acls.md) (`RA4.d`, `RA4.e`)
+4. [Gestión de Procesos, Señales y Servicios (`systemd` y Windows)](ra4-gestion-procesos-servicios-systemd-windows.md) (`RA4.c`, `RA4.e`)
+5. [Comandos de Administración, Variables de Entorno y Scripting](ra4-comandos-administracion-variables-scripting.md) (`RA4.e`, `RA4.h`)
+6. [Monitorización, Registros (`journalctl`/Eventos) y Dimensionamiento para Desarrollo DAM](ra4-monitorizacion-logs-optimizacion-entorno-dam.md) (`RA4.f`, `RA4.g`, `RA4.h`)
+
 ## Próximos Bloques Planificados
 
-- **[RA4 · Administración, usuarios, permisos, procesos y monitorización](../ra/RA4.md)**
 - **[RA5 · Interconexión de sistemas en red y TCP/IP](../ra/RA5.md)**
 - **[RA6 · Operación de sistemas en red, servicios y dominios](../ra/RA6.md)**
 - **[RA7 · Documentación técnica y utilidades de propósito general](../ra/RA7.md)**

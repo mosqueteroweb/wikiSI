@@ -45,6 +45,14 @@ Cada ejercicio incluye:
 4. [e14 · Chequeo SMART, Reparación Lógica (`fsck`/`chkdsk`), TRIM y Cifrado `LUKS` / `BitLocker`](e14-ra3-chequeo-smart-cifrado-luks-bitlocker.md) (`RA3.e`, `RA3.h` · 6 GB RAM)
 5. [e15 · Copias de Seguridad con `rsync`, `tar` y `Robocopy` más Automatización (`cron` y `schtasks`)](e15-ra3-backups-rsync-tar-cron-schtasks.md) (`RA3.f`, `RA3.g`, `RA3.h` · 6 GB RAM)
 
+## RA4 · Administración Multiusuario, Permisos, Servicios y Monitorización (`RA4.a`–`RA4.h`)
+
+1. [e16 · Creación de Usuarios, Grupos y Directivas (`chage` y `net accounts`)](e16-ra4-creacion-usuarios-grupos-politicas-chage-net.md) (`RA4.a`, `RA4.b`, `RA4.e` · 6 GB RAM)
+2. [e17 · Permisos Locales (`chmod`, SGID, Sticky) y ACLs (`setfacl` e `icacls`)](e17-ra4-permisos-chmod-sgid-sticky-setfacl-icacls.md) (`RA4.d`, `RA4.e` · 6 GB RAM)
+3. [e18 · Control de Procesos, Señales (`kill`/`nice`) y Servicios (`systemd`/PowerShell)](e18-ra4-control-procesos-senales-servicios-systemd.md) (`RA4.c`, `RA4.e` · 6 GB RAM)
+4. [e19 · Auditoría de Logs (`journalctl`/Eventos) y Monitorización de Rendimiento](e19-ra4-auditoria-logs-journalctl-eventviewer-rendimiento.md) (`RA4.f`, `RA4.g` · 6 GB RAM)
+5. [e20 · Preparación de Estación de Desarrollo DAM: Variables, `PATH` y Scripting](e20-ra4-preparacion-estacion-desarrollo-dam-variables.md) (`RA4.e`, `RA4.g`, `RA4.h` · 6 GB RAM)
+
 ## Otros Bloques
 
-*Los ejercicios de RA4–RA7 se publicarán secuencialmente tras completar cada bloque.*
+*Los ejercicios de RA5–RA7 se publicarán secuencialmente tras completar cada bloque.*
