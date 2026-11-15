@@ -69,7 +69,22 @@ nav:
       - "RA5 · Interconexión en Red": ra/RA5.md
       - "RA6 · Sistemas en Red": ra/RA6.md
       - "RA7 · Documentación y Apps": ra/RA7.md
-  - Conceptos: conceptos/index.md
-  - Ejercicios: ejercicios/index.md
-  - Prácticas: practicas/index.md
+  - Conceptos:
+      - Índice de Conceptos: conceptos/index.md
+      - "RA1 · Von Neumann, Placa Base y CPU": conceptos/ra1-arquitectura-placa-base-cpu.md
+      - "RA1 · Jerarquía y Tipos de Memoria": conceptos/ra1-jerarquia-tipos-memoria.md
+      - "RA1 · Puesta en Marcha: POST, BIOS y UEFI": conceptos/ra1-puesta-en-marcha-bios-uefi.md
+      - "RA1 · Periféricos, Buses e Interfaces": conceptos/ra1-perifericos-interfaces-buses.md
+      - "RA1 · Redes, Cableado y Mapas": conceptos/ra1-redes-componentes-topologias-mapas.md
+      - "RA1 · Seguridad y PRL (PVD y ESD)": conceptos/ra1-seguridad-prevencion-riesgos-prl.md
+  - Ejercicios:
+      - Índice de Ejercicios: ejercicios/index.md
+      - "e01 · Auditoría CPU y Placa Base": ejercicios/e01-ra1-auditoria-hardware-cpu-placas.md
+      - "e02 · Jerarquía de Memorias y RAM": ejercicios/e02-ra1-analisis-jerarquia-memorias.md
+      - "e03 · Verificación Arranque UEFI/BIOS": ejercicios/e03-ra1-verificacion-arranque-uefi-bios.md
+      - "e04 · Buses PCIe/USB y VirtualBox": ejercicios/e04-ra1-inventario-perifericos-buses-usb.md
+      - "e05 · Mapas de Red y Checklist PRL": ejercicios/e05-ra1-interpretacion-mapa-red-prl.md
+  - Prácticas:
+      - Índice de Prácticas: practicas/index.md
+      - "p01 · Auditoría Integral RA1 (Enunciado)": practicas/p01-ra1-auditoria-integral-sistema-red-enunciado.md
   - Registro: log.md

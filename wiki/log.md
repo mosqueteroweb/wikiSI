@@ -11,6 +11,18 @@ Bitácora de operaciones (*ingest*, *compile*, *lint*, *publish*) ejecutadas sob
 
 ---
 
+## [2026-11-15] Compilación completa del bloque RA1 (6 conceptos, 6 SVGs, 5 ejercicios, práctica p01 y banco de evaluación privado)
+
+- **Tipo:** `ingest` · `compile` · `publish`
+- **Resumen:**
+  - Documentadas 3 fuentes técnicas de Nivel 1/2 en `raw/procesados/` (`ra1-hardware-cpu-placas.md`, `ra1-memorias-arranque-perifericos.md`, `ra1-redes-fisica-topologias-prl.md`).
+  - Generadas 6 ilustraciones vectoriales SVG locales en `wiki/assets/` cubriendo Von Neumann/placas base, pirámide de memorias, arranque BIOS/UEFI, buses PCIe/NVMe/USB, código de colores T568A/B y ergonomía PVD/ESD.
+  - Compilados los 6 conceptos teóricos en `wiki/conceptos/` (`RA1.a`–`RA1.h`), los 5 ejercicios sencillos resueltos (`e01`–`e05`) en `wiki/ejercicios/` y la práctica integradora `p01` (enunciado público + solución privada con `publicar: false`).
+  - Creado el banco privado de evaluación de RA1 en `privado_evaluacion/` (examen teórico-práctico con bloque GIFT Moodle, solucionario completo y rúbrica por criterio `RA1.a`–`RA1.h`).
+  - Actualizados `wiki/ra/RA1.md`, índices, navegación en `mkdocs.yml` y desplegado en GitHub Pages.
+
+---
+
 ## [2026-11-15] Inicialización de la Arquitectura `wikiSI` y Despliegue en GitHub Pages
 
 - **Tipo:** `init` · `schema` · `publish`

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 420" role="img" aria-label="Secuencia de puesta en marcha: Power Good, POST, BIOS Legacy vs UEFI">
+  <rect x="2" y="2" width="916" height="416" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="460" y="34" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="19" font-weight="700" fill="#0f172a">Secuencia de Puesta en Marcha: Power Good, POST y BIOS vs. UEFI</text>
+
+  <!-- Top common phase -->
+  <rect x="44" y="54" width="240" height="62" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+  <text x="164" y="78" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#9a3412">1. Fuente ATX y Power Good</text>
+  <text x="164" y="98" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" fill="#c2410c">+12V · +5V · +3.3V estables → Reset CPU</text>
+
+  <line x1="284" y1="85" x2="328" y2="85" stroke="#475569" stroke-width="2.5"/>
+  <polygon points="338,85 326,79 326,91" fill="#475569"/>
+
+  <rect x="338" y="54" width="250" height="62" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <text x="463" y="78" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#92400e">2. Autoprueba POST</text>
+  <text x="463" y="98" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" fill="#b45309">Chequeo CPU, RAM, GPU (Pitidos / LEDs)</text>
+
+  <line x1="588" y1="85" x2="632" y2="85" stroke="#475569" stroke-width="2.5"/>
+  <polygon points="642,85 630,79 630,91" fill="#475569"/>
+
+  <rect x="642" y="54" width="234" height="62" rx="8" fill="#f1f5f9" stroke="#64748b" stroke-width="2"/>
+  <text x="759" y="78" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#1e293b">3. Selección Firmware</text>
+  <text x="759" y="98" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" fill="#475569">Pila CMOS CR2032 / NVRAM · Boot Order</text>
+
+  <!-- Split lines -->
+  <line x1="463" y1="116" x2="463" y2="146" stroke="#475569" stroke-width="2"/>
+  <line x1="230" y1="146" x2="690" y2="146" stroke="#475569" stroke-width="2"/>
+  <line x1="230" y1="146" x2="230" y2="168" stroke="#64748b" stroke-width="2"/>
+  <polygon points="230,176 224,164 236,164" fill="#64748b"/>
+  <line x1="690" y1="146" x2="690" y2="168" stroke="#4f46e5" stroke-width="2"/>
+  <polygon points="690,176 684,164 696,164" fill="#4f46e5"/>
+
+  <!-- Left Branch: BIOS Legacy -->
+  <rect x="44" y="176" width="380" height="218" rx="10" fill="#f8fafc" stroke="#94a3b8" stroke-width="2"/>
+  <text x="234" y="200" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#334155">VÍA CLÁSICA: BIOS Legacy + MBR</text>
+
+  <rect x="66" y="214" width="336" height="44" rx="6" fill="#e2e8f0" stroke="#64748b"/>
+  <text x="234" y="233" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1e293b">Firmware 16-bit (Modo Real)</text>
+  <text x="234" y="249" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" fill="#475569">Lee sector 0 del disco (MBR · máx. 2 TiB · 4 primarias)</text>
+
+  <rect x="66" y="272" width="336" height="44" rx="6" fill="#e2e8f0" stroke="#64748b"/>
+  <text x="234" y="291" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1e293b">Código de arranque en MBR → Partición activa</text>
+  <text x="234" y="307" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" fill="#475569">Sin firma criptográfica · Sin Secure Boot</text>
+
+  <rect x="66" y="330" width="336" height="44" rx="6" fill="#cbd5e1" stroke="#475569"/>
+  <text x="234" y="350" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#0f172a">Cargador (GRUB Legacy / NTLDR) → Kernel</text>
+  <text x="234" y="366" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#334155">Equipos antiguos o VMs sin EFI habilitado</text>
+
+  <!-- Right Branch: UEFI -->
+  <rect x="496" y="176" width="380" height="218" rx="10" fill="#eef2ff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="686" y="200" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#3730a3">VÍA MODERNA: UEFI + GPT + Secure Boot</text>
+
+  <rect x="518" y="214" width="336" height="44" rx="6" fill="#e0e7ff" stroke="#6366f1"/>
+  <text x="686" y="233" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#312e81">Firmware 64-bit + Verificación Secure Boot + TPM 2.0</text>
+  <text x="686" y="249" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" fill="#4338ca">Tabla GPT (&gt; 2 TiB · hasta 128 particiones)</text>
+
+  <rect x="518" y="272" width="336" height="44" rx="6" fill="#e0e7ff" stroke="#6366f1"/>
+  <text x="686" y="291" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#312e81">Partición del Sistema EFI (ESP en FAT32)</text>
+  <text x="686" y="307" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" fill="#4338ca">MAX/Ubuntu: shimx64.efi · Windows: bootmgfw.efi</text>
+
+  <rect x="518" y="330" width="336" height="44" rx="6" fill="#4f46e5" stroke="#3730a3"/>
+  <text x="686" y="350" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#ffffff">GRUB2 / Windows Boot Manager → Kernel → systemd/wininit</text>
+  <text x="686" y="366" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#e0e7ff">Estándar obligatorio en Windows 11 y equipos actuales</text>
+</svg>

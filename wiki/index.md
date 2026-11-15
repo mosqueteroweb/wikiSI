@@ -32,7 +32,7 @@ La construcción de la wiki avanza de forma secuencial desde **RA1** hasta **RA7
 
 | RA | Resultado de Aprendizaje | Criterios | Estado | Hub |
 | :---: | :--- | :---: | :---: | :--- |
-| **RA1** | Evalúa sistemas informáticos, identificando sus componentes y características. | `a` – `h` (8) | En preparación activa | [Ir a RA1](ra/RA1.md) |
+| **RA1** | Evalúa sistemas informáticos, identificando sus componentes y características. | `a` – `h` (8) | Completado ✅ | [Ir a RA1](ra/RA1.md) |
 | **RA2** | Instala sistemas operativos planificando el proceso e interpretando documentación técnica. | `a` – `i` (9) | Planificado | [Ir a RA2](ra/RA2.md) |
 | **RA3** | Gestiona la información del sistema identificando las estructuras de almacenamiento y aplicando medidas para asegurar la integridad de los datos. | `a` – `h` (8) | Planificado | [Ir a RA3](ra/RA3.md) |
 | **RA4** | Gestiona sistemas operativos utilizando comandos y herramientas gráficas y evaluando las necesidades del sistema. | `a` – `h` (8) | Planificado | [Ir a RA4](ra/RA4.md) |

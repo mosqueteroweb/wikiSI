@@ -18,6 +18,6 @@ Las prácticas de clase integran en un escenario realista los conocimientos y de
 
 ## Prácticas Disponibles
 
-*Las prácticas se publicarán de forma progresiva comenzando por **RA1**.*
-
-- [Consultar estado del bloque RA1](../ra/RA1.md)
+| Práctica | Bloque | Criterios | Laboratorio VirtualBox (RAM total) | Enunciado |
+| :---: | :---: | :---: | :--- | :--- |
+| **p01** | [RA1](../ra/RA1.md) | `RA1.a`–`RA1.h` | `DAM-Win10-Audit` (4 GB) + `DAM-Ubuntu-Node` (2 GB) = **6 GB** | [Auditoría Integral de Hardware, Arranque, Red y PRL](p01-ra1-auditoria-integral-sistema-red-enunciado.md) |

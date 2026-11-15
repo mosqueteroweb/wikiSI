@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 440" role="img" aria-label="Arquitectura de Von Neumann y formatos de placa base">
+  <rect x="2" y="2" width="916" height="436" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="460" y="36" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#0f172a">Arquitectura de Von Neumann y Formatos de Placa Base</text>
+
+  <!-- Left: Von Neumann Architecture -->
+  <rect x="28" y="56" width="540" height="356" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="298" y="80" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#334155">MODELO FUNCIONAL DE VON NEUMANN</text>
+
+  <!-- CPU Box -->
+  <rect x="50" y="100" width="210" height="190" rx="10" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+  <text x="155" y="124" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#c2410c">CPU (Procesador)</text>
+
+  <rect x="68" y="138" width="174" height="42" rx="6" fill="#ffedd5" stroke="#fb923c" stroke-width="1.2"/>
+  <text x="155" y="156" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#7c2d12">Unidad de Control (UC)</text>
+  <text x="155" y="172" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" fill="#9a3412">Fetch · Decode · Temporización</text>
+
+  <rect x="68" y="188" width="174" height="42" rx="6" fill="#ffedd5" stroke="#fb923c" stroke-width="1.2"/>
+  <text x="155" y="206" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#7c2d12">ALU / FPU</text>
+  <text x="155" y="222" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" fill="#9a3412">Cálculo aritmético y lógico</text>
+
+  <rect x="68" y="238" width="174" height="38" rx="6" fill="#fed7aa" stroke="#ea580c" stroke-width="1.2"/>
+  <text x="155" y="255" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="700" fill="#7c2d12">Registros Internos</text>
+  <text x="155" y="270" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#9a3412">PC/RIP · IR · MAR · MDR · Flags</text>
+
+  <!-- Memory Box -->
+  <rect x="338" y="100" width="210" height="90" rx="10" fill="#eef2ff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="443" y="126" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#3730a3">Memoria Principal (RAM)</text>
+  <text x="443" y="148" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" fill="#4338ca">Instrucciones + Datos</text>
+  <text x="443" y="166" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" fill="#6366f1">Direccionamiento lineal único</text>
+
+  <!-- I/O Box -->
+  <rect x="338" y="206" width="210" height="84" rx="10" fill="#ecfeff" stroke="#0891b2" stroke-width="2"/>
+  <text x="443" y="232" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#155e75">Subsistema de E/S</text>
+  <text x="443" y="252" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" fill="#0e7490">Discos · Red · USB · Vídeo</text>
+  <text x="443" y="270" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" fill="#0891b2">Interrupciones (IRQ) y DMA</text>
+
+  <!-- System Buses -->
+  <rect x="50" y="318" width="498" height="76" rx="8" fill="#1e293b"/>
+  <text x="299" y="338" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#f8fafc">BUSES DEL SISTEMA (Cuello de botella compartido)</text>
+  <line x1="72" y1="352" x2="526" y2="352" stroke="#f97316" stroke-width="3"/>
+  <text x="299" y="348" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#fed7aa">Bus de Datos (Bidireccional · 64 bits)</text>
+  <line x1="72" y1="370" x2="526" y2="370" stroke="#818cf8" stroke-width="3"/>
+  <text x="299" y="366" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#c7d2fe">Bus de Direcciones (Unidireccional CPU → RAM/E/S)</text>
+  <line x1="72" y1="386" x2="526" y2="386" stroke="#22d3ee" stroke-width="2.5"/>
+  <text x="299" y="383" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#a5f3fc">Bus de Control (RD · WR · CLK · IRQ · DMA)</text>
+
+  <!-- Vertical Connectors to Bus -->
+  <line x1="155" y1="290" x2="155" y2="318" stroke="#ea580c" stroke-width="3"/>
+  <line x1="443" y1="190" x2="443" y2="206" stroke="#4f46e5" stroke-width="2" stroke-dasharray="4 3"/>
+  <line x1="443" y1="290" x2="443" y2="318" stroke="#0891b2" stroke-width="3"/>
+  <line x1="365" y1="190" x2="365" y2="318" stroke="#4f46e5" stroke-width="3"/>
+
+  <!-- Right: Form Factors -->
+  <rect x="590" y="56" width="302" height="356" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="741" y="80" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#334155">FORMATOS DE PLACA BASE</text>
+
+  <!-- ATX scaled -->
+  <rect x="615" y="102" width="244" height="295" rx="6" fill="#ffedd5" stroke="#ea580c" stroke-width="2"/>
+  <text x="845" y="122" text-anchor="end" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#9a3412">ATX</text>
+  <text x="845" y="138" text-anchor="end" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" fill="#c2410c">305 × 244 mm</text>
+  <text x="845" y="154" text-anchor="end" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#9a3412">Hasta 7 PCIe</text>
+
+  <!-- Micro-ATX scaled -->
+  <rect x="615" y="102" width="244" height="236" rx="6" fill="#e0e7ff" fill-opacity="0.72" stroke="#4f46e5" stroke-width="2"/>
+  <text x="845" y="286" text-anchor="end" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#3730a3">Micro-ATX</text>
+  <text x="845" y="302" text-anchor="end" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" fill="#4338ca">244 × 244 mm · ≤ 4 PCIe</text>
+  <text x="845" y="318" text-anchor="end" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#4f46e5">(Estándar aula/oficina)</text>
+
+  <!-- Mini-ITX scaled -->
+  <rect x="615" y="102" width="166" height="166" rx="6" fill="#cffafe" fill-opacity="0.88" stroke="#0891b2" stroke-width="2"/>
+  <text x="698" y="142" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#155e75">Mini-ITX</text>
+  <text x="698" y="160" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" fill="#0e7490">170 × 170 mm</text>
+  <text x="698" y="178" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#0891b2">1 ranura PCIe x16</text>
+  <rect x="642" y="194" width="60" height="50" rx="4" fill="#ffffff" stroke="#0891b2" stroke-width="1.2"/>
+  <text x="672" y="223" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#155e75">Socket</text>
+  <rect x="716" y="194" width="12" height="50" rx="2" fill="#0891b2"/>
+  <rect x="734" y="194" width="12" height="50" rx="2" fill="#0891b2"/>
+  <text x="732" y="256" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#155e75">DIMM</text>
+</svg>

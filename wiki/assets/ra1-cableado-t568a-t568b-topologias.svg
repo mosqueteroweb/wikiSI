@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 430" role="img" aria-label="Código de colores EIA/TIA-568A y T568B y topología en estrella jerárquica">
+  <rect x="2" y="2" width="916" height="426" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="460" y="34" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="19" font-weight="700" fill="#0f172a">Cableado Estructurado: Estándares RJ-45 (T568A / T568B) y Topología en Estrella</text>
+
+  <!-- Left: T568A vs T568B -->
+  <rect x="28" y="54" width="468" height="352" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="262" y="78" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#334155">ORDEN DE PINES EN CONECTOR RJ-45 (8P8C)</text>
+
+  <!-- Column headers -->
+  <text x="64" y="106" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#475569">Pin</text>
+  <text x="172" y="106" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#15803d">EIA/TIA-568A</text>
+  <text x="366" y="106" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#c2410c">EIA/TIA-568B (Más común)</text>
+
+  <!-- Pin rows (y starts at 120, step 32) -->
+  <!-- Pin 1 -->
+  <text x="64" y="136" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#0f172a">1 (TX+)</text>
+  <rect x="104" y="120" width="22" height="22" rx="3" fill="#bbf7d0" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="134" y="136" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" fill="#1e293b">Blanco-Verde</text>
+  <rect x="290" y="120" width="22" height="22" rx="3" fill="#fed7aa" stroke="#ea580c" stroke-width="1.5"/>
+  <text x="320" y="136" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" fill="#1e293b">Blanco-Naranja</text>
+
+  <!-- Pin 2 -->
+  <text x="64" y="168" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#0f172a">2 (TX-)</text>
+  <rect x="104" y="152" width="22" height="22" rx="3" fill="#16a34a" stroke="#15803d" stroke-width="1.5"/>
+  <text x="134" y="168" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" fill="#1e293b">Verde</text>
+  <rect x="290" y="152" width="22" height="22" rx="3" fill="#ea580c" stroke="#c2410c" stroke-width="1.5"/>
+  <text x="320" y="168" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" fill="#1e293b">Naranja</text>
+
+  <!-- Pin 3 -->
+  <text x="64" y="200" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#0f172a">3 (RX+)</text>
+  <rect x="104" y="184" width="22" height="22" rx="3" fill="#fed7aa" stroke="#ea580c" stroke-width="1.5"/>
+  <text x="134" y="200" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" fill="#1e293b">Blanco-Naranja</text>
+  <rect x="290" y="184" width="22" height="22" rx="3" fill="#bbf7d0" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="320" y="200" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" fill="#1e293b">Blanco-Verde</text>
+
+  <!-- Pin 4 -->
+  <text x="64" y="232" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#0f172a">4</text>
+  <rect x="104" y="216" width="22" height="22" rx="3" fill="#2563eb" stroke="#1d4ed8" stroke-width="1.5"/>
+  <text x="134" y="232" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" fill="#1e293b">Azul</text>
+  <rect x="290" y="216" width="22" height="22" rx="3" fill="#2563eb" stroke="#1d4ed8" stroke-width="1.5"/>
+  <text x="320" y="232" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" fill="#1e293b">Azul</text>
+
+  <!-- Pin 5 -->
+  <text x="64" y="264" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#0f172a">5</text>
+  <rect x="104" y="248" width="22" height="22" rx="3" fill="#bfdbfe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="134" y="264" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" fill="#1e293b">Blanco-Azul</text>
+  <rect x="290" y="248" width="22" height="22" rx="3" fill="#bfdbfe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="320" y="264" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" fill="#1e293b">Blanco-Azul</text>
+
+  <!-- Pin 6 -->
+  <text x="64" y="296" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#0f172a">6 (RX-)</text>
+  <rect x="104" y="280" width="22" height="22" rx="3" fill="#ea580c" stroke="#c2410c" stroke-width="1.5"/>
+  <text x="134" y="296" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" fill="#1e293b">Naranja</text>
+  <rect x="290" y="280" width="22" height="22" rx="3" fill="#16a34a" stroke="#15803d" stroke-width="1.5"/>
+  <text x="320" y="296" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" fill="#1e293b">Verde</text>
+
+  <!-- Pin 7 -->
+  <text x="64" y="328" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#0f172a">7</text>
+  <rect x="104" y="312" width="22" height="22" rx="3" fill="#e7e5e4" stroke="#78350f" stroke-width="1.5"/>
+  <text x="134" y="328" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" fill="#1e293b">Blanco-Marrón</text>
+  <rect x="290" y="312" width="22" height="22" rx="3" fill="#e7e5e4" stroke="#78350f" stroke-width="1.5"/>
+  <text x="320" y="328" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" fill="#1e293b">Blanco-Marrón</text>
+
+  <!-- Pin 8 -->
+  <text x="64" y="360" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#0f172a">8</text>
+  <rect x="104" y="344" width="22" height="22" rx="3" fill="#78350f" stroke="#451a03" stroke-width="1.5"/>
+  <text x="134" y="360" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" fill="#1e293b">Marrón</text>
+  <rect x="290" y="344" width="22" height="22" rx="3" fill="#78350f" stroke="#451a03" stroke-width="1.5"/>
+  <text x="320" y="360" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" fill="#1e293b">Marrón</text>
+
+  <text x="262" y="394" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="600" fill="#475569">Cable directo: T568B–T568B (o T568A–T568A) · Gigabit usa los 8 hilos</text>
+
+  <!-- Right: Structured Cabling Star Topology -->
+  <rect x="514" y="54" width="378" height="352" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="703" y="78" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#334155">ESTRELLA EN CABLEADO ESTRUCTURADO</text>
+
+  <!-- Router -->
+  <rect x="633" y="96" width="140" height="44" rx="8" fill="#ea580c" stroke="#c2410c" stroke-width="1.5"/>
+  <text x="703" y="116" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#ffffff">Router (Capa 3)</text>
+  <text x="703" y="131" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#ffedd5">Salida WAN / Gateway</text>
+
+  <line x1="703" y1="140" x2="703" y2="168" stroke="#334155" stroke-width="2.5"/>
+
+  <!-- Rack Box -->
+  <rect x="546" y="168" width="314" height="106" rx="8" fill="#eef2ff" stroke="#4f46e5" stroke-width="2" stroke-dasharray="5 3"/>
+  <text x="703" y="186" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#3730a3">Armario Rack 19&quot;</text>
+
+  <rect x="572" y="196" width="262" height="28" rx="4" fill="#4f46e5"/>
+  <text x="703" y="214" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Switch Capa 2 (Tabla MAC)</text>
+
+  <line x1="630" y1="224" x2="630" y2="238" stroke="#6366f1" stroke-width="2"/>
+  <line x1="703" y1="224" x2="703" y2="238" stroke="#6366f1" stroke-width="2"/>
+  <line x1="776" y1="224" x2="776" y2="238" stroke="#6366f1" stroke-width="2"/>
+
+  <rect x="572" y="238" width="262" height="26" rx="4" fill="#c7d2fe" stroke="#4f46e5"/>
+  <text x="703" y="255" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#312e81">Patch Panel (Tomas P01, P02, P03...)</text>
+
+  <!-- Horizontal cabling to workstations -->
+  <line x1="610" y1="264" x2="585" y2="322" stroke="#0891b2" stroke-width="2.5"/>
+  <line x1="703" y1="264" x2="703" y2="322" stroke="#0891b2" stroke-width="2.5"/>
+  <line x1="796" y1="264" x2="821" y2="322" stroke="#0891b2" stroke-width="2.5"/>
+
+  <rect x="530" y="322" width="105" height="64" rx="6" fill="#ecfeff" stroke="#0891b2" stroke-width="1.5"/>
+  <text x="582" y="344" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#155e75">Roseta P01</text>
+  <text x="582" y="362" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#0e7490">PC Aula (MAX)</text>
+  <text x="582" y="376" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" fill="#0891b2">Cat6 ≤ 100 m</text>
+
+  <rect x="650" y="322" width="106" height="64" rx="6" fill="#ecfeff" stroke="#0891b2" stroke-width="1.5"/>
+  <text x="703" y="344" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#155e75">Roseta P02</text>
+  <text x="703" y="362" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#0e7490">PC Aula (MAX)</text>
+  <text x="703" y="376" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" fill="#0891b2">Cat6 ≤ 100 m</text>
+
+  <rect x="771" y="322" width="105" height="64" rx="6" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+  <text x="823" y="344" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#92400e">Roseta P03</text>
+  <text x="823" y="362" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#b45309">Punto Acceso Wi-Fi</text>
+  <text x="823" y="376" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" fill="#d97706">PoE / 802.11ax</text>
+</svg>
