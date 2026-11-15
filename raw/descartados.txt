@@ -1,0 +1,6 @@
+# Lista negra de fuentes descartadas (URLs o dominios)
+# El agente consultará este archivo antes de realizar scouting o ingesta en raw/inbox/
+# para evitar descargar o citar dominios de Nivel 3 o fuentes retiradas por el profesor.
+#
+# Formato recomendado (una entrada por línea):
+# dominio-o-url | motivo | fecha (YYYY-MM-DD)

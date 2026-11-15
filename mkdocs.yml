@@ -1,0 +1,75 @@
+site_name: "wikiSI · Sistemas Informáticos (0483 - 1º DAM)"
+site_description: "Base de conocimiento curricular, ejercicios resueltos y prácticas de Sistemas Informáticos (0483 - 1º DAM) siguiendo el patrón LLM Wiki."
+site_author: "Pedro Mosqueteroweb"
+site_url: "https://mosqueteroweb.github.io/wikiSI/"
+repo_url: "https://github.com/mosqueteroweb/wikiSI"
+repo_name: "mosqueteroweb/wikiSI"
+docs_dir: wiki
+copyright: "Copyright &copy; 2026 Pedro Mosqueteroweb (@mosqueteroweb)"
+
+theme:
+  name: material
+  language: es
+  logo: assets/logo_mosqueteroweb.png
+  favicon: assets/logo_mosqueteroweb.png
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep orange
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Cambiar a modo oscuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep orange
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Cambiar a modo claro
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+
+hooks:
+  - scripts/filter_unpublished.py
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/mosqueteroweb
+
+nav:
+  - Inicio: index.md
+  - Resultados de Aprendizaje:
+      - "RA1 · Sistemas y Redes": ra/RA1.md
+      - "RA2 · Instalación de SO": ra/RA2.md
+      - "RA3 · Gestión de Información": ra/RA3.md
+      - "RA4 · Administración de SO": ra/RA4.md
+      - "RA5 · Interconexión en Red": ra/RA5.md
+      - "RA6 · Sistemas en Red": ra/RA6.md
+      - "RA7 · Documentación y Apps": ra/RA7.md
+  - Conceptos: conceptos/index.md
+  - Ejercicios: ejercicios/index.md
+  - Prácticas: practicas/index.md
+  - Registro: log.md

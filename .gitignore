@@ -1,0 +1,13 @@
+# CAPA PRIVADA DE EVALUACIÓN - NUNCA SUBIR AL REPO PÚBLICO
+privado_evaluacion/
+
+# Entorno Python y compilación MkDocs
+.venv/
+site/
+__pycache__/
+*.pyc
+
+# Sistema operativo y editores
+.DS_Store
+.idea/
+.vscode/
