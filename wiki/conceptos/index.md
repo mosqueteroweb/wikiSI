@@ -65,7 +65,15 @@ Páginas de referencia teórica del módulo **Sistemas Informáticos (0483)**. C
 5. [Gestión de Puertos y Diagnóstico Sistemático de Red (*Bottom-Up*)](ra5-gestion-puertos-herramientas-diagnostico-red.md) (`RA5.f`, `RA5.g`)
 6. [Protocolos Seguros de Comunicaciones: TLS, SSH, SFTP y VPN](ra5-protocolos-seguros-comunicaciones-tls-ssh-vpn.md) (`RA5.h`, `RA5.f`)
 
+## RA6 · Operación de Sistemas en Red, Servidores, Cortafuegos y Dominios (Completado ✅)
+
+1. [Recursos Compartidos en Red, Permisos Efectivos y Samba/SMB](ra6-recursos-compartidos-permisos-red-samba-smb.md) (`RA6.a`, `RA6.b`)
+2. [Servidores de Ficheros (SMB/NFS), Impresión (CUPS) y Aplicaciones](ra6-servidores-ficheros-impresion-aplicaciones.md) (`RA6.c`)
+3. [Conexión y Administración Remota Segura (SSH, RDP, xrdp y VNC)](ra6-conexion-administracion-remota-ssh-rdp-vnc.md) (`RA6.d`)
+4. [Seguridad de Recursos y Cortafuegos (`ufw`, `nftables` y Defender Firewall)](ra6-seguridad-recursos-cortafuegos-ufw-defender.md) (`RA6.e`, `RA6.f`)
+5. [Utilidades de Seguridad Básica, Defensa Activa (`fail2ban`) y Auditoría](ra6-utilidades-seguridad-auditoria-endurecimiento.md) (`RA6.b`, `RA6.e`, `RA6.f`)
+6. [Implantación y Explotación de Dominios (Active Directory, Samba AD DC, LDAP y GPO)](ra6-implantacion-explotacion-dominios-ad-samba-dc.md) (`RA6.g`, `RA6.b`)
+
 ## Próximos Bloques Planificados
 
-- **[RA6 · Operación de sistemas en red, servicios y dominios](../ra/RA6.md)**
 - **[RA7 · Documentación técnica y utilidades de propósito general](../ra/RA7.md)**

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 430" width="920" height="430" font-family="system-ui, -apple-system, sans-serif">
+  <rect x="2" y="2" width="916" height="426" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="460" y="36" text-anchor="middle" font-size="20" font-weight="bold" fill="#0f172a">Arquitectura de Servidores en Red: Ficheros (SMB/NFS), Impresión (CUPS) y Aplicaciones (RA6.c)</text>
+  <text x="460" y="58" text-anchor="middle" font-size="13" fill="#475569">Servicios centrales de red sobre un servidor Ubuntu y consumo simultáneo desde clientes Linux y Windows</text>
+
+  <!-- Tarjeta 1: Samba SMB -->
+  <rect x="35" y="92" width="205" height="270" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="137" y="122" text-anchor="middle" font-size="15" font-weight="bold" fill="#1e40af">Servidor SMB / Samba</text>
+  <text x="137" y="142" text-anchor="middle" font-size="12" font-family="monospace" fill="#1d4ed8">Puerto 445/TCP</text>
+  <rect x="50" y="158" width="175" height="106" rx="6" fill="#ffffff" stroke="#93c5fd"/>
+  <text x="137" y="180" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e3a8a">Multiplataforma</text>
+  <text x="137" y="198" text-anchor="middle" font-size="11" fill="#334155">• Win (`net use Z:`)</text>
+  <text x="137" y="216" text-anchor="middle" font-size="11" fill="#334155">• Linux (`mount -t cifs`)</text>
+  <text x="137" y="234" text-anchor="middle" font-size="11" fill="#334155">• Base `/etc/samba/smb.conf`</text>
+  <text x="137" y="252" text-anchor="middle" font-size="11" fill="#334155">• Claves vía `smbpasswd`</text>
+  <text x="137" y="330" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#1e40af">Validación: testparm -s</text>
+
+  <!-- Tarjeta 2: NFS -->
+  <rect x="252" y="92" width="205" height="270" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="354" y="122" text-anchor="middle" font-size="15" font-weight="bold" fill="#166534">Servidor NFSv4</text>
+  <text x="354" y="142" text-anchor="middle" font-size="12" font-family="monospace" fill="#15803d">Puerto 2049/TCP</text>
+  <rect x="267" y="158" width="175" height="106" rx="6" fill="#ffffff" stroke="#86efac"/>
+  <text x="354" y="180" text-anchor="middle" font-size="12" font-weight="bold" fill="#14532d">Nativo Unix / Linux</text>
+  <text x="354" y="198" text-anchor="middle" font-size="11" fill="#334155">• Alta velocidad en LAN</text>
+  <text x="354" y="216" text-anchor="middle" font-size="11" fill="#334155">• Reglas `/etc/exports`</text>
+  <text x="354" y="234" text-anchor="middle" font-size="11" fill="#334155">• Montaje `/etc/fstab`</text>
+  <text x="354" y="252" text-anchor="middle" font-size="11" fill="#334155">• Protección `root_squash`</text>
+  <text x="354" y="330" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#166534">Recarga: exportfs -ra</text>
+
+  <!-- Tarjeta 3: Impresión CUPS -->
+  <rect x="469" y="92" width="205" height="270" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <text x="571" y="122" text-anchor="middle" font-size="15" font-weight="bold" fill="#92400e">Impresión CUPS / IPP</text>
+  <text x="571" y="142" text-anchor="middle" font-size="12" font-family="monospace" fill="#b45309">Puerto 631/TCP</text>
+  <rect x="484" y="158" width="175" height="106" rx="6" fill="#ffffff" stroke="#fcd34d"/>
+  <text x="571" y="180" text-anchor="middle" font-size="12" font-weight="bold" fill="#78350f">Colas Centralizadas</text>
+  <text x="571" y="198" text-anchor="middle" font-size="11" fill="#334155">• Spooling &amp; cuotas</text>
+  <text x="571" y="216" text-anchor="middle" font-size="11" fill="#334155">• Protocolo IPP / IPPS</text>
+  <text x="571" y="234" text-anchor="middle" font-size="11" fill="#334155">• Panel web `:631` / `lpadmin`</text>
+  <text x="571" y="252" text-anchor="middle" font-size="11" fill="#334155">• Win Spooler / Driverless</text>
+  <text x="571" y="330" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#92400e">Estado: lpstat -p -d</text>
+
+  <!-- Tarjeta 4: Servidores de Aplicaciones -->
+  <rect x="686" y="92" width="200" height="270" rx="10" fill="#f3e8ff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="786" y="122" text-anchor="middle" font-size="15" font-weight="bold" fill="#5b21b6">Apps Web y Java</text>
+  <text x="786" y="142" text-anchor="middle" font-size="12" font-family="monospace" fill="#6d28d9">80/443 · 8080 · 5432</text>
+  <rect x="701" y="158" width="170" height="106" rx="6" fill="#ffffff" stroke="#c4b5fd"/>
+  <text x="786" y="180" text-anchor="middle" font-size="12" font-weight="bold" fill="#4c1d95">Proxy + Runtime</text>
+  <text x="786" y="198" text-anchor="middle" font-size="11" fill="#334155">• Nginx Proxy Inverso TLS</text>
+  <text x="786" y="216" text-anchor="middle" font-size="11" fill="#334155">• Tomcat / Spring Boot</text>
+  <text x="786" y="234" text-anchor="middle" font-size="11" fill="#334155">• Usuario sin privilegios</text>
+  <text x="786" y="252" text-anchor="middle" font-size="11" fill="#334155">• systemd Restart=on-failure</text>
+  <text x="786" y="330" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#5b21b6">Socket: 0.0.0.0 vs 127.0.0.1</text>
+
+  <text x="460" y="398" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#334155">Todos los servicios operan bajo cuentas dedicadas sin login (smb, nobody, lp, www-data) para aislar fallos</text>
+</svg>

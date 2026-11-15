@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 420" width="920" height="420" font-family="system-ui, -apple-system, sans-serif">
+  <rect x="2" y="2" width="916" height="416" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="460" y="36" text-anchor="middle" font-size="20" font-weight="bold" fill="#0f172a">Cortafuegos Perimetral del Sistema: UFW (Linux) y Defender Firewall (Windows) (RA6.e / RA6.f)</text>
+  <text x="460" y="58" text-anchor="middle" font-size="13" fill="#475569">Política predeterminada de denegación entrante, filtrado por subred origen y prevención activa de fuerza bruta</text>
+
+  <!-- Escenario de tráfico -->
+  <rect x="35" y="96" width="190" height="72" rx="8" fill="#fef2f2" stroke="#ef4444" stroke-width="2"/>
+  <text x="130" y="124" text-anchor="middle" font-size="13" font-weight="bold" fill="#991b1b">Red No Confiable (WAN)</text>
+  <text x="130" y="144" text-anchor="middle" font-size="11.5" fill="#b91c1c">Escaneo puerto 445 / fuerza bruta</text>
+
+  <rect x="35" y="196" width="190" height="72" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="130" y="224" text-anchor="middle" font-size="13" font-weight="bold" fill="#166534">Subred Aula DAM</text>
+  <text x="130" y="244" text-anchor="middle" font-size="11.5" font-family="monospace" fill="#15803d">192.168.50.0/24</text>
+
+  <line x1="225" y1="132" x2="295" y2="155" stroke="#ef4444" stroke-width="3" stroke-dasharray="5,4"/>
+  <line x1="225" y1="232" x2="295" y2="215" stroke="#16a34a" stroke-width="3"/>
+
+  <!-- Muro Cortafuegos -->
+  <rect x="295" y="88" width="320" height="218" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="2.5"/>
+  <text x="455" y="116" text-anchor="middle" font-size="15" font-weight="bold" fill="#92400e">CORTAFUEGOS DEL HOST</text>
+  <text x="455" y="135" text-anchor="middle" font-size="12" fill="#b45309">Política base: DENY INCOMING · ALLOW OUTGOING</text>
+
+  <rect x="312" y="150" width="286" height="44" rx="6" fill="#fef2f2" stroke="#dc2626"/>
+  <text x="455" y="170" text-anchor="middle" font-size="12" font-weight="bold" fill="#991b1b">✕ BLOQUEADO: Origen externo hacia 445 / 3389</text>
+  <text x="455" y="186" text-anchor="middle" font-size="11" fill="#b91c1c">Fail2ban banea IP tras 5 fallos SSH en 10 min</text>
+
+  <rect x="312" y="204" width="286" height="44" rx="6" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="455" y="224" text-anchor="middle" font-size="12" font-weight="bold" fill="#166534">✓ PERMITIDO: Solo subred 192.168.50.0/24</text>
+  <text x="455" y="240" text-anchor="middle" font-size="11" fill="#15803d">ufw limit ssh · allow from 192.168.50.0/24 to any port 445</text>
+
+  <rect x="312" y="256" width="286" height="36" rx="6" fill="#ffffff" stroke="#d97706"/>
+  <text x="455" y="279" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#78350f">Windows: Perfiles Dominio · Privado · Público</text>
+
+  <!-- Servicios protegidos -->
+  <rect x="665" y="102" width="220" height="190" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="775" y="132" text-anchor="middle" font-size="15" font-weight="bold" fill="#1e40af">Servicios Protegidos</text>
+  <text x="775" y="160" text-anchor="middle" font-size="12.5" fill="#1e3a8a">• SSH (`22/TCP`, limitado)</text>
+  <text x="775" y="184" text-anchor="middle" font-size="12.5" fill="#1e3a8a">• Samba SMB (`445/TCP`, LAN)</text>
+  <text x="775" y="208" text-anchor="middle" font-size="12.5" fill="#1e3a8a">• App Web HTTPS (`443/TCP`)</text>
+  <text x="775" y="238" text-anchor="middle" font-size="11.5" fill="#475569">Resto de puertos cerrados</text>
+  <text x="775" y="258" text-anchor="middle" font-size="11.5" fill="#475569">(superficie mínima de ataque)</text>
+
+  <line x1="615" y1="226" x2="665" y2="226" stroke="#16a34a" stroke-width="3"/>
+
+  <!-- Utilidades pie -->
+  <rect x="35" y="324" width="850" height="72" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="55" y="350" font-size="13" font-weight="bold" fill="#0f172a">Utilidades de verificación y endurecimiento básico (RA6.f):</text>
+  <text x="55" y="372" font-size="12" fill="#334155">• Linux: `sudo ufw status verbose` · `sudo nft list ruleset` · `fail2ban-client status sshd` · `sudo lynis audit system` · `nmap` (auditoría propia)</text>
+  <text x="55" y="388" font-size="12" fill="#334155">• Windows: `Get-NetFirewallProfile` · `New-NetFirewallRule` · `Get-MpComputerStatus` (Microsoft Defender) · AppLocker / BitLocker</text>
+</svg>

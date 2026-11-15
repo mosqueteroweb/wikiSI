@@ -11,6 +11,16 @@ Bitácora de operaciones (*ingest*, *compile*, *lint*, *publish*) ejecutadas sob
 
 ---
 
+## [2026-11-15] Compilación completa del bloque RA6 (6 conceptos, 5 SVGs, 5 ejercicios `e26`–`e30`, práctica `p06` y banco de evaluación privado)
+
+- **Fuentes procesadas (`raw/procesados/`):** `ra6-recursos-compartidos-permisos-red-servidores.md`, `ra6-acceso-remoto-cortafuegos-seguridad-red.md`, `ra6-dominios-active-directory-ldap-integracion.md`.
+- **Conceptos publicados (`wiki/conceptos/`):** 6 páginas completas cubriendo `RA6.a`–`RA6.g` con tabs duales MAX/Ubuntu y Windows 10/11, más 5 diagramas SVG locales (`wiki/assets/ra6-*.svg`).
+- **Ejercicios resueltos (`wiki/ejercicios/`):** `e26`–`e30` con presupuesto de RAM entre 4 GB y 6 GB sobre hosts MAX de 16 GB.
+- **Práctica Integradora (`wiki/practicas/`):** Enunciado público `p06` (`DAM-Corp-Srv` 2 GB + `DAM-Corp-Win10` 4 GB = 6 GB) y solución docente marcada con `publicar: false`.
+- **Evaluación privada (`privado_evaluacion/`):** Examen teórico-práctico RA6 (14 preguntas + bloque Moodle GIFT + 3 supuestos), solucionario y rúbrica `RA6.a`–`RA6.g` (excluido de Git vía `.gitignore`).
+
+---
+
 ## [2026-11-15] Compilación completa del bloque RA5 (6 conceptos, 5 SVGs, 5 ejercicios `e21`–`e25`, práctica `p05` y banco de evaluación privado)
 
 - **Fuentes procesadas (`raw/procesados/`):** `ra5-tcpip-direccionamiento-ipv4-ipv6-subredes.md`, `ra5-lan-cableada-inalambrica-enrutamiento-wan.md`, `ra5-puertos-diagnostico-protocolos-seguros.md`.

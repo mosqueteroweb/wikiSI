@@ -61,6 +61,14 @@ Cada ejercicio incluye:
 4. [e24 · Auditoría de Puertos (`ss`/`Get-NetTCPConnection`) y Diagnóstico *Bottom-Up*](e24-ra5-auditoria-puertos-diagnostico-red-ss-wireshark.md) (`RA5.c`, `RA5.f`, `RA5.g` · 6 GB RAM)
 5. [e25 · Comunicaciones Seguras: SSH por Claves Ed25519, SFTP y Verificación TLS](e25-ra5-comunicaciones-seguras-ssh-claves-sftp-tls.md) (`RA5.f`, `RA5.h` · 6 GB RAM)
 
+## RA6 · Recursos Compartidos, Servidores, Acceso Remoto, Cortafuegos y Dominios (`RA6.a`–`RA6.g`)
+
+1. [e26 · Compartición de Recursos con Samba (`SMB3`) y Permisos Efectivos](e26-ra6-comparticion-samba-smb-permisos-efectivos.md) (`RA6.a`, `RA6.b`, `RA6.c` · 6 GB RAM)
+2. [e27 · Despliegue NFSv4 (`root_squash`), Impresión CUPS y Proxy Nginx](e27-ra6-servidor-nfs-impresion-cups-tomcat.md) (`RA6.c` · 4 GB RAM)
+3. [e28 · Conexión Remota Segura: RDP (NLA), Remmina y Túnel Local SSH](e28-ra6-escritorio-remoto-rdp-remmina-ssh-tunnel.md) (`RA6.d` · 6 GB RAM)
+4. [e29 · Cortafuegos (`ufw`/Defender), `fail2ban` y Auditoría de Seguridad](e29-ra6-cortafuegos-ufw-windows-defender-fail2ban.md) (`RA6.e`, `RA6.f` · 6 GB RAM)
+5. [e30 · Dominio Samba AD DC, Unidades Organizativas (`OU`) y Unión Windows 10](e30-ra6-dominio-samba-ad-dc-unidades-organizativas.md) (`RA6.b`, `RA6.g` · 6 GB RAM)
+
 ## Otros Bloques
 
-*Los ejercicios de RA6–RA7 se publicarán secuencialmente tras completar cada bloque.*
+*Los ejercicios de RA7 se publicarán secuencialmente tras completar el bloque.*

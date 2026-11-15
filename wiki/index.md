@@ -37,8 +37,8 @@ La construcción de la wiki avanza de forma secuencial desde **RA1** hasta **RA7
 | **RA3** | Gestiona la información del sistema identificando las estructuras de almacenamiento y aplicando medidas para asegurar la integridad de los datos. | `a` – `h` (8) | Completado ✅ | [Ir a RA3](ra/RA3.md) |
 | **RA4** | Gestiona sistemas operativos utilizando comandos y herramientas gráficas y evaluando las necesidades del sistema. | `a` – `h` (8) | Completado ✅ | [Ir a RA4](ra/RA4.md) |
 | **RA5** | Interconecta sistemas en red configurando dispositivos y protocolos. | `a` – `h` (8) | Completado ✅ | [Ir a RA5](ra/RA5.md) |
-| **RA6** | Opera sistemas en red gestionando sus recursos e identificando las restricciones de seguridad existentes. | `a` – `g` (7) | En preparación activa | [Ir a RA6](ra/RA6.md) |
-| **RA7** | Elabora documentación valorando y utilizando aplicaciones informáticas de propósito general. | `a` – `g` (7) | Planificado | [Ir a RA7](ra/RA7.md) |
+| **RA6** | Opera sistemas en red gestionando sus recursos e identificando las restricciones de seguridad existentes. | `a` – `g` (7) | Completado ✅ | [Ir a RA6](ra/RA6.md) |
+| **RA7** | Elabora documentación valorando y utilizando aplicaciones informáticas de propósito general. | `a` – `g` (7) | En preparación activa | [Ir a RA7](ra/RA7.md) |
 
 ---
 

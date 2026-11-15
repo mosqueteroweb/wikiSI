@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 430" width="920" height="430" font-family="system-ui, -apple-system, sans-serif">
+  <rect x="2" y="2" width="916" height="426" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="460" y="36" text-anchor="middle" font-size="20" font-weight="bold" fill="#0f172a">Estructura de Dominio Active Directory / Samba AD DC, OUs, LDAP y GPOs (RA6.b / RA6.g)</text>
+  <text x="460" y="58" text-anchor="middle" font-size="13" fill="#475569">Centralización de identidades, tickets Kerberos, DNS con registros SRV y aplicación jerárquica de directivas</text>
+
+  <!-- Controlador de Dominio -->
+  <rect x="270" y="84" width="380" height="84" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="460" y="112" text-anchor="middle" font-size="16" font-weight="bold" fill="#1e40af">Dominio: corp.dam.local (Controlador DC)</text>
+  <text x="460" y="133" text-anchor="middle" font-size="12" fill="#1e3a8a">LDAP (389/636) · Kerberos (88) · DNS SRV (53) · NTP (123)</text>
+  <text x="460" y="152" text-anchor="middle" font-size="11.5" font-family="monospace" fill="#1d4ed8">GPO Raíz: Directiva de Contraseñas y Bloqueo Único</text>
+
+  <!-- Líneas jerárquicas -->
+  <line x1="460" y1="168" x2="460" y2="195" stroke="#64748b" stroke-width="2"/>
+  <line x1="175" y1="195" x2="745" y2="195" stroke="#64748b" stroke-width="2"/>
+  <line x1="175" y1="195" x2="175" y2="216" stroke="#64748b" stroke-width="2"/>
+  <line x1="460" y1="195" x2="460" y2="216" stroke="#64748b" stroke-width="2"/>
+  <line x1="745" y1="195" x2="745" y2="216" stroke="#64748b" stroke-width="2"/>
+
+  <!-- OU 1: Desarrollo -->
+  <rect x="45" y="216" width="260" height="128" rx="8" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
+  <text x="175" y="242" text-anchor="middle" font-size="14" font-weight="bold" fill="#065f46">OU=Desarrollo</text>
+  <text x="175" y="264" text-anchor="middle" font-size="12" fill="#047857">• Usuarios: laura.dev, carlos.dev</text>
+  <text x="175" y="284" text-anchor="middle" font-size="12" fill="#047857">• Equipos: PC-DEV01..20</text>
+  <rect x="60" y="298" width="230" height="32" rx="5" fill="#d1fae5" stroke="#10b981"/>
+  <text x="175" y="319" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#065f46">GPO: Mapear Z:\ + Script Entorno</text>
+
+  <!-- OU 2: Sistemas -->
+  <rect x="330" y="216" width="260" height="128" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <text x="460" y="242" text-anchor="middle" font-size="14" font-weight="bold" fill="#92400e">OU=Administracion</text>
+  <text x="460" y="264" text-anchor="middle" font-size="12" fill="#b45309">• Usuarios: sofia.admin</text>
+  <text x="460" y="284" text-anchor="middle" font-size="12" fill="#b45309">• Grupos: Domain Admins / Soporte</text>
+  <rect x="345" y="298" width="230" height="32" rx="5" fill="#fde68a" stroke="#f59e0b"/>
+  <text x="460" y="319" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#92400e">GPO: Acceso RDP y Auditoría Reforzada</text>
+
+  <!-- OU 3: Alumnos / Invitados -->
+  <rect x="615" y="216" width="260" height="128" rx="8" fill="#f3e8ff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="745" y="242" text-anchor="middle" font-size="14" font-weight="bold" fill="#5b21b6">OU=Puestos_Aula</text>
+  <text x="745" y="264" text-anchor="middle" font-size="12" fill="#6d28d9">• Cuentas con privilegio estándar</text>
+  <text x="745" y="284" text-anchor="middle" font-size="12" fill="#6d28d9">• Restricción de registro y USB</text>
+  <rect x="630" y="298" width="230" height="32" rx="5" fill="#ede9fe" stroke="#8b5cf6"/>
+  <text x="745" y="319" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#5b21b6">GPO: Bloqueo Panel Control + Wallpapers</text>
+
+  <!-- Pie AGDLP / LSDOU -->
+  <rect x="45" y="362" width="830" height="46" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="460" y="382" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#0f172a">Orden de aplicación GPO (LSDOU): Local → Site (Sitio) → Domain (Dominio) → OU (Unidad Organizativa — gana la última)</text>
+  <text x="460" y="399" text-anchor="middle" font-size="11.5" fill="#475569">Gestión de grupos AGDLP: Cuentas (A) → Grupos Globales de Rol (G) → Grupos Locales de Dominio (DL) → Permiso sobre Recurso (P)</text>
+</svg>

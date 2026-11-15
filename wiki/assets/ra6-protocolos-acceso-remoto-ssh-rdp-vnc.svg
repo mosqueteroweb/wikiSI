@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 400" width="920" height="400" font-family="system-ui, -apple-system, sans-serif">
+  <rect x="2" y="2" width="916" height="396" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="460" y="36" text-anchor="middle" font-size="20" font-weight="bold" fill="#0f172a">Protocolos de Conexión y Administración Remota: SSH, RDP y VNC Tunelizado (RA6.d)</text>
+  <text x="460" y="58" text-anchor="middle" font-size="13" fill="#475569">Comparativa de cifrado, modo de acceso (consola vs gráfico) y túneles seguros SSH Local Port Forwarding</text>
+
+  <!-- Tarjeta SSH -->
+  <rect x="35" y="88" width="275" height="260" rx="10" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
+  <text x="172" y="118" text-anchor="middle" font-size="16" font-weight="bold" fill="#065f46">OpenSSH (22/TCP)</text>
+  <text x="172" y="138" text-anchor="middle" font-size="12" fill="#047857">Consola segura + SFTP + Túneles</text>
+  <rect x="52" y="154" width="241" height="145" rx="6" fill="#ffffff" stroke="#6ee7b7"/>
+  <text x="65" y="176" font-size="12" font-weight="bold" fill="#065f46">• Cifrado integral nativo</text>
+  <text x="65" y="196" font-size="11.5" fill="#334155">• Consumo RAM mínimo (ideal Server)</text>
+  <text x="65" y="216" font-size="11.5" fill="#334155">• Autenticación Ed25519 / RSA</text>
+  <text x="65" y="236" font-size="11.5" fill="#334155">• Túneles locales para blindar otros</text>
+  <text x="65" y="253" font-size="11.5" fill="#334155">  servicios (BD, paneles, VNC):</text>
+  <text x="65" y="276" font-size="11" font-family="monospace" fill="#047857">ssh -L 5901:127.0.0.1:5901 u@srv</text>
+  <text x="172" y="328" text-anchor="middle" font-size="12" font-weight="bold" fill="#065f46">Estándar de administración DAM</text>
+
+  <!-- Tarjeta RDP -->
+  <rect x="325" y="88" width="275" height="260" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="462" y="118" text-anchor="middle" font-size="16" font-weight="bold" fill="#1e40af">RDP (3389/TCP)</text>
+  <text x="462" y="138" text-anchor="middle" font-size="12" fill="#1d4ed8">Escritorio Remoto Gráfico</text>
+  <rect x="342" y="154" width="241" height="145" rx="6" fill="#ffffff" stroke="#93c5fd"/>
+  <text x="355" y="176" font-size="12" font-weight="bold" fill="#1e40af">• Fluido incluso en enlaces medios</text>
+  <text x="355" y="196" font-size="11.5" fill="#334155">• NLA (Network Level Auth) obligatoria</text>
+  <text x="355" y="216" font-size="11.5" fill="#334155">• Servidor nativo Windows Pro / xrdp</text>
+  <text x="355" y="236" font-size="11.5" fill="#334155">• Clientes: mstsc.exe / Remmina</text>
+  <text x="355" y="256" font-size="11.5" fill="#dc2626">• Nunca exponer 3389 abierto a</text>
+  <text x="355" y="273" font-size="11.5" fill="#dc2626">  Internet directo (usar VPN/SSH)</text>
+  <text x="462" y="328" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e40af">Redirige audio, portapapeles y discos</text>
+
+  <!-- Tarjeta VNC + Túnel -->
+  <rect x="615" y="88" width="270" height="260" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <text x="750" y="118" text-anchor="middle" font-size="16" font-weight="bold" fill="#92400e">VNC / RFB (5900+/TCP)</text>
+  <text x="750" y="138" text-anchor="middle" font-size="12" fill="#b45309">Asistencia Visual Ligera</text>
+  <rect x="632" y="154" width="236" height="145" rx="6" fill="#ffffff" stroke="#fcd34d"/>
+  <text x="645" y="176" font-size="12" font-weight="bold" fill="#92400e">• Multiplataforma (TigerVNC / SPICE)</text>
+  <text x="645" y="196" font-size="11.5" fill="#334155">• Envía píxeles/framebuffer remoto</text>
+  <text x="645" y="216" font-size="11.5" fill="#dc2626">• Tráfico nativo SIN cifrado completo</text>
+  <text x="645" y="236" font-size="11.5" fill="#334155">• Regla de oro: vincularlo solo</text>
+  <text x="645" y="253" font-size="11.5" fill="#334155">  a 127.0.0.1 y acceder vía SSH -L</text>
+  <text x="645" y="276" font-size="11" font-family="monospace" fill="#92400e">vncviewer localhost:5901</text>
+  <text x="750" y="328" text-anchor="middle" font-size="12" font-weight="bold" fill="#92400e">Ideal para soporte sobre sesión activa</text>
+
+  <text x="460" y="376" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#0f172a">En Linux cliente: Remmina unifica RDP, VNC, SSH y SFTP desde un único panel seguro en MAX / Ubuntu</text>
+</svg>

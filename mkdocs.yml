@@ -101,6 +101,12 @@ nav:
       - "RA5 · Interconexión, VLANs, NAT y WAN": conceptos/ra5-interconexion-enrutamiento-nat-acceso-wan.md
       - "RA5 · Puertos y Diagnóstico de Red": conceptos/ra5-gestion-puertos-herramientas-diagnostico-red.md
       - "RA5 · Protocolos Seguros (TLS, SSH, SFTP)": conceptos/ra5-protocolos-seguros-comunicaciones-tls-ssh-vpn.md
+      - "RA6 · Recursos en Red y Samba SMB": conceptos/ra6-recursos-compartidos-permisos-red-samba-smb.md
+      - "RA6 · Servidores NFS, CUPS y Apps": conceptos/ra6-servidores-ficheros-impresion-aplicaciones.md
+      - "RA6 · Acceso Remoto (SSH, RDP, VNC)": conceptos/ra6-conexion-administracion-remota-ssh-rdp-vnc.md
+      - "RA6 · Cortafuegos UFW y Defender": conceptos/ra6-seguridad-recursos-cortafuegos-ufw-defender.md
+      - "RA6 · Seguridad Básica y Fail2ban": conceptos/ra6-utilidades-seguridad-auditoria-endurecimiento.md
+      - "RA6 · Dominios AD / Samba AD DC": conceptos/ra6-implantacion-explotacion-dominios-ad-samba-dc.md
   - Ejercicios:
       - Índice de Ejercicios: ejercicios/index.md
       - "e01 · Auditoría CPU y Placa Base": ejercicios/e01-ra1-auditoria-hardware-cpu-placas.md
@@ -128,6 +134,11 @@ nav:
       - "e23 · Router Linux, ip_forward y NAT": ejercicios/e23-ra5-router-nat-masquerade-enlaces-wan.md
       - "e24 · Puertos (ss) y Diagnóstico Bottom-Up": ejercicios/e24-ra5-auditoria-puertos-diagnostico-red-ss-wireshark.md
       - "e25 · SSH Ed25519, SFTP y Auditoría TLS": ejercicios/e25-ra5-comunicaciones-seguras-ssh-claves-sftp-tls.md
+      - "e26 · Samba SMB3 y Permisos Efectivos": ejercicios/e26-ra6-comparticion-samba-smb-permisos-efectivos.md
+      - "e27 · NFSv4, Impresión CUPS y Proxy Nginx": ejercicios/e27-ra6-servidor-nfs-impresion-cups-tomcat.md
+      - "e28 · RDP (NLA), Remmina y Túnel SSH": ejercicios/e28-ra6-escritorio-remoto-rdp-remmina-ssh-tunnel.md
+      - "e29 · Cortafuegos UFW/Defender y Fail2ban": ejercicios/e29-ra6-cortafuegos-ufw-windows-defender-fail2ban.md
+      - "e30 · Dominio Samba AD DC y Windows 10": ejercicios/e30-ra6-dominio-samba-ad-dc-unidades-organizativas.md
   - Prácticas:
       - Índice de Prácticas: practicas/index.md
       - "p01 · Auditoría Integral RA1 (Enunciado)": practicas/p01-ra1-auditoria-integral-sistema-red-enunciado.md
@@ -135,4 +146,5 @@ nav:
       - "p03 · Almacenamiento, Cifrado y Backups RA3 (Enunciado)": practicas/p03-ra3-almacenamiento-lvm-cifrado-backups-enunciado.md
       - "p04 · Usuarios, ACLs, Servicios y DAM RA4 (Enunciado)": practicas/p04-ra4-administracion-multi-usuario-acls-monitorizacion-enunciado.md
       - "p05 · Subredes VLSM, Router NAT y SSH RA5 (Enunciado)": practicas/p05-ra5-redes-vlsm-enrutamiento-nat-ssh-enunciado.md
+      - "p06 · Samba, Acceso Remoto, UFW y Dominio RA6 (Enunciado)": practicas/p06-ra6-recursos-samba-acceso-remoto-cortafuegos-dominio-enunciado.md
   - Registro: log.md

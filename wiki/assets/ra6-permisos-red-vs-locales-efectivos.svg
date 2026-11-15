@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 420" width="920" height="420" font-family="system-ui, -apple-system, sans-serif">
+  <rect x="2" y="2" width="916" height="416" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="460" y="36" text-anchor="middle" font-size="20" font-weight="bold" fill="#0f172a">Cálculo de Permisos Efectivos en Red SMB/Samba vs. Acceso Local (RA6.a / RA6.b)</text>
+  <text x="460" y="58" text-anchor="middle" font-size="13" fill="#475569">Al acceder por red siempre prevalece la intersección más restrictiva entre recurso compartido y sistema de archivos</text>
+
+  <!-- Flujo Acceso Local -->
+  <rect x="40" y="90" width="840" height="84" rx="10" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="65" y="118" font-size="15" font-weight="bold" fill="#0f172a">1. Acceso Local (sesión directa en teclado/consola del servidor):</text>
+  <rect x="65" y="130" width="220" height="32" rx="6" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+  <text x="175" y="151" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#0369a1">Usuario entra localmente</text>
+  <text x="310" y="151" text-anchor="middle" font-size="16" font-weight="bold" fill="#0284c7">→</text>
+  <rect x="335" y="130" width="260" height="32" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="465" y="151" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#15803d">Evalúa SOLO NTFS o POSIX/ACLs</text>
+  <text x="620" y="151" text-anchor="middle" font-size="16" font-weight="bold" fill="#16a34a">→</text>
+  <rect x="645" y="130" width="215" height="32" rx="6" fill="#d1fae5" stroke="#059669" stroke-width="1.5"/>
+  <text x="752" y="151" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#065f46">Permiso efectivo = NTFS/POSIX</text>
+
+  <!-- Flujo Acceso en Red -->
+  <rect x="40" y="192" width="840" height="162" rx="10" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+  <text x="65" y="220" font-size="15" font-weight="bold" fill="#1e40af">2. Acceso en Red (SMB / Samba `\\servidor\proyecto` — Puerto 445/TCP):</text>
+
+  <!-- Puerta 1: Share -->
+  <rect x="65" y="242" width="230" height="88" rx="8" fill="#ffffff" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="180" y="266" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#1d4ed8">Capa 1: Permisos de Red</text>
+  <text x="180" y="286" text-anchor="middle" font-size="12" fill="#1e3a8a">(Share / smb.conf)</text>
+  <text x="180" y="308" text-anchor="middle" font-size="12" font-family="monospace" fill="#0f172a">Ej.: Lectura (Read only)</text>
+
+  <text x="318" y="292" text-anchor="middle" font-size="22" font-weight="bold" fill="#2563eb">∩</text>
+
+  <!-- Puerta 2: Filesystem -->
+  <rect x="342" y="242" width="250" height="88" rx="8" fill="#ffffff" stroke="#10b981" stroke-width="1.5"/>
+  <text x="467" y="266" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#047857">Capa 2: Sistema de Archivos</text>
+  <text x="467" y="286" text-anchor="middle" font-size="12" fill="#065f46">(NTFS / POSIX chmod + ACL)</text>
+  <text x="467" y="308" text-anchor="middle" font-size="12" font-family="monospace" fill="#0f172a">Ej.: Control Total / rwx</text>
+
+  <text x="615" y="292" text-anchor="middle" font-size="20" font-weight="bold" fill="#dc2626">⇒</text>
+
+  <!-- Resultado -->
+  <rect x="640" y="242" width="220" height="88" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <text x="750" y="268" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#92400e">Permiso Efectivo Real</text>
+  <text x="750" y="290" text-anchor="middle" font-size="13" font-weight="bold" fill="#b45309">SOLO LECTURA</text>
+  <text x="750" y="312" text-anchor="middle" font-size="11.5" fill="#78350f">(Gana la regla más restrictiva)</text>
+
+  <!-- Regla de oro -->
+  <rect x="40" y="368" width="840" height="36" rx="6" fill="#ecfdf5" stroke="#10b981" stroke-width="1.5"/>
+  <text x="460" y="391" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#065f46">Buena práctica profesional: Compartición en Red = Cambiar (Change) a Usuarios autentificados · Control fino = NTFS / ACLs POSIX</text>
+</svg>
