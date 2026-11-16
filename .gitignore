@@ -13,3 +13,6 @@ __pycache__/
 .DS_Store
 .idea/
 .vscode/
+
+# Reglas locales del agente
+AGENTS.md
