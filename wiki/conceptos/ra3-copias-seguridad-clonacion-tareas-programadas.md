@@ -141,7 +141,7 @@ Para llevar la teoría de copias e imágenes al entorno real de aula o empresa c
 - **Clonación de equipos con [Clonezilla](https://clonezilla.org/):**
   - Permite generar una **imagen completa** de disco o particiones y restaurarla bit a bit en otro equipo (`unicast`), o bien desplegar simultáneamente una misma imagen sobre toda un aula en red local usando **Clonezilla Server / Multicast** sin saturar el ancho de banda con envíos repetidos.
 - **Sincronización entre carpetas locales y nube:**
-  - En Linux / multiplataforma destaca **`rclone`** para sincronizar carpetas **local $\leftrightarrow$ local** y **local $\leftrightarrow$ nube** (Google Drive, OneDrive, S3/Nextcloud), junto con **`Syncthing`** (P2P cifrado), **`FreeFileSync`** en Windows y **`Cyberduck`** como cliente gráfico multi-protocolo (`SFTP`, WebDAV, nube).
+  - En Linux / multiplataforma destaca **`rclone`** para sincronizar carpetas **local ↔ local** y **local ↔ nube** (Google Drive, OneDrive, S3/Nextcloud), junto con **`Syncthing`** (P2P cifrado), **`FreeFileSync`** en Windows y **`Cyberduck`** como cliente gráfico multi-protocolo (`SFTP`, WebDAV, nube).
 - **Diseño de una Política de Copias de Seguridad (`Checklist` profesional):**
   1. **¿Qué datos?** Separar políticas por criticidad (*Sistema operativo*, *Documentos y proyectos de código*, *Otros archivos*).
   2. **¿Cómo?** Combinación de copia **completa**, **diferencial** e **incremental**.

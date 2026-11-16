@@ -56,7 +56,7 @@ fuentes_primarias:
 
 - **Marco legal español:** Ley 31/1995 de Prevención de Riesgos Laborales, **RD 488/1997** (Pantallas de Visualización de Datos - PVD) y **RD 614/2001** (riesgo eléctrico).
 - **Seguridad física y eléctrica en taller:**
-  - **ESD (Descarga Electrostática):** Puede dañar circuitos integrados con voltajes imperceptibles para el humano (< 3.000 V no se sienten, pero ~100 V destruyen componentes CMOS). Uso de pulsera antiestática con resistencia de protección ($1\text{ M}\Omega$) conectada a chasis/tierra, alfombrilla ESD y bolsas antiestáticas.
+  - **ESD (Descarga Electrostática):** Puede dañar circuitos integrados con voltajes imperceptibles para el humano (< 3.000 V no se sienten, pero ~100 V destruyen componentes CMOS). Uso de pulsera antiestática con resistencia de protección (1 MΩ) conectada a chasis/tierra, alfombrilla ESD y bolsas antiestáticas.
   - **Seguridad eléctrica:** Desenchufar el equipo de la toma AC antes de abrirlo, pulsar el botón de encendido unos segundos para descargar condensadores de la fuente, no abrir fuentes de alimentación sin formación de alta tensión, evitar regletas encadenadas y verificar toma de tierra.
   - **Protección de suministro (SAI/UPS):** Sistemas *Offline*, *Line-Interactive* y *Online* (doble conversión) contra cortes y sobretensiones.
 - **Ergonomía PVD:**

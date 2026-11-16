@@ -38,7 +38,7 @@ flowchart TD
 
 ### Parámetros fundamentales en seguridad de cuentas
 1. **Longitud y complejidad mínima:** Exigir al menos 10–12 caracteres combinando clases de caracteres o frases de paso largas.
-2. **Historial de contraseñas:** Impedir reutilizar las últimas $N$ claves al caducar.
+2. **Historial de contraseñas:** Impedir reutilizar las últimas N claves al caducar.
 3. **Vigencia mínima y máxima:** Evitar cambios continuos en el mismo día para burlar el historial y obligar a renovar periódicamente cuentas sensibles.
 4. **Umbral de bloqueo (*Account Lockout*):** Deshabilitar temporalmente la cuenta (p. ej. 15 minutos) tras 5 intentos erróneos consecutivos para frenar ataques por diccionario.
 

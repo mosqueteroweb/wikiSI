@@ -31,6 +31,6 @@ fuente_tipo: sintesis-tecnica-curada
 
 ## 3. Utilidades de Seguridad Básica y Auditoría (`RA6.f`)
 
-- **Protección contra fuerza bruta:** **`fail2ban`** en Linux monitoriza logs (`journald` / `/var/log/auth.log`) y banea temporalmente mediante reglas de cortafuegos las IP atacantes tras $N$ fallos SSH/web.
+- **Protección contra fuerza bruta:** **`fail2ban`** en Linux monitoriza logs (`journald` / `/var/log/auth.log`) y banea temporalmente mediante reglas de cortafuegos las IP atacantes tras N fallos SSH/web.
 - **Auditoría de puertos expuestos y vulnerabilidades locales:** `nmap -sT -sV <ip>` (exclusivamente en redes/VMs propias de laboratorio), `ss -tulnp`, **`lynis audit system`** (auditoría de endurecimiento en Linux) y **Windows Defender (`Get-MpComputerStatus`, `Start-MpScan`)** / **AppLocker / BitLocker**.
 - **Actualizaciones de seguridad automáticas:** `unattended-upgrades` en Ubuntu/Debian y Windows Update / WSUS en entornos corporativos.

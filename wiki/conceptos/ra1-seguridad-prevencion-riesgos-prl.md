@@ -45,7 +45,7 @@ El trabajo habitual de técnicos y desarrolladores DAM combina dos escenarios co
 
 Una persona solo percibe una descarga estática a partir de ~3.000 V, pero un circuito integrado moderno (RAM, CPU, chipset) puede dañarse de forma latente o irreversible con tan solo **30–100 V**:
 
-- Utilizar **pulsera antiestática** (con resistencia limitadora interna de seguridad de **$1\text{ M}\Omega$**) conectada al chasis metálico sin pintar o a toma de tierra ESD.
+- Utilizar **pulsera antiestática** (con resistencia limitadora interna de seguridad de **1 MΩ**) conectada al chasis metálico sin pintar o a toma de tierra ESD.
 - Trabajar sobre **alfombrilla antiestática**, evitar suelos enmoquetados o ropa de fibra altamente estática.
 - Sujetar siempre módulos RAM, tarjetas PCIe y placas base por los **bordes**, sin tocar contactos dorados ni patillas.
 - Almacenar piezas sueltas en **bolsas antiestáticas metalizadas** (nunca sobre plástico común o espuma convencional).

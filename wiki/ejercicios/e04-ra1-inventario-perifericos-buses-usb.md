@@ -35,8 +35,8 @@ Identificar los buses internos (PCIe, SATA, NVMe) y externos (USB) del equipo an
 1. En **MAX**, traza el árbol de dispositivos **PCI/PCIe** identificando la tarjeta gráfica, el controlador NVMe/SATA, el controlador USB xHCI y la tarjeta de red, junto al nombre del driver del kernel activo para cada uno.
 2. Conecta un pendrive USB físico al equipo MAX y localiza en `lsusb -tv` y `dmesg` su velocidad negociada (`480M` USB 2.0 o `5000M` USB 3.x) y su nodo de bloque (`/dev/sdX`).
 3. En **VirtualBox** (VM `e04-Mint`):
-   - Configura una **carpeta compartida** (`~/Compartida_DAM` en MAX $\rightarrow$ montada en `e04-Mint`).
-   - Añade un **filtro USB** para capturar el pendrive desde la VM (o conéctalo desde el menú *Dispositivos $\rightarrow$ USB* de VirtualBox).
+   - Configura una **carpeta compartida** (`~/Compartida_DAM` en MAX → montada en `e04-Mint`).
+   - Añade un **filtro USB** para capturar el pendrive desde la VM (o conéctalo desde el menú *Dispositivos → USB* de VirtualBox).
 4. Verifica dentro de `e04-Mint` que el pendrive aparece con `lsblk` y `lsusb`.
 
 ---

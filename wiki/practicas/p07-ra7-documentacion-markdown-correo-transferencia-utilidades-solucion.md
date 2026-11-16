@@ -37,7 +37,7 @@ rm -rf /tmp/v_lic
 **Tabla resumen de compatibilidad comercial cerrada:**
 - **GPLv3 / AGPLv3:** Copyleft fuerte (obliga a liberar derivada; Nextcloud AGPLv3 también obliga si se sirve como SaaS).
 - **MIT / Apache 2.0 / BSD:** Permisivas (permiten integración en producto propietario citando copyright original).
-- **LibreOffice (MPL-2.0) / Nextcloud (AGPLv3):** Reducen TCO de licencias a 0 € en 20 puestos frente a suscripciones SaaS anuales (~20 × 12 € × 12 meses × 3 años $\approx 8\,640\,\text{€}$), garantizan formatos ODF/PDF-A y alojamiento propio cumpliendo RGPD/ENS.
+- **LibreOffice (MPL-2.0) / Nextcloud (AGPLv3):** Reducen TCO de licencias a 0 € en 20 puestos frente a suscripciones SaaS anuales (~20 × 12 € × 12 meses × 3 años ≈ 8.640 €), garantizan formatos ODF/PDF-A y alojamiento propio cumpliendo RGPD/ENS.
 
 ---
 

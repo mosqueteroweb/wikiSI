@@ -158,8 +158,8 @@ Un alumno de **1.º DAM** comienza el segundo trimestre y necesita dejar su sist
     | **IDE Java / Kotlin (IntelliJ IDEA + Gradle)** | 2,5 – 4,0 GB | Pico al indexar proyectos | Ajustar `-Xmx` del IDE y excluir `target/`/`build/` del indexado |
     | **Contenedor BD (PostgreSQL / MySQL) o servidor local** | 0,5 – 1,5 GB | Ligero si está contenerizado | Arrancar contenedores solo bajo demanda |
     | **Navegador técnico + documentación** | 1,5 – 2,5 GB | Sube rápido con muchas pestañas | Evitar fugas cerrando pestañas pesadas |
-    | **1 o 2 VMs de pruebas en VirtualBox** | 2,0 – 6,0 GB | Margen crítico del aula | No superar **6–7 GB** para conservar $\ge 4\text{ GB}$ libres al anfitrión + IDE |
-    | **Total combinado recomendado** | **10 – 14 GB** | **16 GB mínimos en DAM**; **32 GB ideales** | Imprescindible **SSD NVMe ($\ge 512\text{ GB}$)** para compilaciones y VMs |
+    | **1 o 2 VMs de pruebas en VirtualBox** | 2,0 – 6,0 GB | Margen crítico del aula | No superar **6–7 GB** para conservar ≥ 4 GB libres al anfitrión + IDE |
+    | **Total combinado recomendado** | **10 – 14 GB** | **16 GB mínimos en DAM**; **32 GB ideales** | Imprescindible **SSD NVMe (≥ 512 GB)** para compilaciones y VMs |
 
     ### 4. Reto de Tuberías (`cut`/`sed`/`awk`) y Búsqueda con `2>/dev/null`
 

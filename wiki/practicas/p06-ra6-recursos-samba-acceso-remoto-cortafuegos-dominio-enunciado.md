@@ -33,7 +33,7 @@ La consultora **VegaSoft DAM** te encarga implantar su infraestructura interna s
 | :--- | :--- | :---: | :--- | :--- |
 | **`DAM-Corp-Srv`** | Ubuntu Server 24.04 | **2 GB** | `intnet_corp` (`192.168.75.10/24`) [+ NAT temporal `apt`] | Samba/CUPS/Nginx/UFW/Fail2ban + Samba AD DC |
 | **`DAM-Corp-Win10`** | Windows 10 Pro / Education | **4 GB** | `intnet_corp` (`192.168.75.20/24`, DNS `.10`) | Estación cliente mapeando recursos, RDP/SSH y unida al dominio |
-| **Consumo total activo** | **2 VMs sobre MAX (16 GB)** | **6 GB** | Margen libre **10 GB** | Respeta el tope de aula ($\le 10\text{–}12\text{ GB}$) |
+| **Consumo total activo** | **2 VMs sobre MAX (16 GB)** | **6 GB** | Margen libre **10 GB** | Respeta el tope de aula (≤ 10–12 GB) |
 
 ---
 

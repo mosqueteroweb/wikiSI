@@ -124,9 +124,9 @@ En la red interna VirtualBox del aula (**MAX 16 GB RAM**), compartiremos un dire
 
     En dos máquinas Windows (`Win-A` y `Win-B`) conectadas en **Red Interna** sobre partición **NTFS**, comprueba experimentalmente los siguientes supuestos del trabajo en grupo sin dominio:
 
-    1. **Usuario inexistente en remoto y acceso anónimo:** intenta acceder desde `Win-B` con una cuenta que no existe en `Win-A`. Observa qué cambia al entrar en el **Centro de redes y recursos compartidos** $\rightarrow$ *Configuración de uso compartido avanzado* y **desactivar la protección por contraseña** (habilitando `Todos`).
+    1. **Usuario inexistente en remoto y acceso anónimo:** intenta acceder desde `Win-B` con una cuenta que no existe en `Win-A`. Observa qué cambia al entrar en el **Centro de redes y recursos compartidos** → *Configuración de uso compartido avanzado* y **desactivar la protección por contraseña** (habilitando `Todos`).
     2. **Control selectivo en red:** configura la carpeta para que únicamente `pedro` pueda leer/escribir desde cualquier equipo Windows y el resto solo leer (`Permisos SMB` + `Permisos NTFS`).
-    3. **El dilema del cifrado EFS entre Pedro y Luis:** con ambos usuarios autorizados para escribir en la carpeta compartida, haz que `pedro` cifre la carpeta con todo su contenido (*Propiedades* $\rightarrow$ *Avanzadas* $\rightarrow$ *Cifrar contenido*). Comprueba y razona por qué:
+    3. **El dilema del cifrado EFS entre Pedro y Luis:** con ambos usuarios autorizados para escribir en la carpeta compartida, haz que `pedro` cifre la carpeta con todo su contenido (*Propiedades* → *Avanzadas* → *Cifrar contenido*). Comprueba y razona por qué:
        - `luis` **no puede leer** los ficheros de `pedro`, aunque sí puede crear otros nuevos en la carpeta si tiene permiso de escritura.
        - Los archivos creados por `luis` quedan cifrados con la clave de `luis`, impidiendo que `pedro` los abra en local o por red sin compartir certificados EFS.
     4. **Cambio de propietario:** transfiere la propiedad NTFS de una carpeta de prueba a otro administrador y verifica si el antiguo propietario conserva acceso cuando se revisan los permisos explícitos (concluyendo por qué en redes medianas se adopta un **Dominio Active Directory / Samba AD**, trabajado en `e30`).

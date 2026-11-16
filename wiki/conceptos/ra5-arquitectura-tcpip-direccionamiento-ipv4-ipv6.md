@@ -44,8 +44,8 @@ Una dirección **IPv4** ocupa **32 bits** divididos en cuatro octetos decimales 
 
 ![Planificación VLSM sobre 192.168.10.0/24 y anatomía IPv6](../assets/ra5-subnetting-cidr-vlsm-ipv4-ipv6.svg)
 
-1. **Hosts útiles por subred:** $2^{(32 - \text{prefijo})} - 2$ (la primera dirección es la **dirección de red** y la última es **broadcast**). En enlaces punto a punto entre routers suele usarse `/30` (2 útiles) o `/31` (RFC 3021).
-2. **Salto de bloque (*block size*):** $256 - \text{octeto donde corta la máscara}$. Por ejemplo, `/26` equivale a `255.255.255.192`, dando saltos de $256 - 192 = 64$ (`.0`, `.64`, `.128`, `.192`).
+1. **Hosts útiles por subred:** 2^(32 − prefijo) − 2 (la primera dirección es la **dirección de red** y la última es **broadcast**). En enlaces punto a punto entre routers suele usarse `/30` (2 útiles) o `/31` (RFC 3021).
+2. **Salto de bloque (*block size*):** 256 − octeto donde corta la máscara. Por ejemplo, `/26` equivale a `255.255.255.192`, dando saltos de 256 − 192 = 64 (`.0`, `.64`, `.128`, `.192`).
 3. **Estrategia VLSM (*Variable Length Subnet Mask*):** ordena siempre las subredes necesarias de **mayor a menor número de hosts** antes de repartir bloques para evitar solapamientos.
 
 ---

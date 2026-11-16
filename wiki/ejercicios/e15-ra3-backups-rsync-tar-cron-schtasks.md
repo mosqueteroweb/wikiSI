@@ -116,6 +116,6 @@ Implementar una política de copias de seguridad incrementales/espejo y empaquet
 
     ### Parte C (Ampliación): Sincronización (`rclone`), Política 3-2-1 y Clonación Multicast
 
-    1. **Sincronización en Linux y Windows:** configura dos tareas verificadas de sincronización de carpetas: una **local $\rightarrow$ local** y otra **local $\rightarrow$ nube**, utilizando **`rclone`** en Linux (`rclone sync /origen remoto:carpeta -P`) y **`FreeFileSync`** o **`Syncthing`** en Windows. Modifica un fichero en origen, vuelve a sincronizar y demuestra la propagación.
+    1. **Sincronización en Linux y Windows:** configura dos tareas verificadas de sincronización de carpetas: una **local → local** y otra **local → nube**, utilizando **`rclone`** en Linux (`rclone sync /origen remoto:carpeta -P`) y **`FreeFileSync`** o **`Syncthing`** en Windows. Modifica un fichero en origen, vuelve a sincronizar y demuestra la propagación.
     2. **Clonación con Clonezilla:** arranca con la ISO de [Clonezilla Live](https://clonezilla.org/), guarda una imagen completa de una VM pequeña en un segundo disco virtual y restáurala en una VM destino limpia (y practica en red interna la restauración simultánea en 2 máquinas mediante modo **Multicast**).
     3. **Documento de Política 3-2-1:** redacta la política para tu estación DAM respondiendo a **qué datos** (*Sistema / Trabajos DAM / Otros*), **cómo** (*Completa + Incremental/Diferencial*), **cuándo**, **dónde** (*3-2-1*), **cifrado/etiquetado** y **prueba real de restauración**.

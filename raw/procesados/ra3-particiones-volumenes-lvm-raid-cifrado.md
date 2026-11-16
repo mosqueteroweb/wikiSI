@@ -35,11 +35,11 @@ fuentes_primarias:
 
 | Nivel | Nombre | Discos mín. | Capacidad útil | Tolerancia fallos | Uso típico |
 | :---: | :--- | :---: | :---: | :---: | :--- |
-| **RAID 0** | *Striping* (División) | 2 | $N \times C$ (100 %) | **0 discos** (alto riesgo) | Caché temporal, vídeo no crítico |
-| **RAID 1** | *Mirroring* (Espejo) | 2 | $1 \times C$ (50 %) | 1 disco (de 2) | Arranque de servidores, datos críticos |
-| **RAID 5** | Paridad distribuida | 3 | $(N-1) \times C$ | 1 disco | Archivos generales, equilibrio coste/seguridad |
-| **RAID 6** | Doble paridad | 4 | $(N-2) \times C$ | 2 discos | Cabinas grandes HDD |
-| **RAID 10** | Espejos en *Stripe* | 4 (pares) | $(N/2) \times C$ (50 %) | 1 por cada par | Bases de datos intensivas IOPS |
+| **RAID 0** | *Striping* (División) | 2 | N × C (100 %) | **0 discos** (alto riesgo) | Caché temporal, vídeo no crítico |
+| **RAID 1** | *Mirroring* (Espejo) | 2 | 1 × C (50 %) | 1 disco (de 2) | Arranque de servidores, datos críticos |
+| **RAID 5** | Paridad distribuida | 3 | (N − 1) × C | 1 disco | Archivos generales, equilibrio coste/seguridad |
+| **RAID 6** | Doble paridad | 4 | (N − 2) × C | 2 discos | Cabinas grandes HDD |
+| **RAID 10** | Espejos en *Stripe* | 4 (pares) | (N / 2) × C (50 %) | 1 por cada par | Bases de datos intensivas IOPS |
 
 - **Implementación en Linux (`mdadm`):** `sudo mdadm --create /dev/md0 --level=1 --raid-devices=2 /dev/sdb1 /dev/sdc1`, monitorizado en `/proc/mdstat` y guardado en `/etc/mdadm/mdadm.conf`. *Nota pedagógica:* **RAID proporciona disponibilidad, NO sustituye a las copias de seguridad** (si borras un archivo accidentalmente o entra ransomware, se replica instantáneamente en todos los discos del RAID).
 
@@ -51,5 +51,5 @@ fuentes_primarias:
 - **Salud SMART:** `sudo smartctl -H /dev/sda` y `smartctl -a` (`smartmontools`) para leer sectores reasignados, temperatura y horas de encendido.
 - **Desfragmentación (HDD) vs TRIM (SSD):** Los HDD requieren ocasionalmente reducir fragmentación (`e4defrag` / `defrag` o *Optimizar unidades*); los **SSD NO deben desfragmentarse** para no agotar ciclos de escritura NAND, sino enviar comandos **TRIM** (`sudo fstrim -av` / `fstrim.timer` o `Optimize-Volume -DriveLetter C -ReTrim`).
 - **Cifrado de volúmenes:**
-  - **LUKS2 (`cryptsetup`) en Linux:** `sudo cryptsetup luksFormat /dev/sdb1`, `sudo cryptsetup open /dev/sdb1 datos_seguros` $\rightarrow$ `/dev/mapper/datos_seguros`.
+  - **LUKS2 (`cryptsetup`) en Linux:** `sudo cryptsetup luksFormat /dev/sdb1`, `sudo cryptsetup open /dev/sdb1 datos_seguros` → `/dev/mapper/datos_seguros`.
   - **BitLocker (`manage-bde`) en Windows:** Cifra particiones enteras apoyándose en chip **TPM 2.0** (o clave de recuperación USB/AD).

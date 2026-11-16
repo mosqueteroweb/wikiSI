@@ -171,7 +171,7 @@ ls -l /etc/hosts && cat ~/Documentos/entrega_dam.txt
   ping -c 4 192.168.100.10
   free -h
   ```
-- En **Host MAX**, `free -h` confirmará ~10–11 GB disponibles/caché y las dos VMs consumiendo **5 GB asignados** ($\le 12\text{ GB}$).
+- En **Host MAX**, `free -h` confirmará ~10–11 GB disponibles/caché y las dos VMs consumiendo **5 GB asignados** (≤ 12 GB).
 
 ---
 

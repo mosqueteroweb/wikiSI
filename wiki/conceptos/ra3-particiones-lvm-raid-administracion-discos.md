@@ -100,10 +100,10 @@ En **Windows**, el equivalente clásico son los *Discos Dinámicos* (volúmenes 
 
 | Nivel RAID | Discos mínimos | Capacidad útil | Discos que puede perder | Balance rendimiento / seguridad |
 | :---: | :---: | :---: | :---: | :--- |
-| **RAID 0** (*Striping*) | 2 | $N \times C$ (100 %) | **Ninguno (0)** | Máxima lectura/escritura; pérdida total si cae 1 disco |
-| **RAID 1** (*Mirroring*) | 2 | $1 \times C$ (50 %) | 1 (de 2) | Alta fiabilidad y lectura rápida; ideal para SO y arranque |
-| **RAID 5** (*Paridad*) | 3 | $(N-1) \times C$ | 1 | Buen aprovechamiento del espacio; reconstrucción exigente |
-| **RAID 10** (*1 + 0*) | 4 (par) | $(N/2) \times C$ (50 %) | 1 por cada espejo | Alto rendimiento en escritura + alta tolerancia sin calcular paridad |
+| **RAID 0** (*Striping*) | 2 | N × C (100 %) | **Ninguno (0)** | Máxima lectura/escritura; pérdida total si cae 1 disco |
+| **RAID 1** (*Mirroring*) | 2 | 1 × C (50 %) | 1 (de 2) | Alta fiabilidad y lectura rápida; ideal para SO y arranque |
+| **RAID 5** (*Paridad*) | 3 | (N − 1) × C | 1 | Buen aprovechamiento del espacio; reconstrucción exigente |
+| **RAID 10** (*1 + 0*) | 4 (par) | (N / 2) × C (50 %) | 1 por cada espejo | Alto rendimiento en escritura + alta tolerancia sin calcular paridad |
 
 === "MAX / Ubuntu (`mdadm`)"
     ```bash

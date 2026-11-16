@@ -22,7 +22,7 @@ fuentes_primarias:
   3. **Subsistema de Entrada/Salida (E/S):** Controladores y puertos de comunicación con el exterior.
   4. **Buses del sistema:**
      - **Bus de Datos:** Bidireccional; transporta palabras de datos o instrucciones (ancho típico 64 bits en arquitecturas modernas).
-     - **Bus de Direcciones:** Unidireccional desde CPU/DMA hacia memoria o E/S; determina el espacio máximo direccionable ($2^n$ direcciones).
+     - **Bus de Direcciones:** Unidireccional desde CPU/DMA hacia memoria o E/S; determina el espacio máximo direccionable (2ⁿ direcciones).
      - **Bus de Control:** Señales de lectura (`RD`), escritura (`WR`), reloj (`CLK`), interrupciones (`IRQ`, `NMI`), arbitraje de bus (`HOLD`/`HLDA`).
 - **Cuello de botella de Von Neumann:** La compartición de un único bus para instrucciones y datos limita el rendimiento efectivo de la CPU.
 - **Arquitectura Harvard modificada en procesadores modernos:** Mantiene memoria principal unificada (modelo Von Neumann externo), pero divide la caché de primer nivel (`L1i` para instrucciones y `L1d` para datos) para permitir captación y carga simultáneas sin conflictos de bus.
@@ -30,13 +30,13 @@ fuentes_primarias:
 ## 2. Placa Base (*Motherboard / BaseBoard*)
 
 - **Formatos estandarizados (Intel / VIA):**
-  - **ATX (*Advanced Technology Extended*):** $305 \times 244\text{ mm}$. Hasta 7 ranuras de expansión PCIe, 4 ranuras DIMM habituales, máxima capacidad de refrigeración y fases VRM.
-  - **Micro-ATX ($\mu$ATX):** $244 \times 244\text{ mm}$. Hasta 4 ranuras de expansión, 2–4 ranuras DIMM; muy común en equipos de oficina y aulas escolares.
-  - **Mini-ITX:** $170 \times 170\text{ mm}$. 1 ranura PCIe x16, 2 ranuras DIMM/SO-DIMM; ideal para mini-PCs y estaciones compactas.
+  - **ATX (*Advanced Technology Extended*):** 305 × 244 mm. Hasta 7 ranuras de expansión PCIe, 4 ranuras DIMM habituales, máxima capacidad de refrigeración y fases VRM.
+  - **Micro-ATX (µATX):** 244 × 244 mm. Hasta 4 ranuras de expansión, 2–4 ranuras DIMM; muy común en equipos de oficina y aulas escolares.
+  - **Mini-ITX:** 170 × 170 mm. 1 ranura PCIe x16, 2 ranuras DIMM/SO-DIMM; ideal para mini-PCs y estaciones compactas.
 - **Elementos clave de interconexión:**
   - **Zócalo (*Socket*) de CPU:** LGA (*Land Grid Array*, pines en el zócalo, ej. Intel LGA 1700/1851 y AMD AM5), PGA (*Pin Grid Array*, pines en la CPU, ej. AMD AM4) y BGA (*Ball Grid Array*, soldado en placa en portátiles/mini-PCs).
   - **Chipset / PCH (*Platform Controller Hub*):** Gestiona los enlaces secundarios (USB, SATA, audio, LAN, ranuras PCIe de menor ancho de banda), conectado a la CPU por un enlace DMI (*Direct Media Interface*) o equivalente PCIe interno, mientras la CPU controla directamente la memoria RAM y las líneas PCIe principales (GPU + primer M.2 NVMe).
-  - **VRM (*Voltage Regulator Module*):** Regula los $+12\text{ V}$ de la fuente hacia el voltaje preciso del núcleo ($V_{\text{core}} \approx 0.8\text{–}1.4\text{ V}$).
+  - **VRM (*Voltage Regulator Module*):** Regula los +12 V de la fuente hacia el voltaje preciso del núcleo (V_core ≈ 0,8–1,4 V).
   - **Conectores de alimentación:** Conector principal ATX de 24 pines y conector auxiliar EPS12V de 4 u 8 pines para la CPU.
 
 ## 3. Estructura Interna del Procesador y Ciclo de Instrucción

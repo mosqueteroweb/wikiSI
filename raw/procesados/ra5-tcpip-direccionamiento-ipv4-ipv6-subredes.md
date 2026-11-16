@@ -22,8 +22,8 @@ fuente_tipo: sintesis-tecnica-curada
 
 - **Estructura IPv4:** 32 bits divididos en 4 octetos (`0–255`), compuestos por **Porción de Red + Porción de Host** delimitada por la máscara (`/prefijo` CIDR).
 - **Cálculo rápido en subnetting:**
-  - Direcciones útiles por subred = $2^h - 2$ (donde $h = 32 - \text{prefijo}$; se restan dirección de **red** con bits de host a 0 y **broadcast** con bits de host a 1). En enlaces punto a punto (`/31`, RFC 3021) se aprovechan ambas direcciones.
-  - Salto de bloque (*block size*): $256 - \text{octeto crítico de la máscara}$.
+  - Direcciones útiles por subred = 2ʰ − 2 (donde h = 32 − prefijo; se restan dirección de **red** con bits de host a 0 y **broadcast** con bits de host a 1). En enlaces punto a punto (`/31`, RFC 3021) se aprovechan ambas direcciones.
+  - Salto de bloque (*block size*): 256 − octeto crítico de la máscara.
 - **Rangos privados RFC 1918 (no enrutables en Internet público):**
   - `10.0.0.0/8` (`10.0.0.0` – `10.255.255.255`)
   - `172.16.0.0/12` (`172.16.0.0` – `172.31.255.255`)

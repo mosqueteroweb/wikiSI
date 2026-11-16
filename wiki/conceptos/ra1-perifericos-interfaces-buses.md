@@ -114,7 +114,7 @@ Un **controlador (*driver*)** es el software del núcleo que traduce las órdene
 
 ### Conexión de periféricos en Oracle VirtualBox (Aula MAX)
 
-1. **Passthrough USB:** Para pasar un pendrive conectado al host MAX directamente a una VM, entra en *Configuración de la VM $\rightarrow$ USB*, activa el controlador **USB 3.0 (xHCI)** (requiere *Extension Pack* en el host) y añade un filtro para tu dispositivo. Además, tu usuario en MAX debe pertenecer al grupo `vboxusers`.
+1. **Passthrough USB:** Para pasar un pendrive conectado al host MAX directamente a una VM, entra en *Configuración de la VM → USB*, activa el controlador **USB 3.0 (xHCI)** (requiere *Extension Pack* en el host) y añade un filtro para tu dispositivo. Además, tu usuario en MAX debe pertenecer al grupo `vboxusers`.
 2. **Guest Additions:** Instalar las *Guest Additions* dentro del SO invitado habilita controladores paravirtualizados para redimensionar pantalla, portapapeles bidireccional y **carpetas compartidas** entre MAX y la VM.
 
 ---

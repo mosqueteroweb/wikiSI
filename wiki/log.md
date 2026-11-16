@@ -55,7 +55,7 @@ Bitácora de operaciones (*ingest*, *compile*, *lint*, *publish*) ejecutadas sob
 
 - **Fuentes procesadas (`raw/procesados/`):** `ra4-usuarios-grupos-directivas-seguridad.md`, `ra4-permisos-locales-acls-herencia.md`, `ra4-procesos-servicios-monitorizacion-desarrollo.md`.
 - **Conceptos publicados (`wiki/conceptos/`):** 6 páginas completas cubriendo `RA4.a`–`RA4.h` con tabs duales MAX/Ubuntu y Windows 10/11, más 5 diagramas SVG locales (`wiki/assets/ra4-*.svg`).
-- **Ejercicios resueltos (`wiki/ejercicios/`):** `e16`–`e20` con presupuesto de RAM $\le 6\text{ GB}$ sobre hosts MAX de 16 GB.
+- **Ejercicios resueltos (`wiki/ejercicios/`):** `e16`–`e20` con presupuesto de RAM ≤ 6 GB sobre hosts MAX de 16 GB.
 - **Práctica Integradora (`wiki/practicas/`):** Enunciado público `p04` (`DAM-Srv-Ubuntu` 2 GB + `DAM-Workstation-Win10` 4 GB = 6 GB) y solución docente marcada con `publicar: false`.
 - **Evaluación privada (`privado_evaluacion/`):** Examen teórico-práctico RA4 (16 preguntas + bloque Moodle GIFT + 3 supuestos), solucionario y rúbrica `RA4.a`–`RA4.h` (excluido de Git vía `.gitignore`).
 
@@ -65,7 +65,7 @@ Bitácora de operaciones (*ingest*, *compile*, *lint*, *publish*) ejecutadas sob
 
 - **Fuentes procesadas (`raw/procesados/`):** `ra3-sistemas-archivos-directorios-busqueda.md`, `ra3-particiones-volumenes-lvm-raid-cifrado.md`, `ra3-copias-seguridad-automatizacion-tareas.md`.
 - **Conceptos publicados (`wiki/conceptos/`):** 6 páginas completas cubriendo `RA3.a`–`RA3.h` con tabs duales MAX/Ubuntu y Windows 10/11, más 5 diagramas SVG locales (`wiki/assets/ra3-*.svg`).
-- **Ejercicios resueltos (`wiki/ejercicios/`):** `e11`–`e15` con presupuesto de RAM $\le 6\text{ GB}$ sobre hosts MAX de 16 GB.
+- **Ejercicios resueltos (`wiki/ejercicios/`):** `e11`–`e15` con presupuesto de RAM ≤ 6 GB sobre hosts MAX de 16 GB.
 - **Práctica Integradora (`wiki/practicas/`):** Enunciado público `p03` (`DAM-Storage-Ubuntu` 2 GB + `DAM-Client-Win10` 4 GB = 6 GB) y solución docente marcada con `publicar: false`.
 - **Evaluación privada (`privado_evaluacion/`):** Examen teórico-práctico RA3 (16 preguntas + bloque Moodle GIFT + 3 supuestos), solucionario y rúbrica `RA3.a`–`RA3.h` (excluido de Git vía `.gitignore`).
 
@@ -75,7 +75,7 @@ Bitácora de operaciones (*ingest*, *compile*, *lint*, *publish*) ejecutadas sob
 
 - **Fuentes procesadas (`raw/procesados/`):** `ra2-arquitectura-so-licencias.md`, `ra2-virtualizacion-planificacion-instalacion.md`, `ra2-arranque-aplicaciones-recuperacion-doc.md`.
 - **Conceptos publicados (`wiki/conceptos/`):** 6 páginas completas cubriendo `RA2.a`–`RA2.i` con tabs duales MAX/Ubuntu y Windows 10/11, plus 6 diagramas SVG locales (`wiki/assets/ra2-*.svg`).
-- **Ejercicios resueltos (`wiki/ejercicios/`):** `e06`–`e10` con presupuesto de RAM $\le 6\text{ GB}$ sobre hosts MAX de 16 GB.
+- **Ejercicios resueltos (`wiki/ejercicios/`):** `e06`–`e10` con presupuesto de RAM ≤ 6 GB sobre hosts MAX de 16 GB.
 - **Práctica Integradora (`wiki/practicas/`):** Enunciado público `p02` (`DAM-Estacion-Dual` 4 GB + `DAM-Rescate-Puppy` 1 GB = 5 GB) y solución docente marcada con `publicar: false`.
 - **Evaluación privada (`privado_evaluacion/`):** Examen teórico-práctico RA2 (18 preguntas + bloque Moodle GIFT + 3 supuestos), solucionario y rúbrica `RA2.a`–`RA2.i` (excluido de Git vía `.gitignore`).
 

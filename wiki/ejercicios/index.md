@@ -12,7 +12,7 @@ Píldoras prácticas breves enfocadas en **una destreza técnica concreta** (un 
 Cada ejercicio incluye:
 
 - Objetivo y criterios de evaluación (`RAx.CEy`) trabajados.
-- Especificación de máquinas virtuales y presupuesto de RAM ($\le 10\text{–}12\text{ GB}$ totales en equipos de 16 GB).
+- Especificación de máquinas virtuales y presupuesto de RAM (≤ 10–12 GB totales en equipos de 16 GB).
 - Enunciado breve y **resolución paso a paso** desplegable.
 
 ---

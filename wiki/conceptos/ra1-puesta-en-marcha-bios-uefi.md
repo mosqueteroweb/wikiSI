@@ -23,7 +23,7 @@ Cuando pulsas el botón de encendido de la caja, el equipo no carga inmediatamen
 
 ![Secuencia de puesta en marcha: Power Good, POST y BIOS vs UEFI](../assets/ra1-secuencia-arranque-uefi-bios.svg)
 
-1. **Estabilización eléctrica y señal *Power Good*:** La fuente ATX recibe la señal `PS_ON#` de la placa base y suministra las tensiones de trabajo ($+12\text{ V}$, $+5\text{ V}$, $+3{,}3\text{ V}$). Cuando las salidas son estables (en unos ~100–500 ms), envía la señal **Power Good** (`PWR_OK`), liberando el pin *Reset* de la CPU para que ejecute su primera instrucción desde el chip Flash SPI de la placa.
+1. **Estabilización eléctrica y señal *Power Good*:** La fuente ATX recibe la señal `PS_ON#` de la placa base y suministra las tensiones de trabajo (+12 V, +5 V, +3,3 V). Cuando las salidas son estables (en unos ~100–500 ms), envía la señal **Power Good** (`PWR_OK`), liberando el pin *Reset* de la CPU para que ejecute su primera instrucción desde el chip Flash SPI de la placa.
 2. **Autoprueba de encendido (POST — *Power-On Self-Test*):** El firmware comprueba que la CPU, los registros, el controlador de memoria RAM, la tarjeta gráfica y los controladores básicos responden correctamente.
    - Si aparece un fallo grave antes de poder inicializar la pantalla, la placa informa mediante **códigos de pitidos (*beep codes*)** en el altavoz interno o **LEDs de diagnóstico** (`CPU`, `DRAM`, `VGA`, `BOOT`).
    - *Ejemplo orientativo (varía según fabricante AMI/Award/Phoenix):* 1 pitido corto suele indicar POST correcto; pitidos largos repetidos o código continuo suelen indicar ausencia o mal contacto de memoria RAM o tarjeta gráfica.
@@ -89,7 +89,7 @@ sequenceDiagram
 
     1. El firmware UEFI ejecuta `\EFI\Microsoft\Boot\bootmgfw.efi` (**Windows Boot Manager**).
     2. El gestor lee la base de datos de configuración de arranque (**BCD**) y lanza `winload.efi`.
-    3. Se carga el núcleo de Windows (**`ntoskrnl.exe`**), la capa de abstracción de hardware (`hal.dll`) y el subsistema de sesión (`smss.exe` $\rightarrow$ `wininit.exe`), iniciando los servicios y el escritorio.
+    3. Se carga el núcleo de Windows (**`ntoskrnl.exe`**), la capa de abstracción de hardware (`hal.dll`) y el subsistema de sesión (`smss.exe` → `wininit.exe`), iniciando los servicios y el escritorio.
 
     **Verificación desde PowerShell (Administrador) en Windows 10/11:**
     ```powershell

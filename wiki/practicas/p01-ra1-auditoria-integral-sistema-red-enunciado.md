@@ -70,7 +70,7 @@ Como técnico de **1º DAM**, debes elaborar el **Informe Técnico de Auditoría
 1. Conecta **`DAM-Win10-Audit`** y **`DAM-Ubuntu-Node`** a la misma **Red interna** `lan-ra1` en VirtualBox y configura manualmente las IPs estáticas:
    - `DAM-Win10-Audit`: `192.168.100.10` / máscara `255.255.255.0`
    - `DAM-Ubuntu-Node`: `192.168.100.20` / máscara `255.255.255.0`
-2. Verifica la conectividad bidireccional con `ping` y comprueba la resolución IP $\rightarrow$ MAC (`ip neigh show` / `arp -a`).
+2. Verifica la conectividad bidireccional con `ping` y comprueba la resolución IP → MAC (`ip neigh show` / `arp -a`).
 3. Elabora e incluye en tu informe:
    - Un **Mapa Físico** desde tu puesto MAX hasta el *Switch* del aula (indicando tipo de cable Cat5e/Cat6, conector RJ-45 norma **T568B**, roseta, *Patch Panel* y velocidad negociada con `ethtool`).
    - Un **Mapa Lógico** de `lan-ra1` (subred, máscaras, direcciones IP, direcciones MAC reales de tus adaptadores virtuales y modo de red VirtualBox).

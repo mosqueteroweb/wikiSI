@@ -33,7 +33,7 @@ La empresa **NovaCode DAM** estrena una pequeña sede técnica aislada de Intern
 | **`DAM-Router-Gate`** | Ubuntu Server 24.04 | **1 GB** | `enp0s3` (NAT WAN) · `enp0s8` (`intnet_nova`) | Router IP + `ip_forward` + NAT `MASQUERADE` (`192.168.80.1/26`) |
 | **`DAM-Net-Ubuntu`** | Ubuntu Server / Desktop 24.04 | **2 GB** | `enp0s3` (`intnet_nova`) | Servidor aplicaciones + SSH (`192.168.80.10/26`) |
 | **`DAM-Net-Win10`** | Windows 10 Education / Pro | **4 GB** | `Ethernet` (`intnet_nova`) | Estación cliente PowerShell/OpenSSH (`192.168.80.20/26`) |
-| **Consumo total activo** | **3 VMs simultáneas sobre MAX (16 GB)** | **7 GB** | Margen libre **9 GB** | Dentro del tope estricto de aula ($\le 10\text{–}12\text{ GB}$) |
+| **Consumo total activo** | **3 VMs simultáneas sobre MAX (16 GB)** | **7 GB** | Margen libre **9 GB** | Dentro del tope estricto de aula (≤ 10–12 GB) |
 
 ---
 

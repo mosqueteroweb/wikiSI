@@ -153,7 +153,7 @@ Un servidor de prácticas muestra ralentizaciones puntuales y varios intentos fa
 
 ### 4. Taller de Ampliación: 6 Ejercicios en el Registro de Windows (`regedit`) y Monitor de Confiabilidad
 
-En tu VM **Windows 10/11** (`e19-Win10`), realiza primero un respaldo (`Archivo` $\rightarrow$ `Exportar` en `regedit.exe`) o un snapshot en VirtualBox y completa las dos tandas de ajuste:
+En tu VM **Windows 10/11** (`e19-Win10`), realiza primero un respaldo (`Archivo` → `Exportar` en `regedit.exe`) o un snapshot en VirtualBox y completa las dos tandas de ajuste:
 
 **Primera parte:**
 1. **Propietario registrado (`RegisteredOwner`):** abre `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion`, modifica el valor cadena `RegisteredOwner` con tu nombre y comprueba el cambio tras reiniciar ejecutando `winver` (`Win + R`).

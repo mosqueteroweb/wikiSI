@@ -99,7 +99,7 @@ El parámetro `load average: 1.20, 0.95, 0.70` indica el número medio de proces
 
 Evaluar el hardware y configurar el sistema operativo antes de instalar un entorno de desarrollo evita cuellos de botella graves durante la compilación y las pruebas:
 
-1. **Memoria RAM y Presupuesto de Virtualización:** Al ejecutar simultáneamente un IDE (*IntelliJ IDEA* / *Android Studio* $\approx 3\text{–}4\text{ GB}$), un navegador con documentación, servidor de base de datos (*PostgreSQL/MySQL*) y máquinas virtuales de prueba en VirtualBox sobre nuestros PCs de aula **MAX de 16 GB**, el desarrollador debe planificar cuidadosamente el consumo (por ejemplo, **no rebasar 4–6 GB en VMs mientras el IDE está abierto**).
+1. **Memoria RAM y Presupuesto de Virtualización:** Al ejecutar simultáneamente un IDE (*IntelliJ IDEA* / *Android Studio* ≈ 3–4 GB), un navegador con documentación, servidor de base de datos (*PostgreSQL/MySQL*) y máquinas virtuales de prueba en VirtualBox sobre nuestros PCs de aula **MAX de 16 GB**, el desarrollador debe planificar cuidadosamente el consumo (por ejemplo, **no rebasar 4–6 GB en VMs mientras el IDE está abierto**).
 2. **Almacenamiento NVMe/SSD y exclusiones en tiempo real:** Los proyectos Java/Gradle, `node_modules` o compilaciones generan decenas de miles de archivos pequeños. Requieren SSD y, en Windows, es buena práctica valorar exclusiones controladas en tiempo real para carpetas de compilación verificadas (manteniendo la protección activa global).
 3. **Gestión multi-versión sin contaminar el host (`RA4.h`):**
    - Utilizar **`update-alternatives`** (Java), **entornos virtuales Python (`python3 -m venv .venv`)**, **`nvm`** (Node.js) o **contenedores Docker** para aislar dependencias de cada asignatura o proyecto sin romper las herramientas del sistema base.
@@ -123,7 +123,7 @@ Es una base de datos jerárquica donde Windows y las aplicaciones guardan su con
 **Tipos de valores habituales:** `String (REG_SZ)` texto simple, `REG_BINARY` binario/hexadecimal, `REG_DWORD` entero de 32 bits (`0`/`1`), `REG_QWORD` entero de 64 bits, `REG_MULTI_SZ` listas multínea y `REG_EXPAND_SZ` cadenas con variables expandibles (`%SystemRoot%`).
 
 !!! warning "Seguridad antes de tocar `regedit`"
-    Exporta siempre una copia de seguridad de la rama antes de modificarla (`Archivo` $\rightarrow$ `Exportar`) o trabaja dentro de una máquina virtual con instantánea previa; consulta la referencia oficial de Microsoft sobre [uso avanzado del Registro de Windows](https://docs.microsoft.com/es-ES/troubleshoot/windows-server/performance/windows-registry-advanced-users).
+    Exporta siempre una copia de seguridad de la rama antes de modificarla (`Archivo` → `Exportar`) o trabaja dentro de una máquina virtual con instantánea previa; consulta la referencia oficial de Microsoft sobre [uso avanzado del Registro de Windows](https://docs.microsoft.com/es-ES/troubleshoot/windows-server/performance/windows-registry-advanced-users).
 
 ### Consolas de diagnóstico y mantenimiento moderno
 

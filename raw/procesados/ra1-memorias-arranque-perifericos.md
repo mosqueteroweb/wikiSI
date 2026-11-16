@@ -22,7 +22,7 @@ fuentes_primarias:
   - *Localidad temporal:* Un dato o instrucción accedido recientemente tiende a volver a usarse pronto.
   - *Localidad espacial:* Si se accede a una dirección de memoria, es probable acceder a direcciones contiguas.
 - **Niveles volátiles (pierden el contenido sin alimentación eléctrica):**
-  1. **Registros internos de la CPU:** Latencia $< 1\text{ ns}$ (1 ciclo), capacidad de cientos de bytes a pocos KiB.
+  1. **Registros internos de la CPU:** Latencia < 1 ns (1 ciclo), capacidad de cientos de bytes a pocos KiB.
   2. **Memoria Caché SRAM (*Static RAM*):** Basada en biestables de 6 transistores; no requiere refresco.
      - `L1` (dividida en `L1i` instrucciones y `L1d` datos): ~32–64 KiB por núcleo, latencia ~1 ns.
      - `L2`: ~256 KiB – 2 MiB por núcleo, latencia ~3–10 ns.
@@ -31,7 +31,7 @@ fuentes_primarias:
   3. **Memoria Principal DRAM (*Dynamic RAM*):** Basada en condensador + transistor; necesita ciclos periódicos de refresco.
      - Estándares actuales: DDR4 (2133–3200 MT/s nominales, 1.2 V) y DDR5 (4800–6400+ MT/s, 1.1 V, doble subcanal independiente por módulo).
      - Formatos físicos: **DIMM** (sobremesa, 288 pines DDR4/DDR5) y **SO-DIMM** (portátiles y mini-PCs, 260 pines DDR4 / 262 pines DDR5).
-     - Canales: *Single Channel* (64 bits) vs *Dual Channel* (128 bits, duplica el ancho de banda teórico). Fórmula aproximada de ancho de banda: $\text{MT/s} \times 8\text{ bytes} \times \text{n.º canales}$.
+     - Canales: *Single Channel* (64 bits) vs *Dual Channel* (128 bits, duplica el ancho de banda teórico). Fórmula aproximada de ancho de banda: MT/s × 8 bytes × n.º canales.
      - **ECC (*Error-Correcting Code*):** Detecta y corrige errores de 1 bit en memoria (servidores y estaciones críticas).
 - **Memorias no volátiles (conservan datos sin corriente):**
   - **ROM / PROM / EPROM / EEPROM:** Evolución histórica de solo lectura / grabable una vez / borrable por UV / borrable eléctricamente.
@@ -46,15 +46,15 @@ fuentes_primarias:
 
 ## 2. Puesta en Marcha: Fuente, POST, BIOS Legacy y UEFI
 
-1. **Encendido y *Power Good*:** La fuente ATX suministra $+12\text{ V}$, $+5\text{ V}$, $+3.3\text{ V}$ y $+5\text{ VSB}$ (*standby*). Cuando las tensiones son estables, envía la señal *Power Good* para liberar el *reset* de la CPU.
+1. **Encendido y *Power Good*:** La fuente ATX suministra +12 V, +5 V, +3,3 V y +5 VSB (*standby*). Cuando las tensiones son estables, envía la señal *Power Good* para liberar el *reset* de la CPU.
 2. **POST (*Power-On Self-Test*):** El firmware (alojado en chip Flash SPI) verifica CPU, controlador de memoria, RAM, GPU y bus PCIe/teclado. Los fallos críticos se reportan mediante códigos de pitidos (*beep codes*) o LEDs de diagnóstico (`CPU`, `DRAM`, `VGA`, `BOOT`).
 3. **Configuración CMOS/NVRAM:** La pila de litio **CR2032 (3V)** mantiene el reloj RTC y la configuración básica en CMOS en placas antiguas, o la configuración en NVRAM.
 4. **Comparativa BIOS Legacy vs UEFI:**
-   - **BIOS Legacy:** Modo real de 16 bits, direccionamiento limitado a 1 MiB inicial, interfaz textual, particionado **MBR** (máx. 4 particiones primarias, discos $\le 2\text{ TiB}$), sin verificación criptográfica de arranque.
-   - **UEFI:** Ejecución en 32/64 bits, soporte de ratón/red, tabla de particiones **GPT** (hasta 128 particiones estándar en Windows y discos $> 2\text{ TiB}$), requiere partición del sistema EFI (**ESP** en FAT32, punto de montaje `/boot/efi` en Linux), soporta **Secure Boot** (verificación de firmas digitales del cargador) y se integra con **TPM 2.0** (requisito oficial de Windows 11).
+   - **BIOS Legacy:** Modo real de 16 bits, direccionamiento limitado a 1 MiB inicial, interfaz textual, particionado **MBR** (máx. 4 particiones primarias, discos ≤ 2 TiB), sin verificación criptográfica de arranque.
+   - **UEFI:** Ejecución en 32/64 bits, soporte de ratón/red, tabla de particiones **GPT** (hasta 128 particiones estándar en Windows y discos > 2 TiB), requiere partición del sistema EFI (**ESP** en FAT32, punto de montaje `/boot/efi` en Linux), soporta **Secure Boot** (verificación de firmas digitales del cargador) y se integra con **TPM 2.0** (requisito oficial de Windows 11).
 5. **Cadena de arranque del Sistema Operativo:**
-   - **MAX / Ubuntu (UEFI):** `Firmware UEFI` $\rightarrow$ `/EFI/ubuntu/shimx64.efi` (firmado para Secure Boot) $\rightarrow$ `grubx64.efi` (**GRUB2**) $\rightarrow$ carga `vmlinuz` (kernel) + `initramfs` $\rightarrow$ `systemd` (PID 1).
-   - **Windows 10/11 (UEFI):** `Firmware UEFI` $\rightarrow$ `\EFI\Microsoft\Boot\bootmgfw.efi` (*Windows Boot Manager*) lee el almacén **BCD** $\rightarrow$ `winload.efi` $\rightarrow$ `ntoskrnl.exe` $\rightarrow$ `smss.exe` / `wininit.exe`.
+   - **MAX / Ubuntu (UEFI):** `Firmware UEFI` → `/EFI/ubuntu/shimx64.efi` (firmado para Secure Boot) → `grubx64.efi` (**GRUB2**) → carga `vmlinuz` (kernel) + `initramfs` → `systemd` (PID 1).
+   - **Windows 10/11 (UEFI):** `Firmware UEFI` → `\EFI\Microsoft\Boot\bootmgfw.efi` (*Windows Boot Manager*) lee el almacén **BCD** → `winload.efi` → `ntoskrnl.exe` → `smss.exe` / `wininit.exe`.
 
 ## 3. Periféricos, Buses e Interfaces de E/S
 

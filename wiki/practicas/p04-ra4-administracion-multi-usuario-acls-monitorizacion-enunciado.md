@@ -34,7 +34,7 @@ Debes configurar íntegramente las cuentas, políticas de contraseñas, permisos
 | :--- | :--- | :---: | :--- |
 | **`DAM-Srv-Ubuntu`** | Ubuntu Server / Desktop 24.04 | **2 GB** | Servidor de repositorio local, servicios `systemd`, ACLs y logs |
 | **`DAM-Workstation-Win10`** | Windows 10 Education / Pro | **4 GB** | Estación cliente de desarrollo, directivas locales, ACLs NTFS y PowerShell |
-| **Consumo total activo** | **Anfitrión MAX (16 GB)** | **6 GB** | Margen libre **10 GB** (dentro del límite seguro del aula $\le 10\text{–}12\text{ GB}$) |
+| **Consumo total activo** | **Anfitrión MAX (16 GB)** | **6 GB** | Margen libre **10 GB** (dentro del límite seguro del aula ≤ 10–12 GB) |
 
 ---
 

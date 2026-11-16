@@ -23,7 +23,7 @@ ultima_revision: "2026-11-15"
 
 | Tipo | Alcance típico | Ejemplo real |
 | :--- | :--- | :--- |
-| **PAN** (*Personal Area Network*) | $< 10\text{ m}$ | Auriculares Bluetooth, teclado inalámbrico, móvil por USB |
+| **PAN** (*Personal Area Network*) | < 10 m | Auriculares Bluetooth, teclado inalámbrico, móvil por USB |
 | **LAN** (*Local Area Network*) | Aula, edificio o vivienda | Red cableada Ethernet y Wi-Fi del instituto |
 | **MAN** (*Metropolitan Area Network*) | Ciudad o campus extenso | Red de fibra interconectando sedes educativas o municipales |
 | **WAN** (*Wide Area Network*) | País o escala global | Internet y enlaces privados entre delegaciones |

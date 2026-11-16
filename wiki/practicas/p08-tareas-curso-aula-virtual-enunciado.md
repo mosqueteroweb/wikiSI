@@ -44,7 +44,7 @@ Consiste en diseñar **dos presupuestos cerrados** de ordenadores montados por p
 Sobre una máquina virtual en VirtualBox con un único disco duro virtual y **soporte EFI activado antes de instalar**:
 
 - **Objetivo final:** instalar **2 sistemas Windows junto a 2 distribuciones Linux distintas**.
-- **Progresión recomendada:** (1) 1 Windows + 1 Linux $\rightarrow$ (2) 2 Windows $\rightarrow$ (3) 2 Linux $\rightarrow$ (4) 2 Windows + 2 Linux en el menú de arranque (GRUB2).
+- **Progresión recomendada:** (1) 1 Windows + 1 Linux → (2) 2 Windows → (3) 2 Linux → (4) 2 Windows + 2 Linux en el menú de arranque (GRUB2).
 - **Notas técnicas para Windows 11 en VM:** activa EFI; si requiere saltar comprobaciones TPM o crear cuenta local sin Microsoft Account durante el asistente OOBE, pulsa `Shift + F10` y utiliza `start ms-cxh:localonly` (con tu nombre y apellidos en la cuenta local) siguiendo [la guía de apoyo de VirtualBox](https://www.ubackup.com/es/windows-11/instalar-windows-11-iso-en-virtualbox-3023-tc.html).
 - **Entrega:** guía paso a paso en PDF (y llevar la VM operativa al aula teniendo cuidado al exportar/importar `.ova`).
 
@@ -71,7 +71,7 @@ Sobre una VM Linux Mint o Ubuntu, instala y verifica **6 aplicaciones** utilizan
 ### Tarea 6 · Crear RAIDs (`0`, `1` y `5`) en Windows y Linux
 
 Implementa y verifica tolerancia a fallos en **ambos sistemas**:
-- **Windows:** mediante **Espacios de almacenamiento** (*espacio simple* $\rightarrow$ RAID 0, *espacio de reflejo* $\rightarrow$ RAID 1, *espacio de paridad* $\rightarrow$ RAID 5).
+- **Windows:** mediante **Espacios de almacenamiento** (*espacio simple* → RAID 0, *espacio de reflejo* → RAID 1, *espacio de paridad* → RAID 5).
 - **Linux (`mdadm`):** creación de `/dev/md0`, `/dev/md1` y `/dev/md5`, simulación de fallo de disco y verificación de lectura de datos.
 
 ### Tarea 7 · Política y Supuesto Práctico de Copias de Seguridad
@@ -85,7 +85,7 @@ Redacta un documento justificado cubriendo todos estos puntos + capturas de real
 
 ### Tarea 8 · Sincronización (`rclone` + herramienta en Windows)
 
-Realiza una sincronización en **Windows** y otra en **Linux** (obligatoriamente con **`rclone`** en Linux): una **local $\rightarrow$ nube** y la otra **local $\rightarrow$ local**, eligiendo qué SO realiza cada caso, comprobando en PDF con capturas la propagación de cambios.
+Realiza una sincronización en **Windows** y otra en **Linux** (obligatoriamente con **`rclone`** en Linux): una **local → nube** y la otra **local → local**, eligiendo qué SO realiza cada caso, comprobando en PDF con capturas la propagación de cambios.
 
 ### Tarea 9 · Clonación de Equipos con Clonezilla
 

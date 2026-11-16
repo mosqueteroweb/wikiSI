@@ -23,7 +23,7 @@ En el aula **1.º DAM** (PC anfitrión **MAX** con **16 GB de RAM**), necesitamo
 | :--- | :--- | :---: | :--- |
 | **`e16-Ubuntu`** | Ubuntu Server / Desktop 24.04 | **2 GB** | Gestión POSIX (`/etc/passwd`, `/etc/shadow`, `chage`, `sudo`) |
 | **`e16-Win10`** | Windows 10 Education / Pro | **4 GB** | Gestión local SAM (`net user`, `net accounts`, `secpol.msc`) |
-| **Total activo** | **2 VMs simultáneas** | **6 GB** | Respeta ampliamente el límite del aula ($\le 10\text{–}12\text{ GB}$) |
+| **Total activo** | **2 VMs simultáneas** | **6 GB** | Respeta ampliamente el límite del aula (≤ 10–12 GB) |
 
 ## Objetivos
 

@@ -141,7 +141,7 @@ En una red interna aislada (`intnet_lab`), los equipos cliente no pueden acceder
 
 ### Parte 2 (Ampliación): Emulador TP-Link Archer C20 y Publicación de Servidor en Casa
 
-1. Accede al [**Emulador Online TP-Link (Archer C20)**](https://www.tp-link.com/es/support/emulator/) y localiza las pantallas de **DHCP Address Reservation**, **Forwarding $\rightarrow$ Virtual Servers**, **DMZ**, **UPnP** y **Dynamic DNS**.
+1. Accede al [**Emulador Online TP-Link (Archer C20)**](https://www.tp-link.com/es/support/emulator/) y localiza las pantallas de **DHCP Address Reservation**, **Forwarding → Virtual Servers**, **DMZ**, **UPnP** y **Dynamic DNS**.
 2. Configura hipotéticamente la publicación de un servidor web interno (`192.168.0.50:8080`) en el puerto externo `80` con reserva DHCP por dirección MAC.
 3. Describe los pasos adicionales necesarios en un entorno real para publicar ese servidor desde casa: comprobación de ausencia de **CG-NAT** (comparar la IP WAN del router con la IP pública mostrada externamente), alta de un dominio **DDNS** (*DuckDNS* / *No-IP*) y uso de un proxy inverso si conviven varias aplicaciones web.
 

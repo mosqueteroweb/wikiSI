@@ -73,7 +73,7 @@ Inspeccionar todos los niveles de la jerarquía de memoria volátil y virtual en
 
     ### Paso 3: Corrección del presupuesto multi-VM
 
-    - **Propuesta del compañero:** $6 + 4 + 2 + 3 = \mathbf{15\text{ GB}}$ para las VMs, dejando solo **1 GB** para el anfitrión MAX y VirtualBox. Esto provocaría *swapping/thrashing* severo y congelamiento del equipo del aula.
-    - **Redistribución válida ($\le 10\text{–}12\text{ GB}$ totales en VMs):**
+    - **Propuesta del compañero:** 6 + 4 + 2 + 3 = **15 GB** para las VMs, dejando solo **1 GB** para el anfitrión MAX y VirtualBox. Esto provocaría *swapping/thrashing* severo y congelamiento del equipo del aula.
+    - **Redistribución válida (≤ 10–12 GB totales en VMs):**
       - Si solo necesita 3 máquinas a la vez: Windows 11 (**4 GB**) + Ubuntu Desktop (**2 GB**) + Ubuntu Server (**1,5 GB**) + **Puppy Linux** en lugar de Mint si requiere un cuarto nodo ligero (**1 GB**) = **8,5 GB totales**, reservando **7,5 GB libres** para MAX.
       - En cualquier caso, **nunca superar los 10–12 GB sumando todas las VMs encendidas al mismo tiempo**.

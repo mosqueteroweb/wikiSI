@@ -31,7 +31,7 @@ El estudio **PixelForge DAM** (20 desarrolladores y personal administrativo) qui
 | :--- | :--- | :---: | :--- | :--- |
 | **`DAM-Doc-Ubuntu`** | Ubuntu Desktop / Server 24.04 | **2 GB** | `intnet_oficina` (`192.168.90.10/24`) + NAT (`apt`) | Documentación `pandoc`/Git, SSH/SFTP/`rsync`, `ClamAV`, `7z` |
 | **`DAM-Oficina-Win10`** | Windows 10 Education / Pro | **4 GB** | `intnet_oficina` (`192.168.90.20/24`) | Inventario `winget`, envío `scp`/`Get-FileHash`, consultas DNS correo |
-| **Consumo total activo** | **2 VMs sobre MAX (16 GB)** | **6 GB** | Margen libre **10 GB** | Respeta el tope de aula ($\le 10\text{–}12\text{ GB}$) |
+| **Consumo total activo** | **2 VMs sobre MAX (16 GB)** | **6 GB** | Margen libre **10 GB** | Respeta el tope de aula (≤ 10–12 GB) |
 
 ---
 

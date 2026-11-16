@@ -62,15 +62,15 @@ ultima_revision: "2026-11-16"
 ## 2. Solucionario Razonado · Práctica de Carpetas Compartidas y Cifrado EFS (`Pedro y Luis`)
 
 1. **Usuario que no existe en el servidor Windows compartido (`Grupo de Trabajo`):**
-   - Por defecto falla la autenticación porque está activo el *Uso compartido con protección por contraseña*. Si el recurso añade `Todos` (*Everyone*) y se desactiva la protección por contraseña (y en su caso se habilita usuario anónimo/Invitado), podrá acceder si las directivas locales (`secpol.msc` $\rightarrow$ *Acceso a este equipo desde la red*) lo permiten, aunque se pierde trazabilidad y seguridad.
+   - Por defecto falla la autenticación porque está activo el *Uso compartido con protección por contraseña*. Si el recurso añade `Todos` (*Everyone*) y se desactiva la protección por contraseña (y en su caso se habilita usuario anónimo/Invitado), podrá acceder si las directivas locales (`secpol.msc` → *Acceso a este equipo desde la red*) lo permiten, aunque se pierde trazabilidad y seguridad.
 2. **`Pedro` lee y escribe, resto solo lee:**
-   - En **Permisos de recurso compartido (SMB)** conviene conceder *Control total* o *Cambiar* a `Pedro` y *Lectura* al resto (o *Cambiar* a `Usuarios autentificados` filtrando finamente en **Permisos NTFS**: `Modificar` para `Pedro` y `Lectura y ejecución` para `Usuarios`). Recuerda que en red prevalece el permiso **más restrictivo** al cruzar SMB $\cap$ NTFS.
+   - En **Permisos de recurso compartido (SMB)** conviene conceder *Control total* o *Cambiar* a `Pedro` y *Lectura* al resto (o *Cambiar* a `Usuarios autentificados` filtrando finamente en **Permisos NTFS**: `Modificar` para `Pedro` y `Lectura y ejecución` para `Usuarios`). Recuerda que en red prevalece el permiso **más restrictivo** al cruzar SMB ∩ NTFS.
 3. **Caso crítico de Cifrado EFS (`Pedro` cifra la carpeta con permisos de escritura para ambos):**
    - *¿Puede leer `Luis` los archivos de `Pedro`?* **No.** EFS cifra la clave simétrica de archivo (*FEK*) usando la clave pública del certificado EFS de `Pedro`. Aunque `Luis` tenga Control total NTFS sobre el fichero, Windows devuelve *Acceso denegado* al descifrar porque no posee la clave privada de `Pedro` (salvo que Pedro agregue explícitamente el certificado de Luis al archivo).
    - *¿Puede `Luis` crear archivos nuevos en esa carpeta y quedan cifrados?* **Sí.** `Luis` conserva su permiso NTFS de escritura en el directorio; al crear un archivo nuevo dentro de una carpeta marcada con el atributo EFS, Windows cifra ese nuevo fichero **con el certificado propio de `Luis`**, de modo que **`Pedro` tampoco podrá leer los archivos creados por `Luis`**.
    - *¿Y al acceder por red a la carpeta compartida?* Cada usuario solo podrá abrir **los suyos** (y siempre que el equipo servidor donde reside el perfil/certificado EFS o Active Directory resuelva correctamente el descifrado del certificado del usuario conectado).
 4. **Cambio de propietario NTFS:** si el administrador transfiere la propiedad a otra cuenta y el antiguo propietario no figura con una ACE explícita de escritura/control total (o pertenecía solo por `CREATOR OWNER`), **pierde el acceso de modificación** en cuanto se recalculan o editan los permisos locales.
-5. **Conclusión arquitectónica:** tener que replicar usuarios, contraseñas y certificados en cada máquina aislada es ingobernable $\rightarrow$ justificación directa del salto a **Active Directory / Samba AD DC**.
+5. **Conclusión arquitectónica:** tener que replicar usuarios, contraseñas y certificados en cada máquina aislada es ingobernable → justificación directa del salto a **Active Directory / Samba AD DC**.
 
 ---
 

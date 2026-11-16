@@ -30,7 +30,7 @@ Sus cuatro bloques funcionales y sus mecanismos de interconexión son:
 3. **Subsistema de Entrada/Salida (E/S):** Conecta periféricos, almacenamiento secundario y redes.
 4. **Buses del sistema:**
    - **Bus de Datos (bidireccional):** Transporta los bits de datos o instrucciones (64 bits por transferencia en CPUs modernas).
-   - **Bus de Direcciones (unidireccional CPU → RAM/E/S):** Indica la posición exacta de memoria a leer o escribir. Su anchura $n$ determina el espacio teórico direccionable ($2^n$ posiciones).
+   - **Bus de Direcciones (unidireccional CPU → RAM/E/S):** Indica la posición exacta de memoria a leer o escribir. Su anchura n determina el espacio teórico direccionable (2ⁿ posiciones).
    - **Bus de Control:** Transmite señales de sincronización y estado (`RD`, `WR`, reloj `CLK`, interrupciones `IRQ` y concesión de bus para `DMA`).
 
 !!! warning "El cuello de botella de Von Neumann y la solución Harvard modificada"
@@ -48,9 +48,9 @@ La placa base es el circuito impreso multicapa (PCB) que interconecta físicamen
 
 | Formato | Dimensiones | Ranuras PCIe típicas | Uso habitual |
 | :--- | :---: | :---: | :--- |
-| **ATX** | $305 \times 244\text{ mm}$ | Hasta 7 | Estaciones de trabajo, servidores torre, gaming |
-| **Micro-ATX ($\mu$ATX)** | $244 \times 244\text{ mm}$ | Hasta 4 | Equipos de oficina y PCs de aula |
-| **Mini-ITX** | $170 \times 170\text{ mm}$ | 1 (x16) | Mini-PCs, equipos compactos, laboratorios silenciosos |
+| **ATX** | 305 × 244 mm | Hasta 7 | Estaciones de trabajo, servidores torre, gaming |
+| **Micro-ATX (µATX)** | 244 × 244 mm | Hasta 4 | Equipos de oficina y PCs de aula |
+| **Mini-ITX** | 170 × 170 mm | 1 (x16) | Mini-PCs, equipos compactos, laboratorios silenciosos |
 
 ### Componentes esenciales en la placa
 
@@ -59,7 +59,7 @@ La placa base es el circuito impreso multicapa (PCB) que interconecta físicamen
   - **PGA (*Pin Grid Array*):** Pines en la base de la CPU (AMD AM4).
   - **BGA (*Ball Grid Array*):** Procesador soldado directamente a la placa (portátiles y mini-PCs).
 - **Chipset / PCH (*Platform Controller Hub*):** Circuito integrado que gestiona las comunicaciones secundarias (SATA, USB, audio, LAN, PCIe del chipset), conectado a la CPU mediante un enlace de alta velocidad (**DMI** o PCIe interno).
-- **VRM (*Voltage Regulator Module*):** Conjunto de bobinas, condensadores y MOSFETs que transforman los $+12\text{ V}$ de la fuente en el voltaje preciso del procesador ($V_{\text{core}} \approx 0.8\text{–}1.4\text{ V}$).
+- **VRM (*Voltage Regulator Module*):** Conjunto de bobinas, condensadores y MOSFETs que transforman los +12 V de la fuente en el voltaje preciso del procesador (V_core ≈ 0,8–1,4 V).
 - **Alimentación:** Conector principal **ATX de 24 pines** y conector auxiliar **EPS12V de 4 u 8 pines** dedicado a la CPU.
 
 ---
@@ -176,7 +176,7 @@ La diferencia esencial entre una arquitectura de 32 bits y una de 64 bits radica
 | Característica | Arquitectura de 32 bits (`x86`) | Arquitectura de 64 bits (`x86_64` / `amd64`) |
 | :--- | :--- | :--- |
 | **Tamaño de palabra / registros** | 32 bits por registro general | 64 bits por registro general |
-| **Memoria RAM direccionable** | Límite teórico de $2^{32}$ bytes = **4 GB** | Límite teórico de $2^{64}$ bytes (**16 exabytes**; limitado en SO/hardware actuales a TB) |
+| **Memoria RAM direccionable** | Límite teórico de 2³² bytes = **4 GB** | Límite teórico de 2⁶⁴ bytes (**16 exabytes**; limitado en SO/hardware actuales a TB) |
 | **Precisión y rendimiento** | Menor ancho de bus interno; opera enteros de 64 bits en varios ciclos | Mayor rendimiento paralelo y precisión directa sobre enteros grandes |
 | **Compatibilidad software** | Limitada a ejecutables de 32 bits (y 16 bits antiguos) | Mantiene compatibilidad hacia atrás con la mayoría del software de 32 bits |
 | **Uso recomendado** | Sistemas embebidos ligeros o equipos heredados con poca RAM | Equipos de escritorio modernos, servidores, virtualización y desarrollo DAM |

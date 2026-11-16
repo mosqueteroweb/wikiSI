@@ -144,7 +144,7 @@ flowchart TB
 ### Protocolo de 5 pasos antes de ampliar RAM
 1. Apagar completamente el equipo desde MAX y desconectar el cable de alimentación AC de la torre (nunca manipular con corriente conectada).
 2. Pulsar el botón de encendido durante 5 segundos para descargar los condensadores de la placa y fuente ATX.
-3. Colocar alfombrilla y pulsera antiestática ESD (con resistencia de seguridad de $1\text{ M}\Omega$) conectada al chasis metálico sin pintar.
+3. Colocar alfombrilla y pulsera antiestática ESD (con resistencia de seguridad de 1 MΩ) conectada al chasis metálico sin pintar.
 4. Extraer el módulo RAM nuevo de su bolsa antiestática sujetándolo exclusivamente por los bordes laterales, sin tocar los contactos dorados ni chips.
 5. Insertar el módulo alineando la muesca física (DDR4/DDR5) hasta oír el clic de las pestañas de retención, cerrar la carcasa antes de reconectar el cable AC y comprobar en BIOS/MAX (`dmidecode -t memory` / `free -h`) que se reconoce la capacidad total.
 

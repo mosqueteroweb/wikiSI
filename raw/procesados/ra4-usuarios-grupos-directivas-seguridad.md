@@ -33,7 +33,7 @@ fuentes_primarias:
   - **`/etc/login.defs`**: Define rangos UID/GID, días máximos/mínimos de validez (`PASS_MAX_DAYS`, `PASS_MIN_DAYS`, `PASS_WARN_AGE`).
   - **`chage`** (`chage -l usuario`, `chage -M 90 -m 7 -W 14 usuario`, `chage -d 0 usuario` para forzar cambio al próximo inicio).
   - **`passwd -l` / `passwd -u`** (o `usermod -L/-U`) para bloquear y desbloquear cuentas.
-  - **PAM (*Pluggable Authentication Modules*):** Módulos en `/etc/pam.d/` como `pam_pwquality` / `pam_unix` (longitud mínima, complejidad) y **`pam_faillock`** (bloqueo temporal tras $N$ intentos fallidos de inicio de sesión o `ssh`).
+  - **PAM (*Pluggable Authentication Modules*):** Módulos en `/etc/pam.d/` como `pam_pwquality` / `pam_unix` (longitud mínima, complejidad) y **`pam_faillock`** (bloqueo temporal tras N intentos fallidos de inicio de sesión o `ssh`).
   - **`sudo` y `visudo`:** Delegación granular de privilegios administrativos editando `/etc/sudoers` o drop-ins en `/etc/sudoers.d/` mediante `sudo visudo` (que valida la sintaxis antes de guardar para no bloquear el acceso administrativo).
 - **Directivas de cuenta en Windows (`RA4.b`):**
   - Consola **`secpol.msc`** (*Directiva de seguridad local → Directivas de cuenta*):

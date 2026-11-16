@@ -141,7 +141,7 @@ Antes de crear un USB de arranque o adjuntar una ISO a VirtualBox, verificamos s
 
 Todo despliegue profesional en entornos de sistemas exige redactar una **ficha técnica o acta de instalación** verificable. Un informe técnico completo debe registrar:
 
-- **Identificación del equipo/VM:** Nombre de host, CPU asignada, RAM (cumpliendo en VirtualBox el margen de $\le 10\text{–}12\text{ GB}$ simultáneos sobre anfitriones MAX de 16 GB), tipo de firmware (`UEFI` + `GPT`) y red.
+- **Identificación del equipo/VM:** Nombre de host, CPU asignada, RAM (cumpliendo en VirtualBox el margen de ≤ 10–12 GB simultáneos sobre anfitriones MAX de 16 GB), tipo de firmware (`UEFI` + `GPT`) y red.
 - **Origen de medios:** Versión exacta de ISO y hash **SHA-256** verificado.
 - **Tabla de particiones final:** Salida textual de `lsblk -f` / `parted -l` o `diskpart` (`list partition`) con puntos de montaje y tamaños.
 - **Credenciales no sensibles y servicios activos:** Usuario administrativo creado (sin escribir contraseñas en texto plano en documentos públicos), IP asignada y estado de SSH/RDP.

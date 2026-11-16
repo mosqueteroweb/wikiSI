@@ -29,7 +29,7 @@ Cada sistema operativo sigue una filosofía propia para organizar el código del
 | :--- | :--- | :--- |
 | **Raíz del sistema** | Única raíz global **`/`** (todos los discos se montan como subcarpetas dentro de `/`) | Múltiples raíces independientes por letra de unidad (`C:\`, `D:\`, `E:\`) |
 | **Separador de rutas** | Barra inclinada **`/`** (ej. `/etc/netplan/01.yaml`) | Barra invertida **`\`** (ej. `C:\Windows\System32`) |
-| **Sensibilidad a mayúsculas** | **Sensible** (`Archivo.txt` $\ne$ `archivo.txt`) | **Insensible por defecto** en NTFS/Explorer (preserva mayúsculas, no las distingue al abrir) |
+| **Sensibilidad a mayúsculas** | **Sensible** (`Archivo.txt` ≠ `archivo.txt`) | **Insensible por defecto** en NTFS/Explorer (preserva mayúsculas, no las distingue al abrir) |
 | **Caracteres y extensiones** | El tipo de archivo lo definen los permisos `+x` y su cabecera (*magic bytes*) | La asociación de apertura depende de la extensión (`.exe`, `.msi`, `.txt`) |
 
 ---

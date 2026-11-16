@@ -62,8 +62,8 @@ Fabricada con un transistor y un diminuto condensador por bit: es muchísimo má
 
 - **Formatos físicos:** **DIMM** (sobremesa/torre) frente a **SO-DIMM** (portátiles y mini-PCs compactos).
 - **Canales (*Single* vs. *Dual Channel*):** Instalar dos módulos emparejados activa el acceso en **Dual Channel** (bus de 128 bits efectivos en lugar de 64 bits), duplicando el ancho de banda teórico:
-  $$\text{Ancho de banda teórico} \approx \text{MT/s} \times 8\text{ bytes} \times \text{n.º canales}$$
-  *Ejemplo:* 2 módulos DDR4-3200 en Dual Channel $\rightarrow 3200 \times 8 \times 2 = 51{,}2\text{ GB/s}$.
+  **Ancho de banda teórico ≈ MT/s × 8 bytes × n.º canales**
+  *Ejemplo:* 2 módulos DDR4-3200 en Dual Channel → 3200 × 8 × 2 = 51,2 GB/s.
 - **Latencia CAS (`CL`) y ECC:** El parámetro `CL` indica cuántos ciclos de reloj tarda en entregarse la primera palabra tras solicitar una columna. La memoria **ECC (*Error-Correcting Code*)** añade bits de paridad para detectar y corregir fallos de 1 bit en servidores críticos.
 
 ---
@@ -127,7 +127,7 @@ El sistema operativo combina la RAM física con espacio en disco mediante **memo
     Get-CimInstance Win32_PageFileUsage | Select-Object Name, AllocatedBaseSize, CurrentUsage
     ```
 
-    También puedes consultar en el **Administrador de tareas** (`Ctrl + Shift + Esc`) $\rightarrow$ pestaña **Rendimiento** $\rightarrow$ **Memoria** las ranuras usadas, velocidad y caché de hardware.
+    También puedes consultar en el **Administrador de tareas** (`Ctrl + Shift + Esc`) → pestaña **Rendimiento** → **Memoria** las ranuras usadas, velocidad y caché de hardware.
 
 ---
 
@@ -141,13 +141,13 @@ Comprender cómo reserva la memoria principal (**RAM**) cada byte en binario per
 | **`short`** | 16 (2 B) | `-32.768` a `32.767` | Enteros de tamaño medio |
 | **`int`** | 32 (4 B) | `-2.147.483.648` a `2.147.483.647` | Entero estándar por defecto |
 | **`long`** | 64 (8 B) | `-9.223.372.036.854.775.808` a `9.223.372.036.854.775.807` | Enteros muy grandes (marcas temporales, IDs) |
-| **`float`** | 32 (4 B) | Aprox. $\pm 3{,}4028235 \times 10^{38}$ | Coma flotante IEEE 754 precisión simple: **1** bit signo + **8** bits exponente + **23** bits mantisa |
-| **`double`** | 64 (8 B) | Aprox. $\pm 1{,}7976931348623157 \times 10^{308}$ | Coma flotante IEEE 754 precisión doble: **1** bit signo + **11** bits exponente + **52** bits mantisa |
+| **`float`** | 32 (4 B) | Aprox. ±3,4028235 × 10³⁸ | Coma flotante IEEE 754 precisión simple: **1** bit signo + **8** bits exponente + **23** bits mantisa |
+| **`double`** | 64 (8 B) | Aprox. ±1,7976931348623157 × 10³⁰⁸ | Coma flotante IEEE 754 precisión doble: **1** bit signo + **11** bits exponente + **52** bits mantisa |
 | **`char`** | 16 (2 B) | `\u0000` a `\uffff` (0 a 65.535) | Carácter Unicode (UTF-16) |
 | **`boolean`** | 1 bit lógico (alineado a 1 B) | `true` / `false` | Banderas lógicas y condiciones |
 
 > [!TIP]
-> **De los 64 bits a la cuantización de 1 bit en Inteligencia Artificial:** Mientras que en programación clásica reducimos el tamaño de las variables (`double` $\rightarrow$ `float`) para ahorrar RAM, en los grandes modelos de lenguaje actuales (LLMs como *BitNet* o modelos ternarios/binarios de 1 bit) la misma idea de **cuantización extrema** reduce pesos de 16/32 bits a valores de 1,58 bits o 1 bit para que quepan en menor VRAM y consuman menos energía en memoria. Puedes ver esta conexión explicada en el vídeo de clase: [Modelos de IA de 1 bit y fundamentos binarios (YouTube)](https://youtu.be/Ne5K7V0U77M).
+> **De los 64 bits a la cuantización de 1 bit en Inteligencia Artificial:** Mientras que en programación clásica reducimos el tamaño de las variables (`double` → `float`) para ahorrar RAM, en los grandes modelos de lenguaje actuales (LLMs como *BitNet* o modelos ternarios/binarios de 1 bit) la misma idea de **cuantización extrema** reduce pesos de 16/32 bits a valores de 1,58 bits o 1 bit para que quepan en menor VRAM y consuman menos energía en memoria. Puedes ver esta conexión explicada en el vídeo de clase: [Modelos de IA de 1 bit y fundamentos binarios (YouTube)](https://youtu.be/Ne5K7V0U77M).
 
 ---
 

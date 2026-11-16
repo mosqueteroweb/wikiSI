@@ -95,7 +95,7 @@ Cuando un usuario accede a un archivo **sentado directamente** frente al equipo,
 En redes Windows en grupo de trabajo (*Workgroup*, sin Active Directory), la gestión de recursos compartidos combina dos capas e introduce matices importantes de seguridad:
 
 1. **Derechos de usuario frente a permisos sobre recursos:**
-   - Un **derecho de usuario** (administrado en **`secpol.msc`** $\rightarrow$ *Directivas locales* $\rightarrow$ *Asignación de derechos de usuario*, p. ej. *Iniciar sesión localmente* o *Acceso desde la red*) determina qué acciones puede realizar una cuenta sobre el equipo.
+   - Un **derecho de usuario** (administrado en **`secpol.msc`** → *Directivas locales* → *Asignación de derechos de usuario*, p. ej. *Iniciar sesión localmente* o *Acceso desde la red*) determina qué acciones puede realizar una cuenta sobre el equipo.
    - Un **permiso** (ACL NTFS y permisos SMB) determina qué usuario puede leer/escribir un archivo o recurso concreto.
    - Las plantillas y configuraciones avanzadas de directivas se gestionan con **`secpol.msc`** (seguridad, contraseñas y bloqueo de cuenta) y **`gpedit.msc`** (directivas de grupo local y plantillas administrativas).
 2. **Acceso anónimo en Windows (`Centro de redes`):** por defecto Windows exige autenticación (*Uso compartido con protección por contraseña*). Desactivar la protección por contraseña permite que cuentas remotas sin coincidencia de credenciales accedan si el recurso incluye `Todos` (*Everyone*) o `Invitado` habilitado, reduciendo el aislamiento del equipo.
