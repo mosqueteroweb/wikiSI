@@ -105,6 +105,13 @@ El equipo técnico necesita administrar gráficamente una máquina Windows 10 de
         # Invoke-WebRequest -Uri "http://localhost:9000" -UseBasicParsing | Select-Object StatusCode
         ```
 
+    ### Paso 4 (Ampliación): PuTTY desde Windows y Control Sin Sesión con RustDesk
+
+    1. **SSH desde Windows con PuTTY / OpenSSH sin contraseña:** además de conectar por consola Linux, prueba la conexión desde **PuTTY** en Windows (o `ssh` nativo) configurando el par de **claves pública/privada** (`ssh-keygen` + `authorized_keys`) para iniciar sesión sin introducir la contraseña manualmente cada vez.
+    2. **Administración remota y modo presentación con [RustDesk](https://rustdesk.com/):** instala RustDesk en tu equipo Windows y en otro Linux y compara ambas modalidades:
+       - **Administración remota** (control completo de teclado/ratón y transferencia de archivos) entre Windows, Linux y un dispositivo móvil.
+       - **Modo presentación / solo visualización** (ver qué permisos cambian cuando solo se permite observar la pantalla frente al control remoto tradicional de **VNC**).
+
 ---
 
 ## Puntos de Control y Errores Frecuentes

@@ -134,6 +134,23 @@ Una copia que depende de la memoria humana termina olvidándose. Los sistemas op
 
 ---
 
+## Clonación Masiva (Clonezilla), Sincronización (`rclone`) y Plantilla de Política 3-2-1
+
+Para llevar la teoría de copias e imágenes al entorno real de aula o empresa conviene distinguir tres herramientas complementarias:
+
+- **Clonación de equipos con [Clonezilla](https://clonezilla.org/):**
+  - Permite generar una **imagen completa** de disco o particiones y restaurarla bit a bit en otro equipo (`unicast`), o bien desplegar simultáneamente una misma imagen sobre toda un aula en red local usando **Clonezilla Server / Multicast** sin saturar el ancho de banda con envíos repetidos.
+- **Sincronización entre carpetas locales y nube:**
+  - En Linux / multiplataforma destaca **`rclone`** para sincronizar carpetas **local $\leftrightarrow$ local** y **local $\leftrightarrow$ nube** (Google Drive, OneDrive, S3/Nextcloud), junto con **`Syncthing`** (P2P cifrado), **`FreeFileSync`** en Windows y **`Cyberduck`** como cliente gráfico multi-protocolo (`SFTP`, WebDAV, nube).
+- **Diseño de una Política de Copias de Seguridad (`Checklist` profesional):**
+  1. **¿Qué datos?** Separar políticas por criticidad (*Sistema operativo*, *Documentos y proyectos de código*, *Otros archivos*).
+  2. **¿Cómo?** Combinación de copia **completa**, **diferencial** e **incremental**.
+  3. **¿Cuándo?** Periodicidad y política de retención/sustitución.
+  4. **¿Dónde?** Regla **3-2-1** (en empresas con grandes volúmenes archivísticos siguen usándose cintas **LTO** por su aislamiento físico *air-gapped*).
+  5. **Seguridad y software:** cifrado en reposo/tránsito, etiquetado, lista de acceso, herramientas como *Cobian Backup*, *Areca* o `borg`/`restic`, y referencia oficial de la [Guía de Copias de Seguridad de INCIBE](https://www.incibe.es/sites/default/files/contenidos/guias/guia-copias-de-seguridad.pdf).
+
+---
+
 ## Recursos para profundizar
 
 - **Documentación oficial:** [Manual oficial de Rsync](https://download.samba.org/pub/rsync/rsync.1), `man 5 crontab` y [Microsoft Learn: Robocopy & Task Scheduler](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/robocopy).

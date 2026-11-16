@@ -90,6 +90,20 @@ Cuando un usuario accede a un archivo **sentado directamente** frente al equipo,
 
 ---
 
+## Directivas Locales (`secpol.msc` / `gpedit.msc`), Cambio de Propietario y Cifrado EFS en Red
+
+En redes Windows en grupo de trabajo (*Workgroup*, sin Active Directory), la gestión de recursos compartidos combina dos capas e introduce matices importantes de seguridad:
+
+1. **Derechos de usuario frente a permisos sobre recursos:**
+   - Un **derecho de usuario** (administrado en **`secpol.msc`** $\rightarrow$ *Directivas locales* $\rightarrow$ *Asignación de derechos de usuario*, p. ej. *Iniciar sesión localmente* o *Acceso desde la red*) determina qué acciones puede realizar una cuenta sobre el equipo.
+   - Un **permiso** (ACL NTFS y permisos SMB) determina qué usuario puede leer/escribir un archivo o recurso concreto.
+   - Las plantillas y configuraciones avanzadas de directivas se gestionan con **`secpol.msc`** (seguridad, contraseñas y bloqueo de cuenta) y **`gpedit.msc`** (directivas de grupo local y plantillas administrativas).
+2. **Acceso anónimo en Windows (`Centro de redes`):** por defecto Windows exige autenticación (*Uso compartido con protección por contraseña*). Desactivar la protección por contraseña permite que cuentas remotas sin coincidencia de credenciales accedan si el recurso incluye `Todos` (*Everyone*) o `Invitado` habilitado, reduciendo el aislamiento del equipo.
+3. **Cambio de propietario (*Take Ownership*):** si un administrador cambia el propietario NTFS de una carpeta, el antiguo propietario pierde la capacidad de reescribir sus propios permisos (`Full Control` implícito del *Creator Owner*), quedando sujeto estrictamente a las entradas ACL explícitas que conserve.
+4. **Cifrado EFS en carpetas compartidas entre varios usuarios:** en NTFS, **EFS (*Encrypting File System*)** cifra cada archivo con la clave pública del certificado del usuario que cifra (por ejemplo **Pedro**). Aunque **Luis** tenga permiso de escritura en la misma carpeta, **no podrá leer los ficheros cifrados por Pedro** salvo que Pedro añada expresamente el certificado EFS de Luis al archivo. Asimismo, al crear nuevos archivos en una carpeta con el atributo de cifrado activado, Windows los cifra con el certificado del creador (**Luis**), de modo que el otro usuario tampoco los leerá si no se intercambian certificados o trabajan bajo un Dominio con agente de recuperación.
+
+---
+
 ## Recursos para profundizar
 
 - Concepto siguiente: [Servidores de Ficheros (NFS), Impresión (CUPS) y Aplicaciones](ra6-servidores-ficheros-impresion-aplicaciones.md).

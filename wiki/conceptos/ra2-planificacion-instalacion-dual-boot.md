@@ -166,6 +166,30 @@ Todo despliegue profesional en entornos de sistemas exige redactar una **ficha t
 
 ---
 
+## Medios USB Multiarranque, Windows 11 en VirtualBox y Despliegue Multi-SO
+
+En entornos de taller o soporte técnico es habitual necesitar arrancar varios instaladores desde una única memoria USB o sortear las comprobaciones de hardware al crear laboratorios de **Windows 11** sobre VirtualBox:
+
+- **Creación de USB de arranque simple o multiarranque:**
+  - **Ventoy** ([`ventoy.net`](https://ventoy.net/en/doc_start.html)): permite instalar el gestor una sola vez en el pendrive y copiar directamente las imágenes `.iso` de Windows, Linux o Hiren's BootCD sin reformatear cada vez.
+  - **Rufus**, **Balena Etcher** y **YUMI** ([`pendrivelinux.com`](https://www.pendrivelinux.com/yumi-multiboot-usb-creator/)) o la herramienta oficial de creación de medios de Microsoft.
+- **Instalación de Windows 11 en VirtualBox sin TPM físico (`bypass` + cuenta local):**
+  - En la configuración de la VM recuerda activar el **soporte EFI** antes de instalar.
+  - Si el instalador bloquea el equipo por falta de **TPM 2.0** o **Secure Boot**, pulsa `Shift + F10` para abrir consola y ejecuta `regedit` (creando `LabConfig` en `HKLM\SYSTEM\Setup` con valores DWORD `BypassTPMCheck = 1` y `BypassSecureBootCheck = 1` — [guía detallada](https://www.ubackup.com/es/windows-11/instalar-windows-11-iso-en-virtualbox-3023-tc.html) y [VirtualBox W11](https://geekflare.com/es/windows-11-in-virtual-box/)).
+  - En la pantalla de inicio de sesión Microsoft (**OOBE**), para crear una **cuenta local** con tu nombre y apellidos sin conexión obligatoria, pulsa `Shift + F10` y ejecuta:
+
+    ```cmd
+    start ms-cxh:localonly
+    ```
+
+- **Escalera progresiva para instalar múltiples SOs en un único disco (objetivo: 2 Windows + 2 Linux):**
+  1. **Nivel 1:** Windows + 1 distribución Linux.
+  2. **Nivel 2:** 2 instalaciones Windows en el mismo disco.
+  3. **Nivel 3:** 2 distribuciones Linux coexistiendo bajo GRUB2.
+  4. **Nivel 4 (completo):** 2 Windows + 2 Linux distintos compartiendo la partición **ESP (`EFI`)** y seleccionados desde el gestor de arranque.
+
+---
+
 ## Recursos para profundizar
 
 - **Documentación oficial:** [Ubuntu Desktop Installation Guide (Canonical)](https://ubuntu.com/tutorials/install-ubuntu-desktop) y [Particiones GPT/UEFI en Windows (Microsoft Learn)](https://learn.microsoft.com/es-es/windows-hardware/manufacture/desktop/configure-uefigpt-based-hard-drive-partitions).

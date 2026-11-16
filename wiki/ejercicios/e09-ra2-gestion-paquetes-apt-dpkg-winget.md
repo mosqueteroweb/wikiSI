@@ -123,3 +123,14 @@ Dominar el ciclo completo de vida del software (búsqueda, inspección, instalac
     ```
 
     Con `apps_win10.json` y `inventario_ubuntu.txt` podrías clonar el mismo parque de software en cualquier otro equipo de clase mediante `winget import -i apps_win10.json`.
+
+    ### Paso 4 (Ampliación): Las 6 vías de instalación de aplicaciones en Linux
+
+    Sobre tu VM **Linux Mint / Ubuntu** (`e09-Linux`), instala 6 aplicaciones diferentes empleando obligatoriamente un método distinto para cada una y documenta la verificación:
+
+    1. **Tienda gráfica:** instala **GParted** desde el gestor gráfico de software de la distribución.
+    2. **Comando `apt` oficial:** instala **GIMP** (`sudo apt install -y gimp`).
+    3. **Archivo `.deb` descargado de web:** descarga **Visual Studio Code** (`.deb`) desde su web oficial e instálalo con `sudo apt install ./code_*.deb`.
+    4. **Flatpak:** habilita Flathub si procede e instala **Telegram Desktop** (`flatpak install flathub org.telegram.desktop`).
+    5. **AppImage:** descarga **Audacity** en formato `.AppImage`, concede permisos (`chmod +x Audacity-*.AppImage`) y ejecútalo sin instalarlo en `/usr`.
+    6. **Repositorio PPA:** añade un PPA mantenido (por ejemplo [`ppa:atareao/atareao`](https://github.com/atareao/my-weather-indicator) para **My Weather Indicator** o un PPA oficial equivalente en tu versión) mediante `sudo add-apt-repository`, actualiza índice con `sudo apt update` e instala el paquete.

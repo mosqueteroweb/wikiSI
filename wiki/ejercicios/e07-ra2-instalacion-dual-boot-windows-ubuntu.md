@@ -106,3 +106,12 @@ Planificar el esquema de particiones sobre tabla **GPT** y firmware **UEFI**, in
     └─sda6 ext4   1.0         a42c11...                            /home
     ```
     Con `/boot/efi` montado en `sda1`, `/` en `sda5` y `/home` en `sda6` y Windows intacto en `sda3`, el despliegue dual-boot queda verificado.
+
+    ### Paso 5 (Ampliación): Despliegue Multi-SO (2 Windows + 2 Linux) y Cuenta Local en Windows 11
+
+    Si quieres llevar la práctica al escenario avanzado de clase (**4 sistemas operativos en el mismo disco UEFI/GPT**):
+
+    1. **Activa siempre EFI** en VirtualBox (`Sistema` $\rightarrow$ `Placa base` $\rightarrow$ `Habilitar EFI`) antes de crear las particiones.
+    2. **Prepara las imágenes en USB multiarranque** con [Ventoy](https://ventoy.net/en/doc_start.html) si trabajas en equipo físico, o adjunta las ISOs secuencialmente en VirtualBox.
+    3. **En Windows 11 en VM:** cuando pida cuenta Microsoft en el asistente OOBE, pulsa `Shift + F10`, ejecuta `start ms-cxh:localonly` y da de alta la cuenta local con tu nombre.
+    4. **Instala siempre Windows antes que Linux** (y una distribución ligera como *Puppy Linux*, *Linux Mint* o *Ubuntu* al final) para que **GNU GRUB** detecte las dos entradas de Windows y ambas distribuciones Linux de forma limpia. Si se mueve o importa el `.ova` en los PCs del aula, verifica después `efibootmgr -v`.

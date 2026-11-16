@@ -172,6 +172,21 @@ Cualquier intervención de actualización o rescate en aula o empresa queda inco
 
 ---
 
+## 6. Distribución Moderna de Aplicaciones en Linux y Software Portable en Windows
+
+Además de los gestores clásicos (`apt`/`dpkg` y `winget`), en el día a día de un técnico o desarrollador conviven distintos formatos de empaquetado:
+
+- **En GNU/Linux (`6` vías habituales):**
+  1. **Tienda gráfica de la distribución** (*Software Manager* / *Ubuntu Software*).
+  2. **Instalador de paquete local descargado (`.deb` / `.rpm`):** instalación con `sudo apt install ./paquete.deb` (resuelve dependencias) o `sudo dpkg -i paquete.deb`.
+  3. **Repositorios oficiales por CLI:** `sudo apt update && sudo apt install <paquete>`.
+  4. **Repositorios externos de terceros (`PPA`):** en distros basadas en Ubuntu/Mint se añaden con `sudo add-apt-repository ppa:<autor>/<repo>`.
+  5. **Paquetes universales encapsulados (`Flatpak`, `Snap`):** incluyen sus propias librerías aisladas respecto al sistema base (*sandboxing*).
+  6. **Ejecutables portables `AppImage`:** un único fichero binario que no requiere instalación; basta darle permisos de ejecución (`chmod +x aplicacion.AppImage` y `./aplicacion.AppImage`). Puedes ampliar la comparativa entre formatos en [`atareao.es/opinion/appimage-snap-flatpak`](https://atareao.es/opinion/appimage-snap-flatpak/).
+- **En Windows (aplicaciones portables):** utilidades empaquetadas para ejecutarse directamente desde un pendrive USB sin modificar el Registro ni dejar archivos en `Program Files` (catálogos como [PortableApps.com](https://portableapps.com/)).
+
+---
+
 ## Recursos para profundizar
 
 - **Documentación oficial:** [APT Package Management (Ubuntu Docs)](https://ubuntu.com/server/docs/package-management) y [Reparar una imagen de Windows con DISM y SFC (Microsoft Support)](https://support.microsoft.com/es-es/topic/use-la-herramienta-comprobador-de-archivos-de-sistema-para-reparar-los-archivos-de-sistema-que-faltan-o-est%C3%A1n-da%C3%B1ados-79aa86cb-ca52-166a-92a3-966e85d4094e).

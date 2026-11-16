@@ -144,6 +144,45 @@ En nuestro entorno de aula (**host MAX** + **VirtualBox**), podemos inspeccionar
 
 ---
 
+## Laboratorio Interactivo: Placa Base Explorable
+
+Para consolidar visualmente la ubicación real de los zócalos, ranuras PCIe, conectores ATX, chipset y puertos internos/externos antes de manipular un equipo en el taller, utiliza el recurso interactivo del módulo:
+
+- [**Placa Base Explorable (`placa-base-explorable.mosqueteroweb.chatgpt.site`)**](https://placa-base-explorable.mosqueteroweb.chatgpt.site/): permite inspeccionar cada componente físico sobre la placa base, repasar sus buses asociados e identificar compatibilidades reales (factor de forma, zócalo de CPU, tipo de RAM y ranuras de expansión).
+
+---
+
+## Fases de Ejecución de una Instrucción Máquina y Registros Implicados
+
+Aunque los ordenadores actuales ejecutan miles de millones de operaciones por segundo, todas se reducen a encadenar **instrucciones máquina** elementales almacenadas en la **Memoria Principal (`MP`)** siguiendo el esquema de registros de la **Unidad de Control (`UC`)** y la **Unidad Aritmético-Lógica (`UAL`)**:
+
+1. **Búsqueda (*Fetch*):** La **UC** envía a la **MP** la dirección de la siguiente instrucción a ejecutar, contenida en el **Contador de Programa (`PC`)**, y activa las señales de control de lectura para que la **MP** entregue la instrucción por el bus de datos.
+2. **Decodificación y búsqueda de operandos (*Decode*):** La **UC** recibe la instrucción y la almacena en el **Registro de Instrucción (`IR`)**, la interpreta y, si necesita datos de memoria, envía sus direcciones a través del **Registro de Direcciones de Memoria (`MAR`)** activando de nuevo las señales de control de lectura.
+3. **Ejecución (*Execute*):** La **UAL**, bajo las órdenes de la **UC**, ejecuta la operación sobre los operandos y guarda el resultado en un registro interno o en la **MP**.
+4. **Actualización del `PC`:** Finalizada la instrucción, el **Contador de Programa (`PC`)** se incrementa para apuntar automáticamente a la instrucción siguiente.
+
+Este ciclo lineal forma un **programa**. Para romper la ejecución secuencial (bucles o condicionales `if/else`) existen instrucciones de **bifurcación** capaces de sobreescribir el contenido del `PC` con una nueva dirección de salto. Para que un programa de alto nivel (por ejemplo en Java) llegue a ejecutarse:
+
+- Debe haberse traducido previamente a **lenguaje máquina** mediante un **compilador** (o bytecode + JIT/intérprete).
+- El ejecutable y sus datos deben cargarse desde el almacenamiento secundario hacia la **Memoria Principal (`MP`)**, tarea que realiza el **Cargador del Sistema Operativo**.
+- El **Contador de Programa (`PC`)** debe inicializarse con la dirección en **MP** de la **primera instrucción** del programa.
+
+---
+
+## Comparativa de Arquitecturas de 32 bits frente a 64 bits
+
+La diferencia esencial entre una arquitectura de 32 bits y una de 64 bits radica en el **tamaño de la palabra** (la unidad de datos y ancho de registros/direcciones que el procesador maneja de forma nativa en cada ciclo):
+
+| Característica | Arquitectura de 32 bits (`x86`) | Arquitectura de 64 bits (`x86_64` / `amd64`) |
+| :--- | :--- | :--- |
+| **Tamaño de palabra / registros** | 32 bits por registro general | 64 bits por registro general |
+| **Memoria RAM direccionable** | Límite teórico de $2^{32}$ bytes = **4 GB** | Límite teórico de $2^{64}$ bytes (**16 exabytes**; limitado en SO/hardware actuales a TB) |
+| **Precisión y rendimiento** | Menor ancho de bus interno; opera enteros de 64 bits en varios ciclos | Mayor rendimiento paralelo y precisión directa sobre enteros grandes |
+| **Compatibilidad software** | Limitada a ejecutables de 32 bits (y 16 bits antiguos) | Mantiene compatibilidad hacia atrás con la mayoría del software de 32 bits |
+| **Uso recomendado** | Sistemas embebidos ligeros o equipos heredados con poca RAM | Equipos de escritorio modernos, servidores, virtualización y desarrollo DAM |
+
+---
+
 ## Recursos para profundizar
 
 - **Documentación oficial y referencia técnica:**

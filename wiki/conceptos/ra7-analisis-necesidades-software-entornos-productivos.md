@@ -57,6 +57,21 @@ Implantar una herramienta en una PYME, instituto o departamento de desarrollo no
 
 ---
 
+## Computación en la Nube (`SaaS`, `PaaS`, `IaaS`), VPS y Alojamiento Web
+
+En entornos productivos modernos, la decisión técnica no solo abarca el software instalado en el PC local sino qué parte del servicio se ejecuta en la nube:
+
+| Modelo Cloud | Quién gestiona el hardware/SO/runtime | Ejemplos habituales |
+| :--- | :--- | :--- |
+| **`IaaS`** (*Infraestructura como Servicio*) | Proveedor gestiona físico/virtualización; tú administras el SO y aplicaciones | Servidores **VPS** (*Clouding.io*), EC2 en **Amazon AWS**, **Google Cloud** Compute Engine, **Microsoft Azure** VMs, Oracle Cloud Free Tier |
+| **`PaaS`** (*Plataforma como Servicio*) | Proveedor gestiona SO y runtime; tú despliegas tu código/BD | App Engine, Cloud Run, hosting PHP/Softaculous gestionado, GitHub Pages |
+| **`SaaS`** (*Software como Servicio*) | Todo gestionado por el proveedor; el usuario accede vía web o app | Google Workspace, Microsoft 365, OneDrive, Dropbox, Nextcloud gestionado, Trello |
+
+- **Almacenamiento en frío (*Cold Archive*):** servicios como **Amazon S3 Glacier** ofrecen costes mínimos por GB para copias históricas de respaldo a cambio de tiempos de recuperación mayores.
+- **Servidor doméstico vs. VPS:** para publicar una web o servicio propio desde casa (p. ej. Raspberry Pi) se precisa un **DDNS** (*DuckDNS* / *No-IP*) y ausencia de *CG-NAT*; en un **VPS** (como *Clouding.io*) con pila **LAMP** (*Linux + Apache + MySQL + PHP*) dispones directamente de IPv4 pública fija y ancho de banda simétrico en centro de datos.
+
+---
+
 ## Recursos para profundizar
 
 - Concepto anterior: [Clasificación del Software y Licencias](ra7-clasificacion-software-licencias-modelos-distribucion.md).

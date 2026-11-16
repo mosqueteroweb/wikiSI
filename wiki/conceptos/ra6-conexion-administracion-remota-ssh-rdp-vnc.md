@@ -71,6 +71,19 @@ Administrar servidores de forma remota evita desplazarse físicamente al CPD o a
 
 ---
 
+## Clasificación de Conexión Remota: Con Sesión vs. Sin Sesión (`RustDesk`, `VNC`, `RDP`, `SSH`)
+
+Para elegir el protocolo adecuado en soporte técnico o administración de servidores, conviene clasificar las herramientas según si abren una **sesión independiente de usuario** o interactúan sobre la **sesión física en curso**:
+
+| Modalidad | Subtipo | Herramientas típicas | Uso principal |
+| :--- | :--- | :--- | :--- |
+| **Sin sesión propia** *(asistencia sobre pantalla activa)* | **Administración remota (P2P/ID)** | **RustDesk** (software libre multiplataforma: Windows, Linux, móvil) | Soporte asistido en tiempo real compartiendo la sesión del usuario detrás de NAT/cortafuegos |
+| **Sin sesión propia** | **Presentación / espejo gráfico** | **VNC** (*TightVNC*, *TigerVNC*, *x11vnc*) | Visualizar o controlar el escritorio gráfico ya iniciado en el equipo remoto |
+| **Con sesión propia** *(autenticación de sistema)* | **Gráfica** | **RDP** (*Windows App* / *mstsc*, *Terminal Services* en Windows Server, **Remmina** en Linux) | Abrir sesiones independientes de usuario sin interferir con otras sesiones |
+| **Con sesión propia** | **Línea de comandos** | **SSH** (`OpenSSH`, **PuTTY**, autenticación por **claves públicas/privadas**) | Administración segura de servidores Linux/Windows sin entorno gráfico |
+
+---
+
 ## Recursos para profundizar
 
 - Concepto siguiente: [Protección de Recursos y Cortafuegos (`ufw` y Windows Defender Firewall)](ra6-seguridad-recursos-cortafuegos-ufw-defender.md).

@@ -67,6 +67,19 @@ En un departamento informático coexisten documentos administrativos y manuales 
 
 ---
 
+## Ecosistema de Aplicaciones Comunes de Productividad y Colaboración (`RA7.b`, `RA7.c`, `RA7.g`)
+
+Un técnico o desarrollador DAM combina en su flujo diario suites ofimáticas tradicionales con herramientas colaborativas, wikis personales y sistemas de notas enlazadas:
+
+- **Ofimática local y en la nube:** **Microsoft Office** (Word/Excel), **LibreOffice** (Writer/Calc bajo ODF) y **Google Workspace** (edición colaborativa en tiempo real con historial de revisiones).
+- **Documentación viva y wikis (`TiddlyWiki`, `Obsidian`, `Notion` + `GitHub`):**
+  - [**TiddlyWiki (`tiddlywiki.com`)**](https://tiddlywiki.com/languages/es-ES/index.html) permite crear una wiki personal no lineal contenida en un **único archivo HTML** portátil (versionable o publicable junto a GitHub Pages).
+  - **Obsidian** y **Notion** facilitan grafos de conocimiento en Markdown, mientras que **GitHub** aloja repositorios técnicos y manuales (`README.md`).
+- **Diseño multimedia, comunicación y organización:** **Canva** (maquetación e infografías), **Audacity** (edición de audio), **Microsoft Teams** / **Discord** / **Telegram** (comunicación asíncrona/síncrona) y tableros **Kanban** como **Trello**.
+- **Navegación enfocada a privacidad y correo cifrado:** navegadores como **Brave** o **Zen Browser**, correo corporativo en **Mozilla Thunderbird** (configurando firma y cifrado **GPG**) y transferencia puntual de archivos grandes mediante **WeTransfer**, **Dropbox**, **pCloud** o **Mega**.
+
+---
+
 ## Recursos para profundizar
 
 - Guía oficial sintaxis GitHub Flavored Markdown: [GitHub Docs · Basic writing and formatting](https://docs.github.com/es/get-started/writing-on-github).

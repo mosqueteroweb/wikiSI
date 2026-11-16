@@ -693,14 +693,18 @@ def on_config(config: Any) -> Any:
     if (priv_dir / "README.md").exists():
         eval_nav.append({"Índice de Evaluación": "privado_evaluacion/README.md"})
     for sub_dir, sub_label, prefix in [
+        ("programacion", "Guía Docente (PDF)", "Guía"),
         ("examenes", "Exámenes (con GIFT)", "Examen"),
         ("soluciones", "Solucionarios", "Solución"),
         ("rubricas", "Rúbricas", "Rúbrica"),
         ("correcciones", "Correcciones de Tareas", "Corrección"),
     ]:
+        sub_path = priv_dir / sub_dir
+        if not sub_path.exists():
+            continue
         items = [
             {_nav_label(p, prefix): p.relative_to(repo_root).as_posix()}
-            for p in sorted((priv_dir / sub_dir).glob("*.md"))
+            for p in sorted(sub_path.glob("*.md"))
         ]
         if items:
             eval_nav.append({sub_label: items})
@@ -719,6 +723,23 @@ def on_config(config: Any) -> Any:
     nav.append({"🕸️ Graph View": "grafo-docente.md"})
     config["nav"] = nav
     return config
+
+
+_PRIVATE_STATIC_EXTS = {".pdf", ".png", ".jpg", ".jpeg", ".svg", ".gif", ".jfif"}
+
+
+def _iter_private_assets(priv_dir: Path) -> list[Path]:
+    """Return private static assets (PDF/images), skipping staging and raw text caches."""
+    if not priv_dir.exists():
+        return []
+    return [
+        p
+        for p in sorted(priv_dir.rglob("*"))
+        if p.is_file()
+        and ".staging_entregas" not in p.parts
+        and "textos_anonimos" not in p.parts
+        and p.suffix.lower() in _PRIVATE_STATIC_EXTS
+    ]
 
 
 def on_files(files: Any, config: Any) -> Any:
@@ -745,6 +766,21 @@ def on_files(files: Any, config: Any) -> Any:
                 )
             )
             existing.add(rel_path)
+
+    for asset_path in _iter_private_assets(repo_root / "privado_evaluacion"):
+        rel_path = asset_path.relative_to(repo_root).as_posix()
+        if rel_path in existing:
+            continue
+        files.append(
+            File(
+                path=rel_path,
+                src_dir=str(repo_root),
+                dest_dir=config.site_dir,
+                use_directory_urls=config.use_directory_urls,
+                inclusion=InclusionLevel.INCLUDED,
+            )
+        )
+        existing.add(rel_path)
 
     corr_dir = repo_root / "privado_evaluacion" / "correcciones"
     if corr_dir.exists():
@@ -780,13 +816,22 @@ def on_files(files: Any, config: Any) -> Any:
 
 
 def on_post_build(config: Any) -> None:
-    """Copy local identity-map JSONs (dot and non-dot alias) into `site_docente/` only."""
+    """Copy local identity-map JSONs and private static assets into `site_docente/` only."""
     repo_root = _repo_root(config)
-    corr_dir = repo_root / "privado_evaluacion" / "correcciones"
+    site_dir = Path(config.site_dir)
+    priv_dir = repo_root / "privado_evaluacion"
+    if not priv_dir.exists():
+        return
+
+    for asset_path in _iter_private_assets(priv_dir):
+        dest_file = site_dir / asset_path.relative_to(repo_root)
+        dest_file.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(asset_path, dest_file)
+
+    corr_dir = priv_dir / "correcciones"
     if not corr_dir.exists():
         return
 
-    site_dir = Path(config.site_dir)
     for json_path in sorted(corr_dir.rglob("*.json")):
         if ".staging_entregas" in json_path.parts or "textos_anonimos" in json_path.parts:
             continue

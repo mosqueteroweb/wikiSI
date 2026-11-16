@@ -118,6 +118,42 @@ Las **variables de entorno** permiten a las aplicaciones y herramientas CLI loca
 
 ---
 
+## 4. Procesamiento de Texto en Tuberías (`cut`, `sed`, `awk`) y Silenciamiento de Errores
+
+En administración Linux es frecuente combinar flujos de texto de registros o salidas de comandos en **una sola línea con tuberías (`|`)**:
+
+- **`cut`:** extrae campos concretos por delimitador (`-d`) o rangos de caracteres: `cut -d':' -f1,3 /etc/passwd`.
+- **`sed`:** editor de flujo (*stream editor*) para sustituciones en línea o limpieza de líneas: `sed 's/antiguo/nuevo/g'` o conversión de mayúsculas/minúsculas.
+- **`awk`:** motor de procesamiento por columnas (`$1`, `$2`... `$NF`) y condiciones lógicas (`-F` cambia separador, `tolower()` normaliza texto y `sort -n` ordena numéricamente).
+- **`find` + redirección `2>/dev/null`:** cuando buscas en todo `/` como usuario estándar (`find / -type f -executable 2>/dev/null`), enviar la salida de error estándar (`stderr`, descriptor `2`) a `/dev/null` oculta los mensajes de *«Permiso denegado»* sin alterar ni guardar errores en pantalla.
+
+---
+
+## 5. Contenedores Docker en la Estación DAM (`RA4.h`)
+
+A diferencia de una máquina virtual completa (que emula hardware y arranca su propio kernel), **Docker** ofrece **virtualización ligera mediante contenedores**: procesos aislados que comparten el kernel del anfitrión Linux empaquetando la aplicación y sus dependencias (portabilidad e independencia).
+
+- **Componentes principales:** cliente CLI (`docker`), demonio servidor (`dockerd`), API REST, **imágenes** (plantillas inmutables de solo lectura), **contenedores** (instancias en ejecución), **volúmenes** (persistencia de datos fuera del ciclo de vida del contenedor), **redes bridge/overlay** y **registros** (*Docker Hub*).
+- **Instalación y post-instalación limpia en Ubuntu (sin Docker Desktop):**
+
+```bash
+# 1. Verificar que el servicio docker está activo
+sudo systemctl status docker
+
+# 2. Añadir tu usuario al grupo docker para no anteponer sudo cada vez
+sudo usermod -aG docker ${USER}
+
+# 3. Recargar la sesión de grupo en la terminal actual
+su - ${USER}
+
+# 4. Lanzar un servicio rápido (p. ej. Nginx en puerto 8080 en segundo plano)
+docker run -d --name web-dam -p 8080:80 nginx
+```
+
+- **Automatización multicontenedor:** cuando un proyecto DAM combina varios servicios (por ejemplo servidor web **PHP/Nginx** + base de datos **MySQL** + monitorización), se definen de forma declarativa en **`Dockerfile`** y **`docker compose up -d`** (administrables también gráficamente con **Portainer**). Referencia oficial: [Docker Docs Overview](https://docs.docker.com/get-started/overview/) y [Comandos de Docker](https://docs.docker.com/get-started/docker_cheatsheet.pdf).
+
+---
+
 ## Recursos para profundizar
 
 - **Documentación oficial:** [GNU Bash Reference Manual (Redirections)](https://www.gnu.org/software/bash/manual/html_node/Redirections.html) y [Microsoft Learn: About Environment Variables](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_environment_variables).

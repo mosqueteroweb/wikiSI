@@ -1,0 +1,111 @@
+/* ==========================================================================
+   wikiSI · Menús laterales colapsables y aprovechamiento del ancho central
+   ========================================================================== */
+
+.wikisi-layout-toolbar {
+  display: none;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0 0 1rem 0;
+  padding: 0.35rem 0.55rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.45rem;
+  background: var(--md-code-bg-color);
+  font-size: 0.75rem;
+}
+
+.wikisi-layout-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.25rem 0.6rem;
+  border: 1px solid var(--md-default-fg-color--lighter);
+  border-radius: 0.35rem;
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color--light);
+  font-family: inherit;
+  font-size: 0.74rem;
+  font-weight: 500;
+  line-height: 1.3;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.wikisi-layout-btn:hover,
+.wikisi-layout-btn:focus-visible {
+  color: var(--md-accent-fg-color);
+  border-color: var(--md-accent-fg-color);
+  outline: none;
+}
+
+.wikisi-layout-btn.is-active {
+  background: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+  border-color: var(--md-primary-fg-color);
+}
+
+.wikisi-layout-btn--left,
+.wikisi-layout-btn--both {
+  display: none;
+}
+
+.wikisi-layout-hint {
+  margin-left: auto;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.7rem;
+  opacity: 0.8;
+}
+
+@media screen and (min-width: 60em) {
+  .wikisi-layout-toolbar {
+    display: flex;
+  }
+
+  .md-grid {
+    max-width: 78rem;
+  }
+
+  body.wikisi-hide-nav .md-grid,
+  body.wikisi-hide-toc .md-grid,
+  body.wikisi-wide .md-grid {
+    max-width: 94vw;
+  }
+
+  .md-content {
+    min-width: 0;
+  }
+
+  body.wikisi-hide-toc .md-sidebar--secondary {
+    width: 0 !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+@media screen and (min-width: 76.25em) {
+  .wikisi-layout-btn--left,
+  .wikisi-layout-btn--both {
+    display: inline-flex;
+  }
+
+  body.wikisi-hide-nav .md-sidebar--primary {
+    width: 0 !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+@media print {
+  .wikisi-layout-toolbar {
+    display: none !important;
+  }
+}

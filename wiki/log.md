@@ -11,6 +11,15 @@ Bitácora de operaciones (*ingest*, *compile*, *lint*, *publish*) ejecutadas sob
 
 ---
 
+## [2026-11-16] Ingesta curada del `.mbz` del curso y paneles laterales colapsables en la web
+
+- **Interfaz web (`wiki/assets/` y `mkdocs.yml`):** añadidos controles CSS/JS (`layout-colapsable.css` y `layout-colapsable.js`) para colapsar de forma independiente o conjunta la barra de navegación izquierda (`[`) y la tabla de contenidos derecha (`]`), ampliando el ancho útil de lectura (`94vw` en ancho completo).
+- **Enriquecimiento curado en `wiki/` (`RA1`–`RA7`):** integrados en la documentación de alumnos y profesores los recursos prácticos rescatados del `.mbz` y Google Drive (Placa Base Explorable, ciclo de instrucción máquina y tabla de variables Java/IEEE 754 en `RA1`; bypass TPM y `ms-cxh:localonly` para Windows 11, USB Ventoy y 6 vías de paquetería en `RA2`; Storage Spaces Windows + Clonezilla multicast + `rclone` en `RA3`; Registro de Windows + 6 ejercicios, `Monitor de Confiabilidad`, `winscript`/`PowerToys`, filtros `cut`/`sed`/`awk` y taller Docker en `RA4`; emulador TP-Link + CG-NAT/DDNS en `RA5`; experimento EFS Pedro/Luis y acceso remoto con RustDesk en `RA6`; modelos Cloud, VPS LAMP, TiddlyWiki y manual de aplicaciones comunes en `RA7`).
+- **Catálogo de tareas entregables (`p08`):** creado el enunciado público (`p08-tareas-curso-aula-virtual-enunciado.md`) y los solucionarios privados (`p08-tareas-curso-aula-virtual-solucion.md` con solución PRL-FFE y caso EFS Pedro/Luis).
+- **Capa exclusiva del Portal Docente (`privado_evaluacion/`):** incorporada la Guía Docente en PDF (`IFCS02_0483_2026_2027.pdf` y `2024_2025`), el examen real de consola Linux de 3.ª EV con solucionario, el banco depurado de preguntas Moodle para 1.º DAM (`questions.xml` sin legado SMR1 CRT/polímetros, acompañado de sus láminas mudas) y la auditoría de enlaces Drive `404`.
+
+---
+
 ## [2026-11-15] Compilación completa del bloque RA7 (6 conceptos, 5 SVGs, 5 ejercicios `e31`–`e35`, práctica `p07` y banco de evaluación privado)
 
 - **Fuentes procesadas en `raw/procesados/`:** 3 síntesis técnicas de RA7 (clasificación de software y licencias en entornos productivos; ofimática, Markdown, Pandoc y flujo *docs-as-code* con Git; correo electrónico seguro SPF/DKIM/DMARC, transferencia de ficheros SFTP/`rsync` y utilidades de propósito general).

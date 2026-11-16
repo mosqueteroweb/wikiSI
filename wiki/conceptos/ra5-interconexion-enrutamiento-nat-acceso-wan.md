@@ -82,6 +82,19 @@ Un servidor Linux ligero (como una VM Ubuntu Gateway de **1 GB RAM**) puede actu
 
 ---
 
+## Simulación de Router Doméstico y Publicación de Servicios desde Casa (`CG-NAT`, `DDNS`, `DMZ`, Proxy Inverso)
+
+Para practicar la configuración real de un router doméstico/SOHO sin alterar la red del centro, dispones del [**Emulador Oficial de Router TP-Link** (modelo **Archer C20**)](https://www.tp-link.com/es/support/emulator/). Al exponer un servidor local (por ejemplo, una Raspberry Pi o un servidor web/SSH doméstico) hacia Internet intervienen cinco conceptos clave:
+
+- **Redirección de puertos (*Port Forwarding / Virtual Servers*):** mapea un puerto público de la IP WAN del router (ej. `80`/`443` o `2222`) hacia la IP LAN privada estática (reserva DHCP) del servidor interno.
+- **`DMZ` (*Demilitarized Zone* en routers domésticos):** redirige todo el tráfico entrante no solicitado hacia una única IP interna (opción menos granular y más expuesta que abrir puertos concretos).
+- **`UPnP`:** protocolo que permite a aplicaciones de la LAN solicitar la apertura automática de puertos al router (cómodo en juegos/P2P, desaconsejado en redes corporativas por seguridad).
+- **DNS Dinámico (`DDNS`):** proveedores como **No-IP** o **DuckDNS** asocian un subdominio legible (`miservidor.duckdns.org`) a una IP pública residencial que cambia periódicamente.
+- **Obstáculo `CG-NAT`:** si el operador asigna direcciones compartidas (*Carrier-Grade NAT*, rango `100.64.0.0/10`), el router de casa no tiene IPv4 pública propia y no podrá recibir conexiones entrantes directas salvo pidiendo salida de `CG-NAT`, usando IPv6 o estableciendo un túnel inverso/VPN.
+- **Proxy inverso (`Traefik` / `Nginx Proxy Manager`):** en servidores con varios servicios o contenedores Docker, recibe todas las peticiones en `:80/:443` con TLS y las enruta internamente según el nombre de dominio.
+
+---
+
 ## Recursos para profundizar
 
 - Concepto anterior: [Redes LAN Cableadas e Inalámbricas](ra5-redes-lan-cableadas-inalambricas-wifi-seguridad.md).

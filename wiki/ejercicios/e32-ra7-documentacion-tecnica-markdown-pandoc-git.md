@@ -122,6 +122,11 @@ Debemos redactar el manual de puesta en marcha de una aplicación de clase en **
         pandoc .\manual_despliegue.md -o .\manual_despliegue.odt --toc
         ```
 
+    ### Paso 4 (Ampliación): Manual de Aplicaciones Comunes, TiddlyWiki + GitHub y Despliegue Web
+
+    1. **Manual de Aplicaciones Informáticas Comunes:** documenta un caso real de uso con capturas de pantalla (mostrando tu nombre visible en pantalla) cubriendo herramientas de **Ofimática local/nube**, **Diseño/Multimedia** (*Canva*/*Audacity*), **Comunicación y Kanban** (*Teams*/*Discord*/*Trello*), **Notas/Wiki** (*TiddlyWiki* o *Obsidian* + *GitHub*), **Desarrollo y Datos** (*VS Code*/*Eclipse* + *MySQL*/*Oracle*), **Seguridad y Correo** (*Thunderbird* configurado con **GPG** y cortafuegos), **Transferencia/Nube** (*WeTransfer*/*Dropbox*/*Nextcloud*) y **Buscadores/IA generativa** (*DuckDuckGo* y comparación crítica de resultados).
+    2. **Wiki personal con TiddlyWiki:** descarga la plantilla vacía en español desde [TiddlyWiki ES](https://tiddlywiki.com/languages/es-ES/empty.html), crea varios *tiddlers* interconectados con etiquetas de `0483` y publícalo o enlázalo en tu repositorio GitHub junto a un `README.md` índice.
+
 ---
 
 ## Puntos de Control y Errores Frecuentes

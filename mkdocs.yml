@@ -59,6 +59,12 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/mosqueteroweb
 
+extra_css:
+  - assets/stylesheets/layout-colapsable.css
+
+extra_javascript:
+  - assets/javascripts/layout-colapsable.js
+
 nav:
   - Inicio: index.md
   - Resultados de Aprendizaje:
@@ -159,4 +165,5 @@ nav:
       - "p05 · Subredes VLSM, Router NAT y SSH RA5 (Enunciado)": practicas/p05-ra5-redes-vlsm-enrutamiento-nat-ssh-enunciado.md
       - "p06 · Samba, Acceso Remoto, UFW y Dominio RA6 (Enunciado)": practicas/p06-ra6-recursos-samba-acceso-remoto-cortafuegos-dominio-enunciado.md
       - "p07 · Documentación, Correo, SFTP y Utilidades RA7 (Enunciado)": practicas/p07-ra7-documentacion-markdown-correo-transferencia-utilidades-enunciado.md
+      - "p08 · Catálogo de Tareas Entregables del Curso": practicas/p08-tareas-curso-aula-virtual-enunciado.md
   - Registro: log.md

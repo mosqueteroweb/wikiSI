@@ -113,3 +113,13 @@ Construir una infraestructura de almacenamiento flexible en GNU/Linux combinando
 
     # (Para reintegrar un disco de reemplazo en el RAID: sudo mdadm --manage /dev/md0 --add /dev/sdd)
     ```
+
+    ### Parte C (Ampliación): Batería completa RAID 0, RAID 1 y RAID 5 en Windows y Linux
+
+    Si quieres ampliar el laboratorio con los tres niveles de referencia (`0`, `1` y `5`) en ambos sistemas operativos:
+
+    1. **Linux (`mdadm` con 3 discos virtuales de prueba):**
+       - `RAID 0`: `sudo mdadm --create /dev/md0 --level=0 --raid-devices=2 /dev/sdd /dev/sde`
+       - `RAID 1`: `sudo mdadm --create /dev/md1 --level=1 --raid-devices=2 /dev/sdd /dev/sde`
+       - `RAID 5`: `sudo mdadm --create /dev/md5 --level=5 --raid-devices=3 /dev/sdd /dev/sde /dev/sdf`
+    2. **Windows 10/11 (*Espacios de almacenamiento*):** añade 3 discos sin formato en VirtualBox y crea sucesivamente un **Espacio simple** (`Simple` $\rightarrow$ RAID 0), un **Espacio de reflejo doble** (`Mirror` $\rightarrow$ RAID 1) y un **Espacio de paridad** (`Parity` $\rightarrow$ RAID 5), documentando el espacio útil resultante y desconectando un disco para observar la degradación y reconstrucción ([guía Espacios de almacenamiento en Windows](https://support.microsoft.com/es-es/windows/espacios-de-almacenamiento-en-windows-b6c8b540-b8d8-fb8a-e7ab-4a75ba11f9f2#WindowsVersion=Windows_10)).

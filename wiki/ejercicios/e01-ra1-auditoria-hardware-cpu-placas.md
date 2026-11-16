@@ -87,3 +87,9 @@ Extraer el inventario técnico completo del procesador (arquitectura, núcleos f
 
     - **CPU coincidente:** Los hipervisores de tipo 2 con virtualización asistida por hardware (`VT-x` / `AMD-V`) permiten que la VM ejecute instrucciones directamente sobre los núcleos físicos de la CPU real, exponiendo la arquitectura e identidad del procesador físico al invitado.
     - **Placa base diferente:** VirtualBox abstrae y virtualiza la placa base, los puentes y el chipset (`PIIX3` o `ICH9`) para ofrecer un hardware estándar y portable al sistema operativo invitado, aislando al invitado de las peculiaridades físicas de la placa del aula.
+
+    ### Paso 4 (Ampliación práctica): Placa Base Explorable, Benchmarks y Hiren's BootCD PE
+
+    1. **Exploración visual interactiva:** Abre la [Placa Base Explorable](https://placa-base-explorable.mosqueteroweb.chatgpt.site/) y localiza sobre la maqueta los tres componentes verificados en tu auditoría (`CPU/socket`, `chipset`, ranuras `DIMM DDR4/DDR5` y ranuras `PCIe x16` / `M.2 NVMe`).
+    2. **Evaluación comparativa y cuellos de botella:** Busca tu CPU real (`lscpu` / `Win32_Processor`) en [PassMark CPU Benchmark](https://www.cpubenchmark.net/) y consulta pruebas abiertas en [OpenBenchmarking](https://openbenchmarking.org/). Si combinas ese procesador con una GPU dedicada, comprueba su equilibrio por resolución en la [Calculadora de Cuellos de Botella (`pc-builds.com`)](https://pc-builds.com/es/bottleneck-calculator/).
+    3. **Herramienta de diagnóstico independiente del SO:** Descarga o analiza las utilidades incluidas en [Hiren's BootCD PE x64](https://www.hirensbootcd.org/) para comprobar cómo arrancar un entorno de diagnóstico Windows PE desde USB cuando el sistema instalado no inicia o requiere chequeo de hardware/almacenamiento (`MemTest`, `CPU-Z`, `CrystalDiskInfo`).

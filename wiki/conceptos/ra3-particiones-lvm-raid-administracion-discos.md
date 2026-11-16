@@ -129,6 +129,20 @@ En **Windows**, el equivalente clásico son los *Discos Dinámicos* (volúmenes 
 
 ---
 
+## Equivalencias RAID en Windows (*Espacios de Almacenamiento*) frente a Linux (`mdadm`)
+
+En la práctica profesional resulta útil saber traducir los niveles RAID clásicos a la terminología gráfica de **Espacios de almacenamiento** (*Storage Spaces*) en Windows 10/11:
+
+| Nivel RAID clásico | Discos mínimos | Tolerancia a fallos | Equivalente en Windows (*Storage Spaces*) | Herramienta estándar en Linux |
+| :--- | :---: | :---: | :--- | :--- |
+| **RAID 0 (*Striping*)** | 2 | 0 discos (si falla uno se pierde todo) | **Espacio simple** (`Simple`) | `mdadm --level=0` |
+| **RAID 1 (*Mirroring*)** | 2 | 1 disco por pareja | **Espacio de reflejo** (`Mirror`) | `mdadm --level=1` |
+| **RAID 5 (*Paridad*)** | 3 | 1 disco de todo el conjunto | **Espacio de paridad** (`Parity`) | `mdadm --level=5` |
+
+> **Lectura de particiones Linux desde Windows:** De forma nativa Windows no monta particiones `ext4`. Para consultar o rescatar archivos puntuales en solo lectura desde Windows pueden emplearse utilidades como *DiskInternals Linux Reader* o acceso mediante WSL2 (`wsl --mount`).
+
+---
+
 ## Recursos para profundizar
 
 - **Documentación oficial:** [Ubuntu Server Guide: LVM y Software RAID](https://ubuntu.com/server/docs/logical-volume-manager-lvm) y [Microsoft Learn: Storage Spaces](https://learn.microsoft.com/en-us/windows-server/storage/storage-spaces/overview).

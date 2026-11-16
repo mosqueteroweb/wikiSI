@@ -161,6 +161,19 @@ Un alumno de **1.º DAM** comienza el segundo trimestre y necesita dejar su sist
     | **1 o 2 VMs de pruebas en VirtualBox** | 2,0 – 6,0 GB | Margen crítico del aula | No superar **6–7 GB** para conservar $\ge 4\text{ GB}$ libres al anfitrión + IDE |
     | **Total combinado recomendado** | **10 – 14 GB** | **16 GB mínimos en DAM**; **32 GB ideales** | Imprescindible **SSD NVMe ($\ge 512\text{ GB}$)** para compilaciones y VMs |
 
+    ### 4. Reto de Tuberías (`cut`/`sed`/`awk`) y Búsqueda con `2>/dev/null`
+
+    1. **Filtro de registros en un solo comando:** crea el fichero `viaje.txt` desde terminal (sin editor gráfico) con líneas mixtas de mayúsculas/minúsculas (`ALUMNO1: 7 no Viaja`, `ALUMNO2: 5 VIAJA`, `ALUMNO3: 8 NO VIAJA`, `ALUMNO4: 2 no viaja`). Usando una tubería única (`grep -i`, `sort`, `head`, `cut`/`awk`), obtén exclusivamente el nombre del alumno con **menor nota entre los que no viajan** (`ALUMNO4`).
+    2. **Auditoría silenciosa de ejecutables:** lista con permisos los ficheros regulares ejecutables pertenecientes a usuarios cuyo nombre empiece por `prof*` en todo `/` ocultando los errores de acceso (`find / -type f -user "prof*" -perm /111 -ls 2>/dev/null`).
+
+    ### 5. Taller Práctico Docker: Nginx, MySQL y App Web PHP + Monitorización
+
+    Sobre tu Ubuntu (`e20-Ubuntu`) con Docker Engine instalado y tu usuario dentro del grupo `docker`:
+
+    1. Lanza un contenedor **Nginx** mapeando el puerto `-p 8080:80` y comprueba con `curl http://localhost:8080` y `docker ps`.
+    2. Despliega un contenedor **MySQL** con contraseña y conéctate mediante cliente (`mysql -h 127.0.0.1 -u root -p`).
+    3. **Reto integrador (App + BD + Monitorización):** levanta con **Docker Compose** un formulario web PHP que guarde nombre y edad en MySQL (usando un **volumen persistente** y una **red Docker compartida**) y añade un contenedor de monitorización de recursos de los contenedores activos (`docker stats` / cAdvisor / Portainer).
+
 ---
 
 ## Puntos de Control y Errores Frecuentes

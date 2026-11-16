@@ -106,6 +106,33 @@ Evaluar el hardware y configurar el sistema operativo antes de instalar un entor
 
 ---
 
+## 4. Registro de Windows (`regedit`), Consolas `mmc` y Herramientas de Mantenimiento (`RA4.f`, `RA4.g`)
+
+En estaciones Windows, la administración profunda del sistema y el mantenimiento preventivo se apoyan en el Registro, el Monitor de Confiabilidad y utilidades modernas de optimización:
+
+### Estructura del Registro de Windows (`regedit.exe`)
+
+Es una base de datos jerárquica donde Windows y las aplicaciones guardan su configuración en **cinco claves raíz**:
+
+1. **`HKEY_CLASSES_ROOT` (`HKCR`):** asociaciones de extensiones de archivos y clases COM.
+2. **`HKEY_CURRENT_USER` (`HKCU`):** configuración del usuario activo (escritorio, preferencias, temas).
+3. **`HKEY_LOCAL_MACHINE` (`HKLM`):** configuración global del hardware, controladores y software para todos los usuarios.
+4. **`HKEY_USERS` (`HKU`):** perfiles cargados de todas las cuentas del equipo.
+5. **`HKEY_CURRENT_CONFIG` (`HKCC`):** perfil de hardware activo en el arranque actual.
+
+**Tipos de valores habituales:** `String (REG_SZ)` texto simple, `REG_BINARY` binario/hexadecimal, `REG_DWORD` entero de 32 bits (`0`/`1`), `REG_QWORD` entero de 64 bits, `REG_MULTI_SZ` listas multínea y `REG_EXPAND_SZ` cadenas con variables expandibles (`%SystemRoot%`).
+
+!!! warning "Seguridad antes de tocar `regedit`"
+    Exporta siempre una copia de seguridad de la rama antes de modificarla (`Archivo` $\rightarrow$ `Exportar`) o trabaja dentro de una máquina virtual con instantánea previa; consulta la referencia oficial de Microsoft sobre [uso avanzado del Registro de Windows](https://docs.microsoft.com/es-ES/troubleshoot/windows-server/performance/windows-registry-advanced-users).
+
+### Consolas de diagnóstico y mantenimiento moderno
+
+- **Consola `mmc` personalizada:** permite agrupar en una sola ventana *Administrador de dispositivos*, *Administración de discos*, *Servicios* (inicio manual/automático), *Programador de tareas* y *Visor de eventos*.
+- **Monitor de Confiabilidad (`perfmon /rel`):** muestra una línea temporal diaria con fallos críticos de aplicaciones, advertencias y actualizaciones instaladas por fecha.
+- **Mantenimiento y diagnóstico de hardware/SO:** [Microsoft PC Manager](https://pcmanager.microsoft.com/es-es), [Microsoft PowerToys](https://learn.microsoft.com/es-es/windows/powertoys/), scripts de ajuste transparente como [`winscript` (`winscript.cc`)](https://winscript.cc/) ([código en GitHub](https://github.com/flick9000/winscript)), y telemetría de sensores/buses con **CPU-Z**, **HWiNFO** y **GPU-Z**.
+
+---
+
 ## Recursos para profundizar
 
 - **Documentación oficial:** `man 1 journalctl`, `man 8 logrotate` y [Microsoft Learn: `Get-WinEvent`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.diagnostics/get-winevent).

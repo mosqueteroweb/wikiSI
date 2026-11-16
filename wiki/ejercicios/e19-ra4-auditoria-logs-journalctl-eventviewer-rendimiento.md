@@ -151,6 +151,22 @@ Un servidor de prácticas muestra ralentizaciones puntuales y varios intentos fa
 - **Falsa alarma con `free -h`:** Ver muy poca RAM en `free` no significa falta de memoria en Linux; el kernel aprovecha la RAM ociosa en **buff/cache** para acelerar lecturas de disco. El valor crítico que indica saturación real es **`available`**, junto con actividad continua de `si`/`so` (swap in / swap out) en `vmstat`.
 - **Nunca usar `rm` sobre `/var/log/journal/` manualmente:** Borrar ficheros binarios `.journal` a mano puede corromper el índice de registros activos; utiliza siempre `journalctl --vacuum-size=...` o `--vacuum-time=...`.
 
+### 4. Taller de Ampliación: 6 Ejercicios en el Registro de Windows (`regedit`) y Monitor de Confiabilidad
+
+En tu VM **Windows 10/11** (`e19-Win10`), realiza primero un respaldo (`Archivo` $\rightarrow$ `Exportar` en `regedit.exe`) o un snapshot en VirtualBox y completa las dos tandas de ajuste:
+
+**Primera parte:**
+1. **Propietario registrado (`RegisteredOwner`):** abre `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion`, modifica el valor cadena `RegisteredOwner` con tu nombre y comprueba el cambio tras reiniciar ejecutando `winver` (`Win + R`).
+2. **Ocultar Centro de Notificaciones:** en `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer`, crea el `DWORD (32 bits)` `DisableNotificationCenter = 1` y reinicia `explorer.exe` (para revertir, cámbialo a `0` o bórralo).
+3. **Acelerar el cierre de servicios al apagar:** en `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control`, ajusta la cadena (`REG_SZ`) `WaitToKillServiceTimeout` a `2000` (2 segundos en milisegundos).
+
+**Segunda parte:**
+4. **Desactivar pantalla de bloqueo:** en `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Personalization` (crea la clave si no existe), añade el `DWORD (32 bits)` `NoLockScreen = 1` y revisa `CsEnabled = 0` en `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power`.
+5. **Activar Modo Oscuro desde Registro:** en `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize`, fija `AppsUseLightTheme = 0` y `SystemUsesLightTheme = 0` (`DWORD 32 bits`) y reinicia `explorer.exe`.
+6. **Acelerar menú de inicio y efectos visuales:** en `HKEY_CURRENT_USER\Control Panel\Desktop` asigna `MenuShowDelay = 100` (`REG_SZ`, frente a `400` por defecto), y en `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced` fija `ListviewAlphaSelect = 0` e `IconsOnly = 1`.
+
+**Verificación en `perfmon /rel` y `mmc`:** ejecuta `perfmon /rel` para comprobar el historial diario del **Monitor de Confiabilidad** y crea en `mmc` una consola personalizada con *Visor de eventos* + *Servicios*.
+
 ## Recursos para Profundizar
 
 - Concepto asociado: [Monitorización, logs y optimización del entorno DAM](../conceptos/ra4-monitorizacion-logs-optimizacion-entorno-dam.md).
